@@ -1,0 +1,22 @@
+summary_group,label,trajectory_count,A_count,B_count,C_count,legal_normal_count,independent_count,mdb_success_count,reference_97_variables_all,schema_97_all,initial_match_count,injection_min_s,injection_max_s,pre_rows_min,pre_rows_max,pre_window_min_s,pre_window_max_s,usable_pre_window_count,notes
+fixed_normal,fixed Normal/1.csv,1,1,0,0,1,1,1,True,True,1,,,,,,,0,
+variable_power_normal,variable-power NORM MDB,4,0,4,0,4,4,4,True,True,4,,,,,,,0,
+accident_pre_injection,accident pre-injection audit,1216,0,0,1216,0,0,0,True,False,1191,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,ATWS,1,0,0,1,0,0,0,True,True,1,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,FLB,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LACP,1,0,0,1,0,0,0,True,True,1,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LLB,101,0,0,101,0,0,0,True,True,101,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LOCA,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LOCAC,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LOF,1,0,0,1,0,0,0,True,True,1,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,LR,99,0,0,99,0,0,0,True,True,99,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,MD,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,RI,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,RW,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,SGATR,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,SGBTR,110,0,0,110,0,0,0,True,True,110,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,SLBIC,101,0,0,101,0,0,0,True,False,76,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,SLBOC,100,0,0,100,0,0,0,True,True,100,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,SP,1,0,0,1,0,0,0,True,True,1,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+accident_pre_injection,TT,1,0,0,1,0,0,0,True,True,1,0.5,0.5,1.0,1.0,0.0,0.0,0,All accident categories use report-first malfunction time; pre-injection windows are never relabeled as Normal.
+overall,all scanned trajectories,1221,1,4,1216,5,5,5,True,False,1196,0.5,0.5,1.0,1.0,0.0,0.0,0,

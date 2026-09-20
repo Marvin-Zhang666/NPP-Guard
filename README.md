@@ -78,6 +78,20 @@ NPP-Guard 是一个面向核电厂仿真时序数据的研究型原型，用于�
 
 Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报警。这个“无持续误报”结果只能说明当前单条参考轨迹上的行为；阈值校准和误报检查都依赖同一条独立 Normal reference，不能据此宣称已获得可泛化的 early-warning 性能。当前负结果更支持优先扩充 Normal reference，而不是继续调阈值或直接上 LSTM。
 
+## 第二阶段第一步：Normal-reference audit
+
+06 阶段对本地 NPPAD 的 1221 条轨迹完成了 Normal reference 全量审计，结果固定为：
+
+| 分类 | 数量 | 结论 |
+| --- | ---: | --- |
+| A：独立 Normal reference | 1 | `Normal/1.csv`；合法但 `PWR` 从约 100% 降至约 40%，不是固定功率轨迹 |
+| B：条件化辅助 Normal | 4 | `NORM_*` 变功率 Normal MDB；可用于匹配功率过渡的辅助实验 |
+| C：不能作为 Normal reference | 1216 | 事故轨迹；不能把事故前初始化点重新标记为独立 Normal |
+
+所有事故报告的首个注入时间为 `0.5 s`，而 CSV 采样间隔为 `10 s`；事故前只有 `t=0` 一个采样点，实际可用事故前窗口长度为 `0 s`。因此，NPPAD 当前数据不足以支撑严谨的 normal-reference LOCA early warning 研究。第二阶段主线转向 **LOCA severity estimation / protection-time prediction**；变功率 Normal 仅保留用于条件化辅助实验。
+
+审计产物：`notebooks/06_normal_reference_expansion.ipynb`、`src/normal_reference.py`、`results/normal_reference_inventory.csv`、`results/normal_reference_audit_summary.csv` 和 `results/normal_reference_audit_summary.json`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -103,19 +117,22 @@ NPP-Guard/
 │  ├─ validate_variable_power_classifier.py # 跨功率方向实验性分类
 │  ├─ train_full_power_model.py             # 训练并保存全功率模型
 │  ├─ npp_guard_inference.py                # 统一推理入口
-│  └─ final_validation_summary.py            # 汇总全功率和变功率结果
+│  ├─ final_validation_summary.py            # 汇总全功率和变功率结果
+│  └─ normal_reference.py                    # Normal reference 全量审计
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
 │  ├─ 03_ML_dataset_audit.ipynb
 │  ├─ 04_early_anomaly_detection.ipynb
-│  └─ 05_dynamic_early_warning.ipynb
+│  ├─ 05_dynamic_early_warning.ipynb
+│  └─ 06_normal_reference_expansion.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
 ├─ results/                                 # 已保存的验证报告、轻量 CSV 和 figures/
 │  ├─ early_anomaly_detection_*.csv         # 04 静态 baseline
-│  └─ dynamic_early_warning_*.csv           # 05 动态特征实验
+│  ├─ dynamic_early_warning_*.csv           # 05 动态特征实验
+│  └─ normal_reference_*.csv/json           # 06 Normal reference 审计
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -203,14 +220,16 @@ jupyter notebook notebooks/02_LOCA_severity_analysis.ipynb
 jupyter notebook notebooks/03_ML_dataset_audit.ipynb
 jupyter notebook notebooks/04_early_anomaly_detection.ipynb
 jupyter notebook notebooks/05_dynamic_early_warning.ipynb
+jupyter notebook notebooks/06_normal_reference_expansion.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
 
 ## Roadmap
 
-- 下一阶段优先扩充合法的 Normal reference：系统检查其他事故类型的事故注入前窗口、变量功率 Normal MDB 和匹配初始工况，建立独立的训练/验证参考分布；
-- 如果 NPPAD 无法提供足够且匹配的 Normal reference，则将主线转向 LOCA severity estimation、protection-time prediction 和 multi-accident diagnosis；
+- 06 Normal-reference audit 已完成：A 类 1 条 `Normal/1.csv`，B 类 4 条变功率 Normal MDB，事故数据无法提供合法事故前窗口；
+- 当前主线转向 LOCA severity estimation 和 protection-time prediction；下一步用整条 LOCA 轨迹分组切分，比较可解释回归 baseline；
+- 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
 - 最后再考虑面向研究展示的可视化界面。
