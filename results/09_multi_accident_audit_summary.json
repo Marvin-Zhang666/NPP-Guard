@@ -1,0 +1,1602 @@
+{
+  "experiment": "multi-accident dataset audit",
+  "normal_excluded": true,
+  "accident_class_count": 17,
+  "trajectory_count": 1216,
+  "total_rows": 492407,
+  "class_trajectory_count_min": 1,
+  "class_trajectory_count_max": 110,
+  "classes": [
+    {
+      "accident_class": "ATWS",
+      "trajectory_count": 1,
+      "total_rows": 580,
+      "rows_min": 580,
+      "rows_max": 580,
+      "time_end_min_s": 5790.0,
+      "time_end_max_s": 5790.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 1,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 1,
+      "event_parse_success_count": 1,
+      "injection_parse_success_count": 1,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 1,
+      "available_60s": 1,
+      "available_120s": 1,
+      "train_count": 1,
+      "validation_count": 0,
+      "test_count": 0,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": false,
+      "class_size_strategy": "train-only until more independent trajectories are available"
+    },
+    {
+      "accident_class": "FLB",
+      "trajectory_count": 100,
+      "total_rows": 22007,
+      "rows_min": 161,
+      "rows_max": 553,
+      "time_end_min_s": 1600.0,
+      "time_end_max_s": 5520.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 99,
+      "first_protection_parse_success_count": 99,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "LACP",
+      "trajectory_count": 1,
+      "total_rows": 504,
+      "rows_min": 504,
+      "rows_max": 504,
+      "time_end_min_s": 5030.0,
+      "time_end_max_s": 5030.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 1,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 1,
+      "event_parse_success_count": 1,
+      "injection_parse_success_count": 1,
+      "scram_parse_success_count": 1,
+      "first_protection_parse_success_count": 1,
+      "available_30s": 1,
+      "available_60s": 1,
+      "available_120s": 1,
+      "train_count": 1,
+      "validation_count": 0,
+      "test_count": 0,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": false,
+      "class_size_strategy": "train-only until more independent trajectories are available"
+    },
+    {
+      "accident_class": "LLB",
+      "trajectory_count": 101,
+      "total_rows": 55992,
+      "rows_min": 538,
+      "rows_max": 558,
+      "time_end_min_s": 5370.0,
+      "time_end_max_s": 5570.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 101,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 101,
+      "event_parse_success_count": 101,
+      "injection_parse_success_count": 101,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 101,
+      "available_60s": 101,
+      "available_120s": 101,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 11,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "LOCA",
+      "trajectory_count": 100,
+      "total_rows": 39017,
+      "rows_min": 302,
+      "rows_max": 475,
+      "time_end_min_s": 3010.0,
+      "time_end_max_s": 4740.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 100,
+      "first_protection_parse_success_count": 100,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "LOCAC",
+      "trajectory_count": 100,
+      "total_rows": 45176,
+      "rows_min": 367,
+      "rows_max": 544,
+      "time_end_min_s": 3660.0,
+      "time_end_max_s": 5430.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 100,
+      "first_protection_parse_success_count": 100,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "LOF",
+      "trajectory_count": 1,
+      "total_rows": 512,
+      "rows_min": 512,
+      "rows_max": 512,
+      "time_end_min_s": 5110.0,
+      "time_end_max_s": 5110.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 1,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 1,
+      "event_parse_success_count": 1,
+      "injection_parse_success_count": 1,
+      "scram_parse_success_count": 1,
+      "first_protection_parse_success_count": 1,
+      "available_30s": 1,
+      "available_60s": 1,
+      "available_120s": 1,
+      "train_count": 1,
+      "validation_count": 0,
+      "test_count": 0,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": false,
+      "class_size_strategy": "train-only until more independent trajectories are available"
+    },
+    {
+      "accident_class": "LR",
+      "trajectory_count": 99,
+      "total_rows": 55049,
+      "rows_min": 551,
+      "rows_max": 558,
+      "time_end_min_s": 5500.0,
+      "time_end_max_s": 5570.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 99,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 99,
+      "event_parse_success_count": 99,
+      "injection_parse_success_count": 99,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 99,
+      "available_60s": 99,
+      "available_120s": 99,
+      "train_count": 79,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "MD",
+      "trajectory_count": 100,
+      "total_rows": 59020,
+      "rows_min": 539,
+      "rows_max": 638,
+      "time_end_min_s": 5380.0,
+      "time_end_max_s": 6370.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "RI",
+      "trajectory_count": 100,
+      "total_rows": 20199,
+      "rows_min": 11,
+      "rows_max": 319,
+      "time_end_min_s": 100.0,
+      "time_end_max_s": 3180.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 75,
+      "first_protection_parse_success_count": 75,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 82,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "RW",
+      "trajectory_count": 100,
+      "total_rows": 18388,
+      "rows_min": 155,
+      "rows_max": 555,
+      "time_end_min_s": 1540.0,
+      "time_end_max_s": 5540.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 100,
+      "first_protection_parse_success_count": 100,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "SGATR",
+      "trajectory_count": 100,
+      "total_rows": 45860,
+      "rows_min": 400,
+      "rows_max": 568,
+      "time_end_min_s": 3990.0,
+      "time_end_max_s": 5670.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 44,
+      "first_protection_parse_success_count": 44,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "SGBTR",
+      "trajectory_count": 110,
+      "total_rows": 51266,
+      "rows_min": 415,
+      "rows_max": 557,
+      "time_end_min_s": 4140.0,
+      "time_end_max_s": 5560.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 110,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 110,
+      "event_parse_success_count": 110,
+      "injection_parse_success_count": 110,
+      "scram_parse_success_count": 54,
+      "first_protection_parse_success_count": 54,
+      "available_30s": 110,
+      "available_60s": 110,
+      "available_120s": 110,
+      "train_count": 88,
+      "validation_count": 11,
+      "test_count": 11,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "SLBIC",
+      "trajectory_count": 101,
+      "total_rows": 30063,
+      "rows_min": 175,
+      "rows_max": 551,
+      "time_end_min_s": 1740.0,
+      "time_end_max_s": 5500.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 76,
+      "schema_consistent_within_class": false,
+      "missing_cell_trajectories": 0,
+      "report_count": 101,
+      "event_parse_success_count": 101,
+      "injection_parse_success_count": 101,
+      "scram_parse_success_count": 88,
+      "first_protection_parse_success_count": 88,
+      "available_30s": 101,
+      "available_60s": 101,
+      "available_120s": 101,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 11,
+      "initial_condition_flagged_feature_count": 14,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "SLBOC",
+      "trajectory_count": 100,
+      "total_rows": 47538,
+      "rows_min": 422,
+      "rows_max": 561,
+      "time_end_min_s": 4210.0,
+      "time_end_max_s": 5600.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 100,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 100,
+      "event_parse_success_count": 100,
+      "injection_parse_success_count": 100,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 100,
+      "available_60s": 100,
+      "available_120s": 100,
+      "train_count": 80,
+      "validation_count": 10,
+      "test_count": 10,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": true,
+      "class_size_strategy": "three-way grouped split"
+    },
+    {
+      "accident_class": "SP",
+      "trajectory_count": 1,
+      "total_rows": 515,
+      "rows_min": 515,
+      "rows_max": 515,
+      "time_end_min_s": 5140.0,
+      "time_end_max_s": 5140.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 1,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 1,
+      "event_parse_success_count": 1,
+      "injection_parse_success_count": 1,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 1,
+      "available_60s": 1,
+      "available_120s": 1,
+      "train_count": 1,
+      "validation_count": 0,
+      "test_count": 0,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": false,
+      "class_size_strategy": "train-only until more independent trajectories are available"
+    },
+    {
+      "accident_class": "TT",
+      "trajectory_count": 1,
+      "total_rows": 721,
+      "rows_min": 721,
+      "rows_max": 721,
+      "time_end_min_s": 7200.0,
+      "time_end_max_s": 7200.0,
+      "sampling_median_unique": "10.0",
+      "schema_match_03_97_count": 1,
+      "schema_consistent_within_class": true,
+      "missing_cell_trajectories": 0,
+      "report_count": 1,
+      "event_parse_success_count": 1,
+      "injection_parse_success_count": 1,
+      "scram_parse_success_count": 0,
+      "first_protection_parse_success_count": 0,
+      "available_30s": 1,
+      "available_60s": 1,
+      "available_120s": 1,
+      "train_count": 1,
+      "validation_count": 0,
+      "test_count": 0,
+      "initial_condition_flagged_feature_count": 0,
+      "first_version_eligible": false,
+      "class_size_strategy": "train-only until more independent trajectories are available"
+    }
+  ],
+  "strict_process_feature_count": 38,
+  "strict_process_features": [
+    "P",
+    "TAVG",
+    "THA",
+    "THB",
+    "TCA",
+    "TCB",
+    "WRCA",
+    "WRCB",
+    "PSGA",
+    "PSGB",
+    "WFWA",
+    "WFWB",
+    "WSTA",
+    "WSTB",
+    "VOL",
+    "LVPZ",
+    "QMWT",
+    "LSGA",
+    "LSGB",
+    "QMGA",
+    "QMGB",
+    "NSGA",
+    "NSGB",
+    "TSAT",
+    "LVCR",
+    "RHBR",
+    "RHMT",
+    "RHFL",
+    "RH",
+    "PWNT",
+    "PWR",
+    "TFSB",
+    "TFPK",
+    "TF",
+    "PPM",
+    "RRCA",
+    "RRCB",
+    "RRCO"
+  ],
+  "feature_group_counts": {
+    "('direct_accident_or_leak', 'exclude')": 8,
+    "('observable_process', 'candidate')": 38,
+    "('protection_or_control_action', 'exclude')": 18,
+    "('radiological_or_dose', 'exclude')": 13,
+    "('safety_margin_or_consequence', 'exclude')": 10,
+    "('safety_margin_or_consequence', 'review')": 9,
+    "('time_index', 'exclude')": 1
+  },
+  "event_parse_success": {
+    "reports": 1216,
+    "injection": 1216,
+    "scram": 662,
+    "first_protection": 662,
+    "trajectory_total": 1216
+  },
+  "available_window_coverage": {
+    "30": {
+      "available_trajectories": 1216,
+      "coverage_rate": 1.0,
+      "classes_with_full_coverage": [
+        "ATWS",
+        "FLB",
+        "LACP",
+        "LLB",
+        "LOCA",
+        "LOCAC",
+        "LOF",
+        "LR",
+        "MD",
+        "RI",
+        "RW",
+        "SGATR",
+        "SGBTR",
+        "SLBIC",
+        "SLBOC",
+        "SP",
+        "TT"
+      ]
+    },
+    "60": {
+      "available_trajectories": 1216,
+      "coverage_rate": 1.0,
+      "classes_with_full_coverage": [
+        "ATWS",
+        "FLB",
+        "LACP",
+        "LLB",
+        "LOCA",
+        "LOCAC",
+        "LOF",
+        "LR",
+        "MD",
+        "RI",
+        "RW",
+        "SGATR",
+        "SGBTR",
+        "SLBIC",
+        "SLBOC",
+        "SP",
+        "TT"
+      ]
+    },
+    "120": {
+      "available_trajectories": 1198,
+      "coverage_rate": 0.9851973684210527,
+      "classes_with_full_coverage": [
+        "ATWS",
+        "FLB",
+        "LACP",
+        "LLB",
+        "LOCA",
+        "LOCAC",
+        "LOF",
+        "LR",
+        "MD",
+        "RW",
+        "SGATR",
+        "SGBTR",
+        "SLBIC",
+        "SLBOC",
+        "SP",
+        "TT"
+      ]
+    }
+  },
+  "split_plan": {
+    "unit": "complete trajectory/sample_id",
+    "row_random_split_forbidden": true,
+    "current_assignment": "deterministic per-class interleaved 80/10/10 group split",
+    "small_class_strategy": "classes with fewer than 3 trajectories are train-only in this audit; do not claim held-out generalization for them",
+    "counts": {
+      "ATWS": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      },
+      "FLB": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "LACP": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      },
+      "LLB": {
+        "test": 11,
+        "train": 80,
+        "validation": 10
+      },
+      "LOCA": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "LOCAC": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "LOF": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      },
+      "LR": {
+        "test": 10,
+        "train": 79,
+        "validation": 10
+      },
+      "MD": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "RI": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "RW": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "SGATR": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "SGBTR": {
+        "test": 11,
+        "train": 88,
+        "validation": 11
+      },
+      "SLBIC": {
+        "test": 11,
+        "train": 80,
+        "validation": 10
+      },
+      "SLBOC": {
+        "test": 10,
+        "train": 80,
+        "validation": 10
+      },
+      "SP": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      },
+      "TT": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      }
+    }
+  },
+  "leakage_audit": {
+    "features_checked": 99,
+    "flag_row_count": 30,
+    "potential_label_leakage_row_count": 16,
+    "flagged_features": [
+      "LVCR",
+      "PSGA",
+      "PSGB",
+      "QMGA",
+      "QMGB",
+      "QMWT",
+      "RM4",
+      "SGLK",
+      "STSG",
+      "TAVG",
+      "TCA",
+      "TCB",
+      "THA",
+      "THB",
+      "WFLB",
+      "WFWA",
+      "WFWB",
+      "WLR",
+      "WRLA",
+      "WRLB",
+      "WSTA",
+      "WSTB",
+      "WTRA",
+      "WTRB"
+    ],
+    "auto_removed": false
+  },
+  "initial_condition_audit": {
+    "candidate_features_checked": 38,
+    "flagged_features": [
+      "PSGA",
+      "PSGB",
+      "QMGA",
+      "QMGB",
+      "QMWT",
+      "TAVG",
+      "TCA",
+      "TCB",
+      "THA",
+      "THB",
+      "WFWA",
+      "WFWB",
+      "WSTA",
+      "WSTB"
+    ],
+    "confounding_present": true,
+    "key_features": [
+      {
+        "feature": "LVPZ",
+        "accident_class": "ATWS",
+        "initial_mean": 62.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "FLB",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LACP",
+        "initial_mean": 62.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LLB",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LOCA",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LOCAC",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LOF",
+        "initial_mean": 62.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "LR",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "MD",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "RI",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "RW",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "SGATR",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "SGBTR",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "SLBIC",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "SLBOC",
+        "initial_mean": 62.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "SP",
+        "initial_mean": 62.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "LVPZ",
+        "accident_class": "TT",
+        "initial_mean": 62.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "ATWS",
+        "initial_mean": 155.50001525878906,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "FLB",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LACP",
+        "initial_mean": 155.50001525878906,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LLB",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LOCA",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LOCAC",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LOF",
+        "initial_mean": 155.50001525878906,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "LR",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "MD",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "RI",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "RW",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "SGATR",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "SGBTR",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "SLBIC",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "SLBOC",
+        "initial_mean": 155.50001525878906,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "SP",
+        "initial_mean": 155.50001525878906,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "P",
+        "accident_class": "TT",
+        "initial_mean": 155.50001525878906,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "ATWS",
+        "initial_mean": 100.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "FLB",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LACP",
+        "initial_mean": 100.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LLB",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LOCA",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LOCAC",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LOF",
+        "initial_mean": 100.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "LR",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "MD",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "RI",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "RW",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "SGATR",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "SGBTR",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "SLBIC",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "SLBOC",
+        "initial_mean": 100.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "SP",
+        "initial_mean": 100.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "PWR",
+        "accident_class": "TT",
+        "initial_mean": 100.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "ATWS",
+        "initial_mean": 310.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "FLB",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LACP",
+        "initial_mean": 310.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LLB",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LOCA",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LOCAC",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LOF",
+        "initial_mean": 310.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "LR",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "MD",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "RI",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "RW",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "SGATR",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "SGBTR",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "SLBIC",
+        "initial_mean": 309.5049504950495,
+        "initial_std": 0.8674533114380063,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "SLBOC",
+        "initial_mean": 310.0,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "SP",
+        "initial_mean": 310.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TAVG",
+        "accident_class": "TT",
+        "initial_mean": 310.0,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.4950495049504866,
+        "initial_condition_flag": true
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "ATWS",
+        "initial_mean": 344.9923095703125,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "FLB",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LACP",
+        "initial_mean": 344.9923095703125,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LLB",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LOCA",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LOCAC",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LOF",
+        "initial_mean": 344.9923095703125,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "LR",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "MD",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "RI",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "RW",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "SGATR",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "SGBTR",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "SLBIC",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "SLBOC",
+        "initial_mean": 344.9923095703125,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "SP",
+        "initial_mean": 344.9923095703125,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "TSAT",
+        "accident_class": "TT",
+        "initial_mean": 344.9923095703125,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "ATWS",
+        "initial_mean": 289.6449890136719,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "FLB",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LACP",
+        "initial_mean": 289.6449890136719,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LLB",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LOCA",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LOCAC",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LOF",
+        "initial_mean": 289.6449890136719,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "LR",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "MD",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "RI",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "RW",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "SGATR",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "SGBTR",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "SLBIC",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "SLBOC",
+        "initial_mean": 289.6449890136719,
+        "initial_std": 0.0,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "SP",
+        "initial_mean": 289.6449890136719,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      },
+      {
+        "feature": "VOL",
+        "accident_class": "TT",
+        "initial_mean": 289.6449890136719,
+        "initial_std": null,
+        "max_pairwise_mean_diff": 0.0,
+        "initial_condition_flag": false
+      }
+    ]
+  },
+  "recommendation": {
+    "first_version_eligible_classes": [
+      "FLB",
+      "LLB",
+      "LOCA",
+      "LOCAC",
+      "LR",
+      "MD",
+      "RI",
+      "RW",
+      "SGATR",
+      "SGBTR",
+      "SLBIC",
+      "SLBOC"
+    ],
+    "defer_or_expand_classes": [
+      "ATWS",
+      "LACP",
+      "LOF",
+      "SP",
+      "TT"
+    ],
+    "recommended_windows": [
+      30,
+      60
+    ],
+    "exploratory_window": 120,
+    "window_reason": "30/60 s have the broadest early coverage; 120 s should be reported only with per-class availability because some short trajectories end before it.",
+    "process_variable_policy": "Use only the 38 candidate variables from results/feature_groups.csv for the strict baseline; keep all flagged variables for explicit review and do not auto-delete them.",
+    "metrics": [
+      "Macro-F1",
+      "Balanced Accuracy",
+      "per-class Recall",
+      "confusion matrix"
+    ],
+    "classification_ready": true
+  },
+  "figure_paths": [
+    "results/figures/09_class_counts.png",
+    "results/figures/09_available_window_coverage.png",
+    "results/figures/09_initial_condition_comparison.png"
+  ]
+}

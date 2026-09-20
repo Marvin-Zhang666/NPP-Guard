@@ -110,6 +110,16 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/08_protection_time_prediction.ipynb`、`src/protection_time_features.py`、`src/protection_time_models.py`、`src/protection_time_report.py`、`results/08_*` 和 `results/figures/08_*`。
 
+## 第二阶段第四步：Multi-accident dataset audit
+
+09 阶段对本地 NPPAD 的全部事故轨迹完成了进入多事故分类前的数据审计：共 17 个事故类别、1216 条完整 trajectory/sample_id 轨迹，类别样本量为 `1–110`。首版分类只建议纳入 12 个样本充足类别：`FLB`、`LLB`、`LOCA`、`LOCAC`、`LR`、`MD`、`RI`、`RW`、`SGATR`、`SGBTR`、`SLBIC`、`SLBOC`；`ATWS`、`LACP`、`LOF`、`SP`、`TT` 各只有 1 条轨迹，暂缓独立泛化验证。
+
+窗口覆盖方面，30 s 和 60 s 均为 `1216/1216` 全覆盖；120 s 为 `1198/1216`，覆盖率 `98.52%`，缺失来自 RI 短轨迹。严格过程变量沿用 03 的 `feature_groups.csv`，共 38 个；SLBIC 的 101 条轨迹中有 25 条额外包含 `WPCS/WPFW/WPMU` 三列，已确认 38 个严格变量均存在，因此后续模型统一使用 38 个变量的交集，不使用额外列。
+
+审计还标记出 16 个类别—变量组合的潜在 label leakage（包括直接事故量、控制量、辐射/后果量，以及候选变量 `LVCR` 的类别特异状态变化）；这些变量未在 09 阶段自动删除，而是留给后续敏感性实验。另有 SLBIC 集中的 14 个候选变量表现出初始工况混杂，重点为 `TAVG/THA/THB/TCA/TCB/PSGA/PSGB/WFWA/WFWB/WSTA/WSTB/QMWT/QMGA/QMGB`；后续分类必须报告排除这些变量或仅使用相对 `t=0` 变化特征的敏感性结果。
+
+审计产物：`notebooks/09_multi_accident_dataset_audit.ipynb`、`src/multi_accident.py`、`results/09_multi_accident_*` 和 `results/figures/09_*`。数据划分单位固定为完整 trajectory/sample_id，禁止随机拆分时间行。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -141,7 +151,8 @@ NPP-Guard/
 │  ├─ severity_models.py                     # 分组严重度回归 baseline
 │  ├─ protection_time_features.py            # landmark 保护时间特征
 │  ├─ protection_time_models.py              # 分组保护时间回归 baseline
-│  └─ protection_time_report.py              # 08 结果汇总与敏感性审计
+│  ├─ protection_time_report.py              # 08 结果汇总与敏感性审计
+│  └─ multi_accident.py                       # 09 多事故数据集审计
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -150,7 +161,8 @@ NPP-Guard/
 │  ├─ 05_dynamic_early_warning.ipynb
 │  ├─ 06_normal_reference_expansion.ipynb
 │  ├─ 07_LOCA_severity_estimation.ipynb
-│  └─ 08_protection_time_prediction.ipynb
+│  ├─ 08_protection_time_prediction.ipynb
+│  └─ 09_multi_accident_dataset_audit.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -248,6 +260,7 @@ jupyter notebook notebooks/05_dynamic_early_warning.ipynb
 jupyter notebook notebooks/06_normal_reference_expansion.ipynb
 jupyter notebook notebooks/07_LOCA_severity_estimation.ipynb
 jupyter notebook notebooks/08_protection_time_prediction.ipynb
+jupyter notebook notebooks/09_multi_accident_dataset_audit.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
@@ -257,7 +270,8 @@ jupyter notebook notebooks/08_protection_time_prediction.ipynb
 - 06 Normal-reference audit 已完成：A 类 1 条 `Normal/1.csv`，B 类 4 条变功率 Normal MDB，事故数据无法提供合法事故前窗口；
 - 07 LOCA severity estimation 已完成：比较 30/60/120/300 s 窗口和三类回归模型，并完成过程量—严重度耦合敏感性审计；
 - 08 protection-time prediction 已完成：严格最佳点为 60 s Random Forest，Test `MAE=86.826 s`、`RMSE=338.735 s`、`R²=0.330`；30/60 s 的 process-only 未超过 severity-only，300 s 样本过少；
-- 下一步进行 multi-accident dataset audit：按完整 trajectory/sample_id 建立类别清单、事件与窗口覆盖审计，继续沿用 03 的严格过程变量分组；
+- 09 multi-accident dataset audit 已完成：17 类、1216 条轨迹；12 类进入首版分类，5 个单样本类别暂缓；30/60 s 全覆盖、120 s 覆盖率 98.52%；已固定 38 个严格过程变量、SLBIC schema 差异、16 个潜在 leakage 组合和 SLBIC 初始工况混杂审计；
+- 下一步进行 10 multi-accident classification：以 30/60 s 为主窗口，按完整 trajectory/sample_id 分组，并比较严格变量、leakage 敏感性和 SLBIC 初始工况敏感性；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；

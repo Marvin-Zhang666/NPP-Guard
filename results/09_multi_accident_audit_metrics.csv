@@ -1,0 +1,14 @@
+metric,value
+accident_class_count,17
+trajectory_count,1216
+total_rows,492407
+class_trajectory_count_min,1
+class_trajectory_count_max,110
+strict_process_feature_count,38
+event_injection_parse_success,1216
+event_first_protection_parse_success,662
+leakage_flag_row_count,30
+initial_condition_flagged_feature_count,14
+first_version_eligible_class_count,12
+recommended_windows_s,"30,60; exploratory=120"
+split_policy,trajectory/sample_id grouped; small classes train-only

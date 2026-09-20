@@ -1,0 +1,18 @@
+accident_class,trajectory_count,total_rows,rows_min,rows_max,time_end_min_s,time_end_max_s,sampling_median_unique,schema_match_03_97_count,schema_consistent_within_class,missing_cell_trajectories,report_count,event_parse_success_count,injection_parse_success_count,scram_parse_success_count,first_protection_parse_success_count,available_30s,available_60s,available_120s,train_count,validation_count,test_count,initial_condition_flagged_feature_count,first_version_eligible,class_size_strategy
+ATWS,1,580,580,580,5790.0,5790.0,10.0,1,True,0,1,1,1,0,0,1,1,1,1,0,0,0,False,train-only until more independent trajectories are available
+FLB,100,22007,161,553,1600.0,5520.0,10.0,100,True,0,100,100,100,99,99,100,100,100,80,10,10,0,True,three-way grouped split
+LACP,1,504,504,504,5030.0,5030.0,10.0,1,True,0,1,1,1,1,1,1,1,1,1,0,0,0,False,train-only until more independent trajectories are available
+LLB,101,55992,538,558,5370.0,5570.0,10.0,101,True,0,101,101,101,0,0,101,101,101,80,10,11,0,True,three-way grouped split
+LOCA,100,39017,302,475,3010.0,4740.0,10.0,100,True,0,100,100,100,100,100,100,100,100,80,10,10,0,True,three-way grouped split
+LOCAC,100,45176,367,544,3660.0,5430.0,10.0,100,True,0,100,100,100,100,100,100,100,100,80,10,10,0,True,three-way grouped split
+LOF,1,512,512,512,5110.0,5110.0,10.0,1,True,0,1,1,1,1,1,1,1,1,1,0,0,0,False,train-only until more independent trajectories are available
+LR,99,55049,551,558,5500.0,5570.0,10.0,99,True,0,99,99,99,0,0,99,99,99,79,10,10,0,True,three-way grouped split
+MD,100,59020,539,638,5380.0,6370.0,10.0,100,True,0,100,100,100,0,0,100,100,100,80,10,10,0,True,three-way grouped split
+RI,100,20199,11,319,100.0,3180.0,10.0,100,True,0,100,100,100,75,75,100,100,82,80,10,10,0,True,three-way grouped split
+RW,100,18388,155,555,1540.0,5540.0,10.0,100,True,0,100,100,100,100,100,100,100,100,80,10,10,0,True,three-way grouped split
+SGATR,100,45860,400,568,3990.0,5670.0,10.0,100,True,0,100,100,100,44,44,100,100,100,80,10,10,0,True,three-way grouped split
+SGBTR,110,51266,415,557,4140.0,5560.0,10.0,110,True,0,110,110,110,54,54,110,110,110,88,11,11,0,True,three-way grouped split
+SLBIC,101,30063,175,551,1740.0,5500.0,10.0,76,False,0,101,101,101,88,88,101,101,101,80,10,11,14,True,three-way grouped split
+SLBOC,100,47538,422,561,4210.0,5600.0,10.0,100,True,0,100,100,100,0,0,100,100,100,80,10,10,0,True,three-way grouped split
+SP,1,515,515,515,5140.0,5140.0,10.0,1,True,0,1,1,1,0,0,1,1,1,1,0,0,0,False,train-only until more independent trajectories are available
+TT,1,721,721,721,7200.0,7200.0,10.0,1,True,0,1,1,1,0,0,1,1,1,1,0,0,0,False,train-only until more independent trajectories are available
