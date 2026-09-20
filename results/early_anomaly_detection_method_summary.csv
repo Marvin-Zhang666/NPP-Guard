@@ -1,0 +1,4 @@
+method,candidate_feature_count,active_feature_count,inactive_near_zero_feature_count,calibration_rows,threshold_quantile,threshold,pca_components,covariance_condition_number,covariance_shrinkage,loca_count,detected_count,protection_before_detected_count,protection_before_detected_rate,detection_time_median_s,detection_time_min_s,detection_time_max_s,lead_time_median_s,lead_time_min_s,lead_time_max_s,normal_reference_alarm_time_s,normal_reference_false_alarm,normal_points_above_threshold
+robust_z_score,38,30,8,11,0.995,6.979691751212108,2,74.33855439763039,0.24001665381464463,100,100,0,0.0,160.0,150.0,2080.0,-31.5,-115.0,-24.0,,False,2
+mahalanobis,38,30,8,11,0.995,151.41497834288162,2,74.33855439763039,0.24001665381464463,100,100,2,0.02,150.0,140.0,2060.0,-25.25,-115.0,20.5,,False,2
+pca_reconstruction_error,38,30,8,11,0.995,15.118719715541957,2,74.33855439763039,0.24001665381464463,100,100,0,0.0,150.0,140.0,2060.0,-25.5,-115.0,-20.5,,False,2

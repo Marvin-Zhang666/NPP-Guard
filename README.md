@@ -53,6 +53,31 @@ NPP-Guard 是一个面向核电厂仿真时序数据的研究型原型，用于�
 
 `notebooks/01_LOCA_EDA.ipynb` 包含 Normal/LOCA 对比、特征排序、标准化异常分数、持续报警检查以及多个时间点（`100、300、600、1000、1500、2000 s`）的间接特征探索。
 
+## 第一阶段完成情况（v0.3）
+
+第一阶段已完成并固定为可复现实验基线，包含：
+
+- 100 级 LOCA 严重度分析，以及严重度、检测时间和保护动作时间的关联整理；
+- ML Dataset Audit，核对事故类别、案例数量、时间网格、注入时间和保护事件表；
+- 保护动作前的 38 个常规过程量筛选；
+- 基于单条 Normal reference 的静态异常检测 baseline；
+- 在相同评估协议下加入 10 s 变化率，以及 30/60/120 s 动态斜率的 early-warning 实验。
+
+### 保护前检出结果与限制
+
+这里的“保护前检出”要求异常确认时间不晚于该案例的首次保护动作时间。04 和 05 中各方法最终都检测到 100/100 个 LOCA，但多数确认发生在保护动作之后，因此不能把“最终检测到”表述为有效 early warning。
+
+| 实验 / 特征组 | 保护前检出 | Normal 持续误报 | 结果解释 |
+| --- | ---: | --- | --- |
+| 04 Robust Z-score | 0/100 | 否 | 静态 baseline 未实现保护前确认 |
+| 04 Mahalanobis | 2/100 | 否 | 静态 baseline 中最好的结果，但仍不足以支持 early-warning 声明 |
+| 04 PCA reconstruction error | 0/100 | 否 | 未优于 Mahalanobis |
+| 05 A：静态 Mahalanobis | 2/100 | 否 | 与 04 静态结果逐行一致 |
+| 05 B：静态 + 10 s 变化率 | 0/100 | 否 | 未改善保护前检出 |
+| 05 C：B + 30/60/120 s 斜率 | 0/100 | 否 | 未改善保护前检出；120 s 动态窗口还带来明确 warm-up 期 |
+
+Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报警。这个“无持续误报”结果只能说明当前单条参考轨迹上的行为；阈值校准和误报检查都依赖同一条独立 Normal reference，不能据此宣称已获得可泛化的 early-warning 性能。当前负结果更支持优先扩充 Normal reference，而不是继续调阈值或直接上 LSTM。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -80,11 +105,17 @@ NPP-Guard/
 │  ├─ npp_guard_inference.py                # 统一推理入口
 │  └─ final_validation_summary.py            # 汇总全功率和变功率结果
 ├─ notebooks/
-│  └─ 01_LOCA_EDA.ipynb
+│  ├─ 01_LOCA_EDA.ipynb
+│  ├─ 02_LOCA_severity_analysis.ipynb
+│  ├─ 03_ML_dataset_audit.ipynb
+│  ├─ 04_early_anomaly_detection.ipynb
+│  └─ 05_dynamic_early_warning.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
-├─ results/                                 # 已保存的验证报告
+├─ results/                                 # 已保存的验证报告、轻量 CSV 和 figures/
+│  ├─ early_anomaly_detection_*.csv         # 04 静态 baseline
+│  └─ dynamic_early_warning_*.csv           # 05 动态特征实验
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -168,18 +199,20 @@ Notebook 可以用 Jupyter 打开：
 
 ```powershell
 jupyter notebook notebooks/01_LOCA_EDA.ipynb
+jupyter notebook notebooks/02_LOCA_severity_analysis.ipynb
+jupyter notebook notebooks/03_ML_dataset_audit.ipynb
+jupyter notebook notebooks/04_early_anomaly_detection.ipynb
+jupyter notebook notebooks/05_dynamic_early_warning.ipynb
 ```
 
-Notebook 中保留了早期探索过程，部分单元格使用了本机绝对路径 `C:\Users\18205\NPP-Guard\data\...`。在其他电脑上运行这些单元格前，请把路径改为本机路径；`src/` 中的脚本使用相对于项目根目录的路径推导，推荐优先使用脚本重现实验。
+请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
 
 ## Roadmap
 
-- 批量整理不同 LOCA 严重度，并研究严重度与检测时间的关系；
-- 建立严格的按场景、按工况隔离的训练/验证/测试划分；
-- 补充 false alarm rate、lead time、召回率和置信度校准等早期预警指标；
-- 扩充并验证更多事故类型，尤其是当前规则未能有效报警的场景；
-- 完成变功率分类的独立工况验证，再考虑将其接入统一推理；
-- 在传统机器学习基线稳定后，再评估时序深度学习模型和可解释性方法；
+- 下一阶段优先扩充合法的 Normal reference：系统检查其他事故类型的事故注入前窗口、变量功率 Normal MDB 和匹配初始工况，建立独立的训练/验证参考分布；
+- 如果 NPPAD 无法提供足够且匹配的 Normal reference，则将主线转向 LOCA severity estimation、protection-time prediction 和 multi-accident diagnosis；
+- 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
+- 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
 - 最后再考虑面向研究展示的可视化界面。
 
 Roadmap 中的项目尚未完成，不代表当前版本已经具备对应能力。
