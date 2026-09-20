@@ -1,0 +1,209 @@
+{
+  "experiment": "LOCA severity estimation",
+  "label_definition": "LOCA filename 1..100 = percent of 100 cm2 break area",
+  "trajectory_count": 100,
+  "candidate_process_feature_count": 38,
+  "derived_feature_count": 190,
+  "windows_s": [
+    30,
+    60,
+    120,
+    300
+  ],
+  "window_sample_points": [
+    {
+      "window_s": 30,
+      "sample_count": 3,
+      "first_sample_s": 10.0,
+      "last_sample_s": 30.0,
+      "sample_points_s": "10,20,30"
+    },
+    {
+      "window_s": 60,
+      "sample_count": 6,
+      "first_sample_s": 10.0,
+      "last_sample_s": 60.0,
+      "sample_points_s": "10,20,30,40,50,60"
+    },
+    {
+      "window_s": 120,
+      "sample_count": 12,
+      "first_sample_s": 10.0,
+      "last_sample_s": 120.0,
+      "sample_points_s": "10,20,30,40,50,60,70,80,90,100,110,120"
+    },
+    {
+      "window_s": 300,
+      "sample_count": 30,
+      "first_sample_s": 10.0,
+      "last_sample_s": 300.0,
+      "sample_points_s": "10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300"
+    }
+  ],
+  "split_trajectory_counts": {
+    "train": 60,
+    "test": 20,
+    "validation": 20
+  },
+  "validation_selected_best": {
+    "window_s": 120,
+    "model": "ridge",
+    "validation_mae": 0.47529355342598123,
+    "validation_rmse": 0.6118866335137045,
+    "validation_r2": 0.9995495876664389
+  },
+  "test_metrics": {
+    "window_s": 120,
+    "model": "ridge",
+    "mae": 0.4492331656539175,
+    "rmse": 0.5672993979136379,
+    "r2": 0.9996128377661676
+  },
+  "naive_test_metrics_same_window": {
+    "mae": 25.05,
+    "rmse": 28.98706608127149,
+    "r2": -0.010827067669172852
+  },
+  "mae_improvement_vs_naive": 24.600766834346082,
+  "low_severity_test_metrics": {
+    "n": 2,
+    "mae": 0.30171035655376244,
+    "rmse": 0.3026938848208846,
+    "r2": 0.9853402259347266
+  },
+  "leakage_audit": {
+    "train_correlation_threshold": 0.95,
+    "flagged_features_by_window": {
+      "30": [],
+      "60": [],
+      "120": [
+        "LVPZ__delta_t0",
+        "LVPZ__last",
+        "LVPZ__mean",
+        "LVPZ__slope",
+        "LVPZ__std",
+        "P__delta_t0",
+        "P__last",
+        "P__mean",
+        "P__slope",
+        "P__std",
+        "TSAT__delta_t0",
+        "TSAT__last",
+        "TSAT__mean",
+        "TSAT__slope",
+        "TSAT__std",
+        "VOL__delta_t0",
+        "VOL__last",
+        "VOL__mean",
+        "VOL__slope",
+        "VOL__std"
+      ],
+      "300": [
+        "LVCR__delta_t0",
+        "LVCR__last",
+        "RRCA__mean",
+        "RRCA__slope",
+        "RRCA__std",
+        "RRCB__mean",
+        "RRCB__slope",
+        "RRCB__std",
+        "RRCO__mean",
+        "RRCO__slope",
+        "RRCO__std",
+        "VOL__mean",
+        "WRCA__mean",
+        "WRCA__slope",
+        "WRCA__std",
+        "WRCB__mean",
+        "WRCB__slope",
+        "WRCB__std"
+      ]
+    },
+    "sensitivity_file": "results/07_leakage_sensitivity.csv",
+    "sensitivity_validation_selected": {
+      "window_s": 120,
+      "model": "random_forest",
+      "validation_mae": 0.9968610028860017,
+      "test_mae": 0.9724715909090943,
+      "test_rmse": 1.3982170243974776,
+      "test_r2": 0.9976481072513504
+    }
+  },
+  "selected_feature_importance_top10": [
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 1,
+      "feature": "VOL__last",
+      "importance": 1.381480425310257
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 2,
+      "feature": "VOL__delta_t0",
+      "importance": 1.381480425310257
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 3,
+      "feature": "LVPZ__last",
+      "importance": 1.3814795296852087
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 4,
+      "feature": "LVPZ__delta_t0",
+      "importance": 1.3814795296852085
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 5,
+      "feature": "VOL__std",
+      "importance": 1.3804484654887736
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 6,
+      "feature": "LVPZ__std",
+      "importance": 1.380447338817982
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 7,
+      "feature": "VOL__slope",
+      "importance": 1.377804675132885
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 8,
+      "feature": "LVPZ__slope",
+      "importance": 1.377802857885762
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 9,
+      "feature": "VOL__mean",
+      "importance": 1.377151709557051
+    },
+    {
+      "window_s": 120,
+      "model": "ridge",
+      "rank": 10,
+      "feature": "LVPZ__mean",
+      "importance": 1.3771497312253165
+    }
+  ],
+  "figures": [
+    "results/figures/07_true_vs_predicted_severity.png",
+    "results/figures/07_window_length_vs_mae.png",
+    "results/figures/07_model_comparison.png"
+  ]
+}

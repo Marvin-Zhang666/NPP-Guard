@@ -92,6 +92,16 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/06_normal_reference_expansion.ipynb`、`src/normal_reference.py`、`results/normal_reference_inventory.csv`、`results/normal_reference_audit_summary.csv` 和 `results/normal_reference_audit_summary.json`。
 
+## 第二阶段第二步：LOCA severity estimation
+
+07 阶段使用全部 100 条 LOCA 轨迹，把文件名 `1..100` 作为 100 cm² 破口面积中的严重度标签。观察窗口为 `30、60、120、300 s`，对应实际采样点数分别为 `3、6、12、30`。特征只来自 03 审计保留的 38 个常规过程量，每个过程量提取末值、相对 `t=0` 变化量、均值、标准差和线性斜率，共 190 个派生特征；直接破口/泄漏、保护/控制动作、辐射/剂量以及事故后果/安全裕度变量不作为候选过程特征。
+
+数据按完整 `sample_id` 做可复现的 `60/20/20` train/validation/test 划分，预处理只在 train 拟合。比较了训练集均值 baseline、Ridge、Random Forest 和 Gradient Boosting。validation 选择的最佳组合为 `Ridge + 120 s`，test 指标为 `MAE=0.449`、`RMSE=0.567`、`R²=0.9996`；同窗口训练集均值 baseline 的 test MAE 为 `25.05`。
+
+但训练集相关性审计发现，120 s 窗口中的 `P/LVPZ/TSAT/VOL` 派生特征与严重度存在近乎完全的耦合。排除这些强耦合变量后，validation 选择变为 Random Forest，test 指标为 `MAE=0.972`、`RMSE=1.398`、`R²=0.9976`。因此，`MAE=0.449` 不能被表述为稳健泛化性能；更保守的结论是，前 120 s 的过程响应包含很强的严重度信息，但结果对过程量—严重度耦合敏感，需要独立工况和更严格的外部验证。
+
+审计产物：`notebooks/07_LOCA_severity_estimation.ipynb`、`src/severity_features.py`、`src/severity_models.py`、`results/07_*` 和 `results/figures/07_*`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -118,14 +128,17 @@ NPP-Guard/
 │  ├─ train_full_power_model.py             # 训练并保存全功率模型
 │  ├─ npp_guard_inference.py                # 统一推理入口
 │  ├─ final_validation_summary.py            # 汇总全功率和变功率结果
-│  └─ normal_reference.py                    # Normal reference 全量审计
+│  ├─ normal_reference.py                    # Normal reference 全量审计
+│  ├─ severity_features.py                   # LOCA 严重度窗口特征
+│  └─ severity_models.py                     # 分组严重度回归 baseline
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
 │  ├─ 03_ML_dataset_audit.ipynb
 │  ├─ 04_early_anomaly_detection.ipynb
 │  ├─ 05_dynamic_early_warning.ipynb
-│  └─ 06_normal_reference_expansion.ipynb
+│  ├─ 06_normal_reference_expansion.ipynb
+│  └─ 07_LOCA_severity_estimation.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -221,6 +234,7 @@ jupyter notebook notebooks/03_ML_dataset_audit.ipynb
 jupyter notebook notebooks/04_early_anomaly_detection.ipynb
 jupyter notebook notebooks/05_dynamic_early_warning.ipynb
 jupyter notebook notebooks/06_normal_reference_expansion.ipynb
+jupyter notebook notebooks/07_LOCA_severity_estimation.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
@@ -228,7 +242,8 @@ jupyter notebook notebooks/06_normal_reference_expansion.ipynb
 ## Roadmap
 
 - 06 Normal-reference audit 已完成：A 类 1 条 `Normal/1.csv`，B 类 4 条变功率 Normal MDB，事故数据无法提供合法事故前窗口；
-- 当前主线转向 LOCA severity estimation 和 protection-time prediction；下一步用整条 LOCA 轨迹分组切分，比较可解释回归 baseline；
+- 07 LOCA severity estimation 已完成：比较 30/60/120/300 s 窗口和三类回归模型，并完成过程量—严重度耦合敏感性审计；
+- 当前主线继续转向 protection-time prediction：采用 landmark 设计，只使用 landmark 之前的过程量，并排除已经发生首次保护的轨迹；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
