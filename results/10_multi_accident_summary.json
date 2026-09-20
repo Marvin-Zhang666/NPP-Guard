@@ -1,0 +1,363 @@
+{
+  "experiment": "multi-accident classification baseline",
+  "classes": [
+    "FLB",
+    "LLB",
+    "LOCA",
+    "LOCAC",
+    "LR",
+    "MD",
+    "RI",
+    "RW",
+    "SGATR",
+    "SGBTR",
+    "SLBIC",
+    "SLBOC"
+  ],
+  "trajectory_counts_by_window": {
+    "30": 1211,
+    "60": 1211,
+    "120": 1193
+  },
+  "primary_windows_s": [
+    30,
+    60
+  ],
+  "exploratory_windows_s": [
+    120
+  ],
+  "input_groups": {
+    "A_strict_38": {
+      "feature_count": 38,
+      "features": [
+        "P",
+        "TAVG",
+        "THA",
+        "THB",
+        "TCA",
+        "TCB",
+        "WRCA",
+        "WRCB",
+        "PSGA",
+        "PSGB",
+        "WFWA",
+        "WFWB",
+        "WSTA",
+        "WSTB",
+        "VOL",
+        "LVPZ",
+        "QMWT",
+        "LSGA",
+        "LSGB",
+        "QMGA",
+        "QMGB",
+        "NSGA",
+        "NSGB",
+        "TSAT",
+        "LVCR",
+        "RHBR",
+        "RHMT",
+        "RHFL",
+        "RH",
+        "PWNT",
+        "PWR",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "PPM",
+        "RRCA",
+        "RRCB",
+        "RRCO"
+      ],
+      "removed_features": []
+    },
+    "B_without_potential_leakage": {
+      "feature_count": 37,
+      "features": [
+        "P",
+        "TAVG",
+        "THA",
+        "THB",
+        "TCA",
+        "TCB",
+        "WRCA",
+        "WRCB",
+        "PSGA",
+        "PSGB",
+        "WFWA",
+        "WFWB",
+        "WSTA",
+        "WSTB",
+        "VOL",
+        "LVPZ",
+        "QMWT",
+        "LSGA",
+        "LSGB",
+        "QMGA",
+        "QMGB",
+        "NSGA",
+        "NSGB",
+        "TSAT",
+        "RHBR",
+        "RHMT",
+        "RHFL",
+        "RH",
+        "PWNT",
+        "PWR",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "PPM",
+        "RRCA",
+        "RRCB",
+        "RRCO"
+      ],
+      "removed_features": [
+        "LVCR"
+      ]
+    },
+    "C_without_SLBIC_initial": {
+      "feature_count": 24,
+      "features": [
+        "P",
+        "WRCA",
+        "WRCB",
+        "VOL",
+        "LVPZ",
+        "LSGA",
+        "LSGB",
+        "NSGA",
+        "NSGB",
+        "TSAT",
+        "LVCR",
+        "RHBR",
+        "RHMT",
+        "RHFL",
+        "RH",
+        "PWNT",
+        "PWR",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "PPM",
+        "RRCA",
+        "RRCB",
+        "RRCO"
+      ],
+      "removed_features": [
+        "PSGA",
+        "PSGB",
+        "QMGA",
+        "QMGB",
+        "QMWT",
+        "TAVG",
+        "TCA",
+        "TCB",
+        "THA",
+        "THB",
+        "WFWA",
+        "WFWB",
+        "WSTA",
+        "WSTB"
+      ]
+    }
+  },
+  "best_strict_group_A": {
+    "validation_selection": {
+      "window_s": 30,
+      "input_group": "A_strict_38",
+      "model": "hist_gradient_boosting",
+      "eval_split": "validation",
+      "n_samples": 121,
+      "n_features": 190,
+      "accuracy": 0.2809917355371901,
+      "macro_f1": 0.19586894586894588,
+      "balanced_accuracy": 0.27499999999999997,
+      "train_majority_class": ""
+    },
+    "test_metrics": {
+      "window_s": 30,
+      "input_group": "A_strict_38",
+      "model": "hist_gradient_boosting",
+      "eval_split": "test",
+      "n_samples": 123,
+      "n_features": 190,
+      "accuracy": 0.2764227642276423,
+      "macro_f1": 0.19275498978469274,
+      "balanced_accuracy": 0.2727272727272727,
+      "train_majority_class": ""
+    }
+  },
+  "best_overall_primary": {
+    "validation_selection": {
+      "window_s": 30,
+      "input_group": "A_strict_38",
+      "model": "hist_gradient_boosting",
+      "eval_split": "validation",
+      "n_samples": 121,
+      "n_features": 190,
+      "accuracy": 0.2809917355371901,
+      "macro_f1": 0.19586894586894588,
+      "balanced_accuracy": 0.27499999999999997,
+      "train_majority_class": ""
+    },
+    "test_metrics": {
+      "window_s": 30,
+      "input_group": "A_strict_38",
+      "model": "hist_gradient_boosting",
+      "eval_split": "test",
+      "n_samples": 123,
+      "n_features": 190,
+      "accuracy": 0.2764227642276423,
+      "macro_f1": 0.19275498978469274,
+      "balanced_accuracy": 0.2727272727272727,
+      "train_majority_class": ""
+    }
+  },
+  "best_exploratory_120_group_A": {
+    "validation_selection": {
+      "window_s": 120,
+      "input_group": "A_strict_38",
+      "model": "random_forest",
+      "eval_split": "validation",
+      "n_samples": 119,
+      "n_features": 190,
+      "accuracy": 0.8151260504201681,
+      "macro_f1": 0.7757366902103744,
+      "balanced_accuracy": 0.8174242424242424,
+      "train_majority_class": ""
+    },
+    "test_metrics": {
+      "window_s": 120,
+      "input_group": "A_strict_38",
+      "model": "random_forest",
+      "eval_split": "test",
+      "n_samples": 121,
+      "n_features": 190,
+      "accuracy": 0.7851239669421488,
+      "macro_f1": 0.7488484378142246,
+      "balanced_accuracy": 0.7848484848484848,
+      "train_majority_class": ""
+    }
+  },
+  "strict_A_30_vs_60_macro_f1_max_absolute_delta": 0.0,
+  "sensitivity_for_selected_A_setting": [
+    {
+      "window_s": 30,
+      "model": "hist_gradient_boosting",
+      "input_group": "A_strict_38",
+      "test_macro_f1": 0.19275498978469274,
+      "test_balanced_accuracy": 0.2727272727272727,
+      "slbic_recall": 0.2727272727272727,
+      "delta_macro_f1_vs_A": 0.0,
+      "delta_balanced_accuracy_vs_A": 0.0,
+      "delta_slbic_recall_vs_A": 0.0
+    },
+    {
+      "window_s": 30,
+      "model": "hist_gradient_boosting",
+      "input_group": "B_without_potential_leakage",
+      "test_macro_f1": 0.19275498978469274,
+      "test_balanced_accuracy": 0.2727272727272727,
+      "slbic_recall": 0.2727272727272727,
+      "delta_macro_f1_vs_A": 0.0,
+      "delta_balanced_accuracy_vs_A": 0.0,
+      "delta_slbic_recall_vs_A": 0.0
+    },
+    {
+      "window_s": 30,
+      "model": "hist_gradient_boosting",
+      "input_group": "C_without_SLBIC_initial",
+      "test_macro_f1": 0.19275498978469274,
+      "test_balanced_accuracy": 0.2727272727272727,
+      "slbic_recall": 0.2727272727272727,
+      "delta_macro_f1_vs_A": 0.0,
+      "delta_balanced_accuracy_vs_A": 0.0,
+      "delta_slbic_recall_vs_A": 0.0
+    }
+  ],
+  "weakest_classes_in_best_group_A_test": [
+    {
+      "accident_class": "FLB",
+      "recall": 0.0,
+      "support": 10
+    },
+    {
+      "accident_class": "LLB",
+      "recall": 0.0,
+      "support": 11
+    },
+    {
+      "accident_class": "LOCAC",
+      "recall": 0.0,
+      "support": 10
+    }
+  ],
+  "strongest_classes_in_best_group_A_test": [
+    {
+      "accident_class": "LOCA",
+      "recall": 1.0,
+      "support": 10
+    },
+    {
+      "accident_class": "RI",
+      "recall": 1.0,
+      "support": 10
+    },
+    {
+      "accident_class": "SGBTR",
+      "recall": 1.0,
+      "support": 11
+    }
+  ],
+  "main_confusion_pairs_in_best_group_A_test": [
+    {
+      "true_class": "LLB",
+      "predicted_class": "SGBTR",
+      "count": 11
+    },
+    {
+      "true_class": "LOCAC",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "FLB",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "LR",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "MD",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "SLBOC",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "SGATR",
+      "predicted_class": "SGBTR",
+      "count": 10
+    },
+    {
+      "true_class": "RW",
+      "predicted_class": "RI",
+      "count": 10
+    }
+  ],
+  "near_perfect_warning": false,
+  "risk_notes": [
+    "All reported metrics use complete trajectory/sample_id groups; time rows were never randomly split.",
+    "Scaler fitting is inside the Logistic Regression pipeline and uses train trajectories only.",
+    "If Macro-F1 is near 1.0, treat it as a leakage/confounding signal rather than a generalization claim.",
+    "The strict A test Macro-F1 was identical at 30 s and 60 s for every compared model; the early window did not add measurable class separation.",
+    "09 identified direct accident/control/radiological variables outside the 38-feature strict set; candidate LVCR is explicitly tested in group B."
+  ]
+}
