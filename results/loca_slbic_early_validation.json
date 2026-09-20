@@ -1,0 +1,229 @@
+{
+  "task": "LOCA_vs_SLBIC",
+  "model": "standardized logistic regression",
+  "selection": "contiguous case folds",
+  "reports": [
+    {
+      "cutoff_s": 50.0,
+      "features": [
+        "P",
+        "TSAT",
+        "HUP",
+        "LVCR",
+        "QMWT",
+        "WSTB",
+        "WSTA",
+        "WFWB",
+        "WFWA",
+        "QMGA",
+        "QMGB",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "TBLD",
+        "DNBR",
+        "SCMA",
+        "SCMB",
+        "VOL",
+        "TRB",
+        "PRB",
+        "RRCB",
+        "WRCB",
+        "RRCO",
+        "WRCA",
+        "RRCA"
+      ],
+      "folds": [
+        {
+          "fold": "1-20",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "21-40",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "41-60",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "61-80",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "81-100",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        }
+      ],
+      "mean_accuracy": 1.0,
+      "mean_balanced_accuracy": 1.0,
+      "protection_audit": {
+        "LOCA": {
+          "reports": 100,
+          "known_protection_time": 100,
+          "protection_at_or_before_cutoff": 1,
+          "fraction_protection_at_or_before_cutoff": 0.01
+        },
+        "SLBIC": {
+          "reports": 101,
+          "known_protection_time": 88,
+          "protection_at_or_before_cutoff": 0,
+          "fraction_protection_at_or_before_cutoff": 0.0
+        }
+      }
+    },
+    {
+      "cutoff_s": 100.0,
+      "features": [
+        "P",
+        "TSAT",
+        "HUP",
+        "LVCR",
+        "QMWT",
+        "WSTB",
+        "WSTA",
+        "WFWB",
+        "WFWA",
+        "QMGA",
+        "QMGB",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "TBLD",
+        "DNBR",
+        "SCMA",
+        "SCMB",
+        "VOL",
+        "TRB",
+        "PRB",
+        "RRCB",
+        "WRCB",
+        "RRCO",
+        "WRCA",
+        "RRCA"
+      ],
+      "folds": [
+        {
+          "fold": "1-20",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "21-40",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "41-60",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "61-80",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "81-100",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        }
+      ],
+      "mean_accuracy": 1.0,
+      "mean_balanced_accuracy": 1.0,
+      "protection_audit": {
+        "LOCA": {
+          "reports": 100,
+          "known_protection_time": 100,
+          "protection_at_or_before_cutoff": 1,
+          "fraction_protection_at_or_before_cutoff": 0.01
+        },
+        "SLBIC": {
+          "reports": 101,
+          "known_protection_time": 88,
+          "protection_at_or_before_cutoff": 0,
+          "fraction_protection_at_or_before_cutoff": 0.0
+        }
+      }
+    },
+    {
+      "cutoff_s": 150.0,
+      "features": [
+        "P",
+        "TSAT",
+        "HUP",
+        "LVCR",
+        "QMWT",
+        "WSTB",
+        "WSTA",
+        "WFWB",
+        "WFWA",
+        "QMGA",
+        "QMGB",
+        "TFSB",
+        "TFPK",
+        "TF",
+        "TBLD",
+        "DNBR",
+        "SCMA",
+        "SCMB",
+        "VOL",
+        "TRB",
+        "PRB",
+        "RRCB",
+        "WRCB",
+        "RRCO",
+        "WRCA",
+        "RRCA"
+      ],
+      "folds": [
+        {
+          "fold": "1-20",
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.625
+        },
+        {
+          "fold": "21-40",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "41-60",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "61-80",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        },
+        {
+          "fold": "81-100",
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        }
+      ],
+      "mean_accuracy": 0.925,
+      "mean_balanced_accuracy": 0.925,
+      "protection_audit": {
+        "LOCA": {
+          "reports": 100,
+          "known_protection_time": 100,
+          "protection_at_or_before_cutoff": 77,
+          "fraction_protection_at_or_before_cutoff": 0.77
+        },
+        "SLBIC": {
+          "reports": 101,
+          "known_protection_time": 88,
+          "protection_at_or_before_cutoff": 0,
+          "fraction_protection_at_or_before_cutoff": 0.0
+        }
+      }
+    }
+  ]
+}

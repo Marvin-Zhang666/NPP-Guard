@@ -1,0 +1,7546 @@
+{
+  "rule_features": [
+    "WECS",
+    "WSTB",
+    "SCMA",
+    "TRB",
+    "PRB",
+    "LWRB",
+    "PRBA"
+  ],
+  "threshold": 5.0,
+  "min_consecutive": 3,
+  "variable_power_loca": [
+    {
+      "baseline": "NORM_80_to_100",
+      "test": "LOCA_80_to_100",
+      "first_alarm_s": 2400.0,
+      "peak_score": 21.689560926451925,
+      "injection_s": 2298.5,
+      "detection_delay_s": 101.5,
+      "pre_injection_alarm": false,
+      "max_pre_injection": 0.0
+    },
+    {
+      "baseline": "NORM_100_to_80",
+      "test": "LOCA_100_to_80",
+      "first_alarm_s": 1020.0,
+      "peak_score": 20.632839302276192,
+      "injection_s": 915.0,
+      "detection_delay_s": 105.0,
+      "pre_injection_alarm": false,
+      "max_pre_injection": 0.0
+    }
+  ],
+  "full_power_cases": [
+    {
+      "accident": "LOCA",
+      "case": 1,
+      "alarm": true,
+      "first_alarm_s": 300.0,
+      "peak_score": 15.094251340284998
+    },
+    {
+      "accident": "LOCA",
+      "case": 2,
+      "alarm": true,
+      "first_alarm_s": 210.0,
+      "peak_score": 24.231200989736816
+    },
+    {
+      "accident": "LOCA",
+      "case": 3,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.013522990617375
+    },
+    {
+      "accident": "LOCA",
+      "case": 4,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 14.333010574162612
+    },
+    {
+      "accident": "LOCA",
+      "case": 5,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.69908261368692
+    },
+    {
+      "accident": "LOCA",
+      "case": 6,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.71447221021262
+    },
+    {
+      "accident": "LOCA",
+      "case": 7,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.5784141254381
+    },
+    {
+      "accident": "LOCA",
+      "case": 8,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 16.593955535858992
+    },
+    {
+      "accident": "LOCA",
+      "case": 9,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 17.946189656486737
+    },
+    {
+      "accident": "LOCA",
+      "case": 10,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 18.113838112732072
+    },
+    {
+      "accident": "LOCA",
+      "case": 11,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 18.545923992765566
+    },
+    {
+      "accident": "LOCA",
+      "case": 12,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 19.32538151294568
+    },
+    {
+      "accident": "LOCA",
+      "case": 13,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 20.245379746711397
+    },
+    {
+      "accident": "LOCA",
+      "case": 14,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 20.93301210619864
+    },
+    {
+      "accident": "LOCA",
+      "case": 15,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 21.423823462811086
+    },
+    {
+      "accident": "LOCA",
+      "case": 16,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 21.996695573957563
+    },
+    {
+      "accident": "LOCA",
+      "case": 17,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 22.760003924452672
+    },
+    {
+      "accident": "LOCA",
+      "case": 18,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 23.361330606199964
+    },
+    {
+      "accident": "LOCA",
+      "case": 19,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 24.21094463443504
+    },
+    {
+      "accident": "LOCA",
+      "case": 20,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 24.96000320965814
+    },
+    {
+      "accident": "LOCA",
+      "case": 21,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 24.974262104946504
+    },
+    {
+      "accident": "LOCA",
+      "case": 22,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.015399787475438
+    },
+    {
+      "accident": "LOCA",
+      "case": 23,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.029787910080227
+    },
+    {
+      "accident": "LOCA",
+      "case": 24,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.013543627427865
+    },
+    {
+      "accident": "LOCA",
+      "case": 25,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.06609255597965
+    },
+    {
+      "accident": "LOCA",
+      "case": 26,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.122826491346775
+    },
+    {
+      "accident": "LOCA",
+      "case": 27,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.08129923363648
+    },
+    {
+      "accident": "LOCA",
+      "case": 28,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.13594643006813
+    },
+    {
+      "accident": "LOCA",
+      "case": 29,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.163143209895615
+    },
+    {
+      "accident": "LOCA",
+      "case": 30,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.074727735331404
+    },
+    {
+      "accident": "LOCA",
+      "case": 31,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.164019409669624
+    },
+    {
+      "accident": "LOCA",
+      "case": 32,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.137306845506703
+    },
+    {
+      "accident": "LOCA",
+      "case": 33,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.170660081641042
+    },
+    {
+      "accident": "LOCA",
+      "case": 34,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.231855718489
+    },
+    {
+      "accident": "LOCA",
+      "case": 35,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.19123924738592
+    },
+    {
+      "accident": "LOCA",
+      "case": 36,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.212221926184547
+    },
+    {
+      "accident": "LOCA",
+      "case": 37,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.196069875087343
+    },
+    {
+      "accident": "LOCA",
+      "case": 38,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.21998090576229
+    },
+    {
+      "accident": "LOCA",
+      "case": 39,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.303162239571233
+    },
+    {
+      "accident": "LOCA",
+      "case": 40,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.194905451703463
+    },
+    {
+      "accident": "LOCA",
+      "case": 41,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.302574263407095
+    },
+    {
+      "accident": "LOCA",
+      "case": 42,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.234449730977847
+    },
+    {
+      "accident": "LOCA",
+      "case": 43,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.80980761156019
+    },
+    {
+      "accident": "LOCA",
+      "case": 44,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.289973127183508
+    },
+    {
+      "accident": "LOCA",
+      "case": 45,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.285465309925115
+    },
+    {
+      "accident": "LOCA",
+      "case": 46,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.32332636331785
+    },
+    {
+      "accident": "LOCA",
+      "case": 47,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.343548131786438
+    },
+    {
+      "accident": "LOCA",
+      "case": 48,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.639329887024413
+    },
+    {
+      "accident": "LOCA",
+      "case": 49,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.138178203124067
+    },
+    {
+      "accident": "LOCA",
+      "case": 50,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 28.594917972137097
+    },
+    {
+      "accident": "LOCA",
+      "case": 51,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 29.276117180651962
+    },
+    {
+      "accident": "LOCA",
+      "case": 52,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.311577792532262
+    },
+    {
+      "accident": "LOCA",
+      "case": 53,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.252238315731876
+    },
+    {
+      "accident": "LOCA",
+      "case": 54,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.44225837724802
+    },
+    {
+      "accident": "LOCA",
+      "case": 55,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.396776691610327
+    },
+    {
+      "accident": "LOCA",
+      "case": 56,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 32.291673992350084
+    },
+    {
+      "accident": "LOCA",
+      "case": 57,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 32.306776909507356
+    },
+    {
+      "accident": "LOCA",
+      "case": 58,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.78224182128906
+    },
+    {
+      "accident": "LOCA",
+      "case": 59,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 43.80244445800781
+    },
+    {
+      "accident": "LOCA",
+      "case": 60,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 44.8267822265625
+    },
+    {
+      "accident": "LOCA",
+      "case": 61,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 45.7501220703125
+    },
+    {
+      "accident": "LOCA",
+      "case": 62,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 46.71629333496094
+    },
+    {
+      "accident": "LOCA",
+      "case": 63,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 36.23324461607954
+    },
+    {
+      "accident": "LOCA",
+      "case": 64,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 48.495208740234375
+    },
+    {
+      "accident": "LOCA",
+      "case": 65,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 38.29707806974573
+    },
+    {
+      "accident": "LOCA",
+      "case": 66,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 50.27423095703125
+    },
+    {
+      "accident": "LOCA",
+      "case": 67,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 38.52801435491924
+    },
+    {
+      "accident": "LOCA",
+      "case": 68,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 38.72167756286416
+    },
+    {
+      "accident": "LOCA",
+      "case": 69,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 39.64918113943094
+    },
+    {
+      "accident": "LOCA",
+      "case": 70,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 50.645782470703125
+    },
+    {
+      "accident": "LOCA",
+      "case": 71,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 40.52451624261097
+    },
+    {
+      "accident": "LOCA",
+      "case": 72,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.06510925292969
+    },
+    {
+      "accident": "LOCA",
+      "case": 73,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.21610060894733
+    },
+    {
+      "accident": "LOCA",
+      "case": 74,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 43.08363061677203
+    },
+    {
+      "accident": "LOCA",
+      "case": 75,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 54.135744903617734
+    },
+    {
+      "accident": "LOCA",
+      "case": 76,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 53.96678046122586
+    },
+    {
+      "accident": "LOCA",
+      "case": 77,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.37127421806771
+    },
+    {
+      "accident": "LOCA",
+      "case": 78,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 45.055933250178896
+    },
+    {
+      "accident": "LOCA",
+      "case": 79,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 56.10506719353221
+    },
+    {
+      "accident": "LOCA",
+      "case": 80,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 44.15948848335264
+    },
+    {
+      "accident": "LOCA",
+      "case": 81,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.84462507834435
+    },
+    {
+      "accident": "LOCA",
+      "case": 82,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.7560965172597
+    },
+    {
+      "accident": "LOCA",
+      "case": 83,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 46.34813192478839
+    },
+    {
+      "accident": "LOCA",
+      "case": 84,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 47.04235884046952
+    },
+    {
+      "accident": "LOCA",
+      "case": 85,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 53.0417950503574
+    },
+    {
+      "accident": "LOCA",
+      "case": 86,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.798524442037035
+    },
+    {
+      "accident": "LOCA",
+      "case": 87,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 43.795704000489174
+    },
+    {
+      "accident": "LOCA",
+      "case": 88,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 32.229932636110405
+    },
+    {
+      "accident": "LOCA",
+      "case": 89,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.413533409936726
+    },
+    {
+      "accident": "LOCA",
+      "case": 90,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 50.186820424246726
+    },
+    {
+      "accident": "LOCA",
+      "case": 91,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 26.45651026234266
+    },
+    {
+      "accident": "LOCA",
+      "case": 92,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 55.12516663250645
+    },
+    {
+      "accident": "LOCA",
+      "case": 93,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 54.632138115147875
+    },
+    {
+      "accident": "LOCA",
+      "case": 94,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 54.36634970559021
+    },
+    {
+      "accident": "LOCA",
+      "case": 95,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 54.1108206780475
+    },
+    {
+      "accident": "LOCA",
+      "case": 96,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 41.61669529821252
+    },
+    {
+      "accident": "LOCA",
+      "case": 97,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 48.32485895530488
+    },
+    {
+      "accident": "LOCA",
+      "case": 98,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 55.54617739978724
+    },
+    {
+      "accident": "LOCA",
+      "case": 99,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 53.98910122770575
+    },
+    {
+      "accident": "LOCA",
+      "case": 100,
+      "alarm": true,
+      "first_alarm_s": 120.0,
+      "peak_score": 36.857083060650325
+    },
+    {
+      "accident": "LOCAC",
+      "case": 1,
+      "alarm": true,
+      "first_alarm_s": 310.0,
+      "peak_score": 16.358026347042664
+    },
+    {
+      "accident": "LOCAC",
+      "case": 2,
+      "alarm": true,
+      "first_alarm_s": 220.0,
+      "peak_score": 24.630010234243958
+    },
+    {
+      "accident": "LOCAC",
+      "case": 3,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 19.855820826042958
+    },
+    {
+      "accident": "LOCAC",
+      "case": 4,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 15.283348267723731
+    },
+    {
+      "accident": "LOCAC",
+      "case": 5,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.51641185585914
+    },
+    {
+      "accident": "LOCAC",
+      "case": 6,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 15.604472354225432
+    },
+    {
+      "accident": "LOCAC",
+      "case": 7,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.262868247957755
+    },
+    {
+      "accident": "LOCAC",
+      "case": 8,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 16.838594082144922
+    },
+    {
+      "accident": "LOCAC",
+      "case": 9,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 17.91959362742862
+    },
+    {
+      "accident": "LOCAC",
+      "case": 10,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 18.67898685605479
+    },
+    {
+      "accident": "LOCAC",
+      "case": 11,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 19.479939771022497
+    },
+    {
+      "accident": "LOCAC",
+      "case": 12,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 20.05326141731539
+    },
+    {
+      "accident": "LOCAC",
+      "case": 13,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 20.80012949310344
+    },
+    {
+      "accident": "LOCAC",
+      "case": 14,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 21.514294120773307
+    },
+    {
+      "accident": "LOCAC",
+      "case": 15,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 21.811621429586797
+    },
+    {
+      "accident": "LOCAC",
+      "case": 16,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 22.42652920783124
+    },
+    {
+      "accident": "LOCAC",
+      "case": 17,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 23.08326399634025
+    },
+    {
+      "accident": "LOCAC",
+      "case": 18,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 23.643227780141295
+    },
+    {
+      "accident": "LOCAC",
+      "case": 19,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 24.373214526792747
+    },
+    {
+      "accident": "LOCAC",
+      "case": 20,
+      "alarm": true,
+      "first_alarm_s": 150.0,
+      "peak_score": 24.998590586547728
+    },
+    {
+      "accident": "LOCAC",
+      "case": 21,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.037397013380836
+    },
+    {
+      "accident": "LOCAC",
+      "case": 22,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.041143920309167
+    },
+    {
+      "accident": "LOCAC",
+      "case": 23,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.10225885454634
+    },
+    {
+      "accident": "LOCAC",
+      "case": 24,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.14116076287862
+    },
+    {
+      "accident": "LOCAC",
+      "case": 25,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.116329150490824
+    },
+    {
+      "accident": "LOCAC",
+      "case": 26,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 20.909039905407884
+    },
+    {
+      "accident": "LOCAC",
+      "case": 27,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.19464028598238
+    },
+    {
+      "accident": "LOCAC",
+      "case": 28,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.257957248598974
+    },
+    {
+      "accident": "LOCAC",
+      "case": 29,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.301963229354165
+    },
+    {
+      "accident": "LOCAC",
+      "case": 30,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.22218293414171
+    },
+    {
+      "accident": "LOCAC",
+      "case": 31,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.310402416651208
+    },
+    {
+      "accident": "LOCAC",
+      "case": 32,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.319383464334805
+    },
+    {
+      "accident": "LOCAC",
+      "case": 33,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.283205636823723
+    },
+    {
+      "accident": "LOCAC",
+      "case": 34,
+      "alarm": true,
+      "first_alarm_s": 140.0,
+      "peak_score": 25.333748529050805
+    },
+    {
+      "accident": "LOCAC",
+      "case": 35,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.29637169132268
+    },
+    {
+      "accident": "LOCAC",
+      "case": 36,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.355255140243518
+    },
+    {
+      "accident": "LOCAC",
+      "case": 37,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.302355213463592
+    },
+    {
+      "accident": "LOCAC",
+      "case": 38,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.35149157447448
+    },
+    {
+      "accident": "LOCAC",
+      "case": 39,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.321954418934858
+    },
+    {
+      "accident": "LOCAC",
+      "case": 40,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.25430257322582
+    },
+    {
+      "accident": "LOCAC",
+      "case": 41,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.324905828699944
+    },
+    {
+      "accident": "LOCAC",
+      "case": 42,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.289396679963765
+    },
+    {
+      "accident": "LOCAC",
+      "case": 43,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.263629489241247
+    },
+    {
+      "accident": "LOCAC",
+      "case": 44,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.381109432624903
+    },
+    {
+      "accident": "LOCAC",
+      "case": 45,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.412456632434537
+    },
+    {
+      "accident": "LOCAC",
+      "case": 46,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 35.35595610496271
+    },
+    {
+      "accident": "LOCAC",
+      "case": 47,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 25.576409750673893
+    },
+    {
+      "accident": "LOCAC",
+      "case": 48,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.34744007283526
+    },
+    {
+      "accident": "LOCAC",
+      "case": 49,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.339369811758854
+    },
+    {
+      "accident": "LOCAC",
+      "case": 50,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 28.66706610616013
+    },
+    {
+      "accident": "LOCAC",
+      "case": 51,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 28.877169588812105
+    },
+    {
+      "accident": "LOCAC",
+      "case": 52,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.012482388096316
+    },
+    {
+      "accident": "LOCAC",
+      "case": 53,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 27.026335913549516
+    },
+    {
+      "accident": "LOCAC",
+      "case": 54,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.391150566745612
+    },
+    {
+      "accident": "LOCAC",
+      "case": 55,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 46.04574894830251
+    },
+    {
+      "accident": "LOCAC",
+      "case": 56,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 30.433776617295333
+    },
+    {
+      "accident": "LOCAC",
+      "case": 57,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 32.55593774027483
+    },
+    {
+      "accident": "LOCAC",
+      "case": 58,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.53370666503906
+    },
+    {
+      "accident": "LOCAC",
+      "case": 59,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 43.50959777832031
+    },
+    {
+      "accident": "LOCAC",
+      "case": 60,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 44.436553955078125
+    },
+    {
+      "accident": "LOCAC",
+      "case": 61,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 45.5413818359375
+    },
+    {
+      "accident": "LOCAC",
+      "case": 62,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 46.41908264160156
+    },
+    {
+      "accident": "LOCAC",
+      "case": 63,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 35.675949503684706
+    },
+    {
+      "accident": "LOCAC",
+      "case": 64,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 36.4845598650721
+    },
+    {
+      "accident": "LOCAC",
+      "case": 65,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 49.04646301269531
+    },
+    {
+      "accident": "LOCAC",
+      "case": 66,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 49.94486999511719
+    },
+    {
+      "accident": "LOCAC",
+      "case": 67,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 37.661072323258686
+    },
+    {
+      "accident": "LOCAC",
+      "case": 68,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 51.56889343261719
+    },
+    {
+      "accident": "LOCAC",
+      "case": 69,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 40.529001001980554
+    },
+    {
+      "accident": "LOCAC",
+      "case": 70,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 40.52617641060381
+    },
+    {
+      "accident": "LOCAC",
+      "case": 71,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 40.57582004516809
+    },
+    {
+      "accident": "LOCAC",
+      "case": 72,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 52.67416764988762
+    },
+    {
+      "accident": "LOCAC",
+      "case": 73,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 51.4180655656376
+    },
+    {
+      "accident": "LOCAC",
+      "case": 74,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 54.615145986329054
+    },
+    {
+      "accident": "LOCAC",
+      "case": 75,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.19493346703834
+    },
+    {
+      "accident": "LOCAC",
+      "case": 76,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.48259215863458
+    },
+    {
+      "accident": "LOCAC",
+      "case": 77,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 42.89225013981727
+    },
+    {
+      "accident": "LOCAC",
+      "case": 78,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 52.408813088221414
+    },
+    {
+      "accident": "LOCAC",
+      "case": 79,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 43.26554583037856
+    },
+    {
+      "accident": "LOCAC",
+      "case": 80,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.950004531217424
+    },
+    {
+      "accident": "LOCAC",
+      "case": 81,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 56.07631419400054
+    },
+    {
+      "accident": "LOCAC",
+      "case": 82,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 36.33457638169691
+    },
+    {
+      "accident": "LOCAC",
+      "case": 83,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.79653501585439
+    },
+    {
+      "accident": "LOCAC",
+      "case": 84,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 44.643462598872716
+    },
+    {
+      "accident": "LOCAC",
+      "case": 85,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 47.62028176509522
+    },
+    {
+      "accident": "LOCAC",
+      "case": 86,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.89654397126782
+    },
+    {
+      "accident": "LOCAC",
+      "case": 87,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.70972117953861
+    },
+    {
+      "accident": "LOCAC",
+      "case": 88,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 50.54882963344528
+    },
+    {
+      "accident": "LOCAC",
+      "case": 89,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.758586333849635
+    },
+    {
+      "accident": "LOCAC",
+      "case": 90,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 47.33713924011928
+    },
+    {
+      "accident": "LOCAC",
+      "case": 91,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 55.295401729915014
+    },
+    {
+      "accident": "LOCAC",
+      "case": 92,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 47.25564798794666
+    },
+    {
+      "accident": "LOCAC",
+      "case": 93,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 49.050875663094644
+    },
+    {
+      "accident": "LOCAC",
+      "case": 94,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 54.37380403125399
+    },
+    {
+      "accident": "LOCAC",
+      "case": 95,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 50.54893918581374
+    },
+    {
+      "accident": "LOCAC",
+      "case": 96,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 53.423787323735986
+    },
+    {
+      "accident": "LOCAC",
+      "case": 97,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 54.86255205227378
+    },
+    {
+      "accident": "LOCAC",
+      "case": 98,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 53.04217137983363
+    },
+    {
+      "accident": "LOCAC",
+      "case": 99,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 40.31229143419031
+    },
+    {
+      "accident": "LOCAC",
+      "case": 100,
+      "alarm": true,
+      "first_alarm_s": 130.0,
+      "peak_score": 46.64975201066988
+    },
+    {
+      "accident": "FLB",
+      "case": 1,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 7.750609564112517
+    },
+    {
+      "accident": "FLB",
+      "case": 2,
+      "alarm": true,
+      "first_alarm_s": 770.0,
+      "peak_score": 14.011547804567034
+    },
+    {
+      "accident": "FLB",
+      "case": 3,
+      "alarm": true,
+      "first_alarm_s": 540.0,
+      "peak_score": 20.719894511693365
+    },
+    {
+      "accident": "FLB",
+      "case": 4,
+      "alarm": true,
+      "first_alarm_s": 430.0,
+      "peak_score": 24.649932250158262
+    },
+    {
+      "accident": "FLB",
+      "case": 5,
+      "alarm": true,
+      "first_alarm_s": 370.0,
+      "peak_score": 25.06876727107926
+    },
+    {
+      "accident": "FLB",
+      "case": 6,
+      "alarm": true,
+      "first_alarm_s": 330.0,
+      "peak_score": 25.067429913529455
+    },
+    {
+      "accident": "FLB",
+      "case": 7,
+      "alarm": true,
+      "first_alarm_s": 300.0,
+      "peak_score": 22.51320466477898
+    },
+    {
+      "accident": "FLB",
+      "case": 8,
+      "alarm": true,
+      "first_alarm_s": 280.0,
+      "peak_score": 21.137134500571097
+    },
+    {
+      "accident": "FLB",
+      "case": 9,
+      "alarm": true,
+      "first_alarm_s": 260.0,
+      "peak_score": 21.16689957183004
+    },
+    {
+      "accident": "FLB",
+      "case": 10,
+      "alarm": true,
+      "first_alarm_s": 240.0,
+      "peak_score": 19.222717484412033
+    },
+    {
+      "accident": "FLB",
+      "case": 11,
+      "alarm": true,
+      "first_alarm_s": 230.0,
+      "peak_score": 17.833067485101946
+    },
+    {
+      "accident": "FLB",
+      "case": 12,
+      "alarm": true,
+      "first_alarm_s": 220.0,
+      "peak_score": 18.022909518229874
+    },
+    {
+      "accident": "FLB",
+      "case": 13,
+      "alarm": true,
+      "first_alarm_s": 220.0,
+      "peak_score": 18.97469269633731
+    },
+    {
+      "accident": "FLB",
+      "case": 14,
+      "alarm": true,
+      "first_alarm_s": 210.0,
+      "peak_score": 19.718383150764694
+    },
+    {
+      "accident": "FLB",
+      "case": 15,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 20.37785033041229
+    },
+    {
+      "accident": "FLB",
+      "case": 16,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 20.91815129687366
+    },
+    {
+      "accident": "FLB",
+      "case": 17,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 21.42029067585131
+    },
+    {
+      "accident": "FLB",
+      "case": 18,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 21.947939668111665
+    },
+    {
+      "accident": "FLB",
+      "case": 19,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 22.603233338571314
+    },
+    {
+      "accident": "FLB",
+      "case": 20,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 23.311790732135236
+    },
+    {
+      "accident": "FLB",
+      "case": 21,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 23.824333013097686
+    },
+    {
+      "accident": "FLB",
+      "case": 22,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.45488556888596
+    },
+    {
+      "accident": "FLB",
+      "case": 23,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.98325709050256
+    },
+    {
+      "accident": "FLB",
+      "case": 24,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.98183903034199
+    },
+    {
+      "accident": "FLB",
+      "case": 25,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.05125480454346
+    },
+    {
+      "accident": "FLB",
+      "case": 26,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.042907848801583
+    },
+    {
+      "accident": "FLB",
+      "case": 27,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.08998052876581
+    },
+    {
+      "accident": "FLB",
+      "case": 28,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.058829321010887
+    },
+    {
+      "accident": "FLB",
+      "case": 29,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.03864213937546
+    },
+    {
+      "accident": "FLB",
+      "case": 30,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.086844655890406
+    },
+    {
+      "accident": "FLB",
+      "case": 31,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.070185331239852
+    },
+    {
+      "accident": "FLB",
+      "case": 32,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.04034842314592
+    },
+    {
+      "accident": "FLB",
+      "case": 33,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 26.31714442804388
+    },
+    {
+      "accident": "FLB",
+      "case": 34,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 27.510505462356207
+    },
+    {
+      "accident": "FLB",
+      "case": 35,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 28.683448736145234
+    },
+    {
+      "accident": "FLB",
+      "case": 36,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 29.779724529708417
+    },
+    {
+      "accident": "FLB",
+      "case": 37,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 30.761425673875443
+    },
+    {
+      "accident": "FLB",
+      "case": 38,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 31.67646646155137
+    },
+    {
+      "accident": "FLB",
+      "case": 39,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 32.68779271715555
+    },
+    {
+      "accident": "FLB",
+      "case": 40,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 33.688520895231754
+    },
+    {
+      "accident": "FLB",
+      "case": 41,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 34.39099100615518
+    },
+    {
+      "accident": "FLB",
+      "case": 42,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.497440649073354
+    },
+    {
+      "accident": "FLB",
+      "case": 43,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.566955549936594
+    },
+    {
+      "accident": "FLB",
+      "case": 44,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.69019331746908
+    },
+    {
+      "accident": "FLB",
+      "case": 45,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.77702772341993
+    },
+    {
+      "accident": "FLB",
+      "case": 46,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.78893709541381
+    },
+    {
+      "accident": "FLB",
+      "case": 47,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.891988286823164
+    },
+    {
+      "accident": "FLB",
+      "case": 48,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.994897894477674
+    },
+    {
+      "accident": "FLB",
+      "case": 49,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 35.99983698931007
+    },
+    {
+      "accident": "FLB",
+      "case": 50,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.07050634232819
+    },
+    {
+      "accident": "FLB",
+      "case": 51,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.17317634670527
+    },
+    {
+      "accident": "FLB",
+      "case": 52,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.25536571639145
+    },
+    {
+      "accident": "FLB",
+      "case": 53,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.33707043399375
+    },
+    {
+      "accident": "FLB",
+      "case": 54,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.276080508830745
+    },
+    {
+      "accident": "FLB",
+      "case": 55,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.35875453060081
+    },
+    {
+      "accident": "FLB",
+      "case": 56,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.440753306770866
+    },
+    {
+      "accident": "FLB",
+      "case": 57,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.5228501024635
+    },
+    {
+      "accident": "FLB",
+      "case": 58,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.60741372280781
+    },
+    {
+      "accident": "FLB",
+      "case": 59,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.70543324539122
+    },
+    {
+      "accident": "FLB",
+      "case": 60,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.8344813924013
+    },
+    {
+      "accident": "FLB",
+      "case": 61,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 36.92988706104915
+    },
+    {
+      "accident": "FLB",
+      "case": 62,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.02591896553572
+    },
+    {
+      "accident": "FLB",
+      "case": 63,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.12258255139006
+    },
+    {
+      "accident": "FLB",
+      "case": 64,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.218037229799194
+    },
+    {
+      "accident": "FLB",
+      "case": 65,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.31257161380186
+    },
+    {
+      "accident": "FLB",
+      "case": 66,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.3770956873069
+    },
+    {
+      "accident": "FLB",
+      "case": 67,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.451928147270294
+    },
+    {
+      "accident": "FLB",
+      "case": 68,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.52134230584644
+    },
+    {
+      "accident": "FLB",
+      "case": 69,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.56940999061554
+    },
+    {
+      "accident": "FLB",
+      "case": 70,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.61539203776522
+    },
+    {
+      "accident": "FLB",
+      "case": 71,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.68437055401877
+    },
+    {
+      "accident": "FLB",
+      "case": 72,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.73059764997491
+    },
+    {
+      "accident": "FLB",
+      "case": 73,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.77430346598904
+    },
+    {
+      "accident": "FLB",
+      "case": 74,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 37.819321654499994
+    },
+    {
+      "accident": "FLB",
+      "case": 75,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 37.86283687699799
+    },
+    {
+      "accident": "FLB",
+      "case": 76,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 37.9047075497282
+    },
+    {
+      "accident": "FLB",
+      "case": 77,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 37.94711188430359
+    },
+    {
+      "accident": "FLB",
+      "case": 78,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 37.98868849846605
+    },
+    {
+      "accident": "FLB",
+      "case": 79,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.02993293535754
+    },
+    {
+      "accident": "FLB",
+      "case": 80,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.071171926719984
+    },
+    {
+      "accident": "FLB",
+      "case": 81,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.11328220272762
+    },
+    {
+      "accident": "FLB",
+      "case": 82,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.15471723313524
+    },
+    {
+      "accident": "FLB",
+      "case": 83,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.17538846134227
+    },
+    {
+      "accident": "FLB",
+      "case": 84,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.216774481988594
+    },
+    {
+      "accident": "FLB",
+      "case": 85,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.258209512396206
+    },
+    {
+      "accident": "FLB",
+      "case": 86,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.27877727555163
+    },
+    {
+      "accident": "FLB",
+      "case": 87,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.3201197319657
+    },
+    {
+      "accident": "FLB",
+      "case": 88,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.34068749512112
+    },
+    {
+      "accident": "FLB",
+      "case": 89,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.381735892967434
+    },
+    {
+      "accident": "FLB",
+      "case": 90,
+      "alarm": true,
+      "first_alarm_s": 170.0,
+      "peak_score": 38.40226009189059
+    },
+    {
+      "accident": "FLB",
+      "case": 91,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.44335749949819
+    },
+    {
+      "accident": "FLB",
+      "case": 92,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.463832688660055
+    },
+    {
+      "accident": "FLB",
+      "case": 93,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.484307877821934
+    },
+    {
+      "accident": "FLB",
+      "case": 94,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.52549785942309
+    },
+    {
+      "accident": "FLB",
+      "case": 95,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.54602205834625
+    },
+    {
+      "accident": "FLB",
+      "case": 96,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.564705668456455
+    },
+    {
+      "accident": "FLB",
+      "case": 97,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.58527887714091
+    },
+    {
+      "accident": "FLB",
+      "case": 98,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.58968431012813
+    },
+    {
+      "accident": "FLB",
+      "case": 99,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.580484088827866
+    },
+    {
+      "accident": "FLB",
+      "case": 100,
+      "alarm": true,
+      "first_alarm_s": 160.0,
+      "peak_score": 38.60115531703491
+    },
+    {
+      "accident": "SLBIC",
+      "case": 1,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 5.617586198042408
+    },
+    {
+      "accident": "SLBIC",
+      "case": 2,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 5.615590766170186
+    },
+    {
+      "accident": "SLBIC",
+      "case": 3,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 5.614471205872315
+    },
+    {
+      "accident": "SLBIC",
+      "case": 4,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 6.537765502929702
+    },
+    {
+      "accident": "SLBIC",
+      "case": 5,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 6.543968200683594
+    },
+    {
+      "accident": "SLBIC",
+      "case": 6,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 7.5285186767578125
+    },
+    {
+      "accident": "SLBIC",
+      "case": 7,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.772005601044345
+    },
+    {
+      "accident": "SLBIC",
+      "case": 8,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.776584487433007
+    },
+    {
+      "accident": "SLBIC",
+      "case": 9,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.7803316891093
+    },
+    {
+      "accident": "SLBIC",
+      "case": 10,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.783232189543693
+    },
+    {
+      "accident": "SLBIC",
+      "case": 11,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.785312556442275
+    },
+    {
+      "accident": "SLBIC",
+      "case": 12,
+      "alarm": true,
+      "first_alarm_s": 790.0,
+      "peak_score": 11.786634588599648
+    },
+    {
+      "accident": "SLBIC",
+      "case": 13,
+      "alarm": true,
+      "first_alarm_s": 600.0,
+      "peak_score": 11.787553484695053
+    },
+    {
+      "accident": "SLBIC",
+      "case": 14,
+      "alarm": true,
+      "first_alarm_s": 600.0,
+      "peak_score": 11.787176916339174
+    },
+    {
+      "accident": "SLBIC",
+      "case": 15,
+      "alarm": true,
+      "first_alarm_s": 600.0,
+      "peak_score": 11.785481203620062
+    },
+    {
+      "accident": "SLBIC",
+      "case": 16,
+      "alarm": true,
+      "first_alarm_s": 550.0,
+      "peak_score": 11.78273953186338
+    },
+    {
+      "accident": "SLBIC",
+      "case": 17,
+      "alarm": true,
+      "first_alarm_s": 480.0,
+      "peak_score": 12.045533335308624
+    },
+    {
+      "accident": "SLBIC",
+      "case": 18,
+      "alarm": true,
+      "first_alarm_s": 480.0,
+      "peak_score": 12.515360877288105
+    },
+    {
+      "accident": "SLBIC",
+      "case": 19,
+      "alarm": true,
+      "first_alarm_s": 480.0,
+      "peak_score": 12.954360021955699
+    },
+    {
+      "accident": "SLBIC",
+      "case": 20,
+      "alarm": true,
+      "first_alarm_s": 480.0,
+      "peak_score": 13.215951770275176
+    },
+    {
+      "accident": "SLBIC",
+      "case": 21,
+      "alarm": true,
+      "first_alarm_s": 480.0,
+      "peak_score": 13.721968668710154
+    },
+    {
+      "accident": "SLBIC",
+      "case": 22,
+      "alarm": true,
+      "first_alarm_s": 450.0,
+      "peak_score": 14.264797486597889
+    },
+    {
+      "accident": "SLBIC",
+      "case": 23,
+      "alarm": true,
+      "first_alarm_s": 410.0,
+      "peak_score": 15.457455255302131
+    },
+    {
+      "accident": "SLBIC",
+      "case": 24,
+      "alarm": true,
+      "first_alarm_s": 410.0,
+      "peak_score": 16.33983454350741
+    },
+    {
+      "accident": "SLBIC",
+      "case": 25,
+      "alarm": true,
+      "first_alarm_s": 400.0,
+      "peak_score": 17.30723979662481
+    },
+    {
+      "accident": "SLBIC",
+      "case": 26,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 20.909039905407884
+    },
+    {
+      "accident": "SLBIC",
+      "case": 27,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 21.215390541262032
+    },
+    {
+      "accident": "SLBIC",
+      "case": 28,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 21.537947347541525
+    },
+    {
+      "accident": "SLBIC",
+      "case": 29,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 21.796253346708443
+    },
+    {
+      "accident": "SLBIC",
+      "case": 30,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 22.17472515905964
+    },
+    {
+      "accident": "SLBIC",
+      "case": 31,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 22.638542648866242
+    },
+    {
+      "accident": "SLBIC",
+      "case": 32,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 23.087518176821956
+    },
+    {
+      "accident": "SLBIC",
+      "case": 33,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 23.63683779040402
+    },
+    {
+      "accident": "SLBIC",
+      "case": 34,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 23.75709620938684
+    },
+    {
+      "accident": "SLBIC",
+      "case": 35,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.108648310819415
+    },
+    {
+      "accident": "SLBIC",
+      "case": 36,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.466852613167827
+    },
+    {
+      "accident": "SLBIC",
+      "case": 37,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.949846209646243
+    },
+    {
+      "accident": "SLBIC",
+      "case": 38,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.975601871424367
+    },
+    {
+      "accident": "SLBIC",
+      "case": 39,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.995408597894745
+    },
+    {
+      "accident": "SLBIC",
+      "case": 40,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.958216223276914
+    },
+    {
+      "accident": "SLBIC",
+      "case": 41,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 24.97072512794534
+    },
+    {
+      "accident": "SLBIC",
+      "case": 42,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.041143920309167
+    },
+    {
+      "accident": "SLBIC",
+      "case": 43,
+      "alarm": true,
+      "first_alarm_s": 180.0,
+      "peak_score": 25.03897813334994
+    },
+    {
+      "accident": "SLBIC",
+      "case": 44,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.007744568397246
+    },
+    {
+      "accident": "SLBIC",
+      "case": 45,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.051612201819704
+    },
+    {
+      "accident": "SLBIC",
+      "case": 46,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.007341055343428
+    },
+    {
+      "accident": "SLBIC",
+      "case": 47,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.067925658138435
+    },
+    {
+      "accident": "SLBIC",
+      "case": 48,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.050021207493213
+    },
+    {
+      "accident": "SLBIC",
+      "case": 49,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.018005328908675
+    },
+    {
+      "accident": "SLBIC",
+      "case": 50,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.073252030448863
+    },
+    {
+      "accident": "SLBIC",
+      "case": 51,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.06399428809979
+    },
+    {
+      "accident": "SLBIC",
+      "case": 52,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.040325365257132
+    },
+    {
+      "accident": "SLBIC",
+      "case": 53,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.034929819280336
+    },
+    {
+      "accident": "SLBIC",
+      "case": 54,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.05177360704123
+    },
+    {
+      "accident": "SLBIC",
+      "case": 55,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.0900497024322
+    },
+    {
+      "accident": "SLBIC",
+      "case": 56,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.065792803425385
+    },
+    {
+      "accident": "SLBIC",
+      "case": 57,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.078589931703686
+    },
+    {
+      "accident": "SLBIC",
+      "case": 58,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 25.44183238275265
+    },
+    {
+      "accident": "SLBIC",
+      "case": 59,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 26.1180049715114
+    },
+    {
+      "accident": "SLBIC",
+      "case": 60,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 26.796679341203834
+    },
+    {
+      "accident": "SLBIC",
+      "case": 61,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 27.455500868648315
+    },
+    {
+      "accident": "SLBIC",
+      "case": 62,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 28.128214774088605
+    },
+    {
+      "accident": "SLBIC",
+      "case": 63,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 28.770469208437664
+    },
+    {
+      "accident": "SLBIC",
+      "case": 64,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 29.410417853907752
+    },
+    {
+      "accident": "SLBIC",
+      "case": 65,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 30.044567440347222
+    },
+    {
+      "accident": "SLBIC",
+      "case": 66,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 30.66036294731007
+    },
+    {
+      "accident": "SLBIC",
+      "case": 67,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 31.281934455414746
+    },
+    {
+      "accident": "SLBIC",
+      "case": 68,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 31.9125331269806
+    },
+    {
+      "accident": "SLBIC",
+      "case": 69,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 32.52779830250128
+    },
+    {
+      "accident": "SLBIC",
+      "case": 70,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 33.12808737925304
+    },
+    {
+      "accident": "SLBIC",
+      "case": 71,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 33.73449832547849
+    },
+    {
+      "accident": "SLBIC",
+      "case": 72,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 34.31515360992577
+    },
+    {
+      "accident": "SLBIC",
+      "case": 73,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 34.89223492161067
+    },
+    {
+      "accident": "SLBIC",
+      "case": 74,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 35.584974603464836
+    },
+    {
+      "accident": "SLBIC",
+      "case": 75,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 36.276146348881305
+    },
+    {
+      "accident": "SLBIC",
+      "case": 76,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 36.926494102195555
+    },
+    {
+      "accident": "SLBIC",
+      "case": 77,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 37.594215974712874
+    },
+    {
+      "accident": "SLBIC",
+      "case": 78,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 38.237519543001866
+    },
+    {
+      "accident": "SLBIC",
+      "case": 79,
+      "alarm": true,
+      "first_alarm_s": 210.0,
+      "peak_score": 38.892513460907246
+    },
+    {
+      "accident": "SLBIC",
+      "case": 80,
+      "alarm": true,
+      "first_alarm_s": 210.0,
+      "peak_score": 39.52978739127771
+    },
+    {
+      "accident": "SLBIC",
+      "case": 81,
+      "alarm": true,
+      "first_alarm_s": 210.0,
+      "peak_score": 40.161123915284854
+    },
+    {
+      "accident": "SLBIC",
+      "case": 82,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 40.76982912144486
+    },
+    {
+      "accident": "SLBIC",
+      "case": 83,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 41.368400385481785
+    },
+    {
+      "accident": "SLBIC",
+      "case": 84,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 41.960769077434264
+    },
+    {
+      "accident": "SLBIC",
+      "case": 85,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 42.54588606336238
+    },
+    {
+      "accident": "SLBIC",
+      "case": 86,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 43.15657424795831
+    },
+    {
+      "accident": "SLBIC",
+      "case": 87,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 43.73706812718408
+    },
+    {
+      "accident": "SLBIC",
+      "case": 88,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 44.34595779645441
+    },
+    {
+      "accident": "SLBIC",
+      "case": 89,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 44.93909892768135
+    },
+    {
+      "accident": "SLBIC",
+      "case": 90,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 45.546409131569575
+    },
+    {
+      "accident": "SLBIC",
+      "case": 91,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 46.11241112769101
+    },
+    {
+      "accident": "SLBIC",
+      "case": 92,
+      "alarm": true,
+      "first_alarm_s": 200.0,
+      "peak_score": 46.70105597060395
+    },
+    {
+      "accident": "SLBIC",
+      "case": 93,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 47.24087573400465
+    },
+    {
+      "accident": "SLBIC",
+      "case": 94,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 47.81341464159795
+    },
+    {
+      "accident": "SLBIC",
+      "case": 95,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 48.352277502613894
+    },
+    {
+      "accident": "SLBIC",
+      "case": 96,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 48.89032180857779
+    },
+    {
+      "accident": "SLBIC",
+      "case": 97,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 49.43236665824669
+    },
+    {
+      "accident": "SLBIC",
+      "case": 98,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 49.95815569631884
+    },
+    {
+      "accident": "SLBIC",
+      "case": 99,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 50.482699608396324
+    },
+    {
+      "accident": "SLBIC",
+      "case": 100,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 51.00569864192493
+    },
+    {
+      "accident": "SLBIC",
+      "case": 101,
+      "alarm": true,
+      "first_alarm_s": 190.0,
+      "peak_score": 51.5089485937051
+    },
+    {
+      "accident": "RW",
+      "case": 1,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 2,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 3,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.928654049927938
+    },
+    {
+      "accident": "RW",
+      "case": 4,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.932024767400664
+    },
+    {
+      "accident": "RW",
+      "case": 5,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.898786820710251
+    },
+    {
+      "accident": "RW",
+      "case": 6,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.899916657260948
+    },
+    {
+      "accident": "RW",
+      "case": 7,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.932024767400664
+    },
+    {
+      "accident": "RW",
+      "case": 8,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.932036296345059
+    },
+    {
+      "accident": "RW",
+      "case": 9,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.932024767400664
+    },
+    {
+      "accident": "RW",
+      "case": 10,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.933189190784545
+    },
+    {
+      "accident": "RW",
+      "case": 11,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.897749215714735
+    },
+    {
+      "accident": "RW",
+      "case": 12,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.930987162405148
+    },
+    {
+      "accident": "RW",
+      "case": 13,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.930987162405148
+    },
+    {
+      "accident": "RW",
+      "case": 14,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.932024767400664
+    },
+    {
+      "accident": "RW",
+      "case": 15,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.96532035881303
+    },
+    {
+      "accident": "RW",
+      "case": 16,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.831227206556372
+    },
+    {
+      "accident": "RW",
+      "case": 17,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.59237053658361
+    },
+    {
+      "accident": "RW",
+      "case": 18,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.249292209281217
+    },
+    {
+      "accident": "RW",
+      "case": 19,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 4.211350453277742
+    },
+    {
+      "accident": "RW",
+      "case": 20,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 3.6749201995291347
+    },
+    {
+      "accident": "RW",
+      "case": 21,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 3.3406730436332497
+    },
+    {
+      "accident": "RW",
+      "case": 22,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.9611517230987356
+    },
+    {
+      "accident": "RW",
+      "case": 23,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.410517809855635
+    },
+    {
+      "accident": "RW",
+      "case": 24,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.171050105829945
+    },
+    {
+      "accident": "RW",
+      "case": 25,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.387819739420493
+    },
+    {
+      "accident": "RW",
+      "case": 26,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.3463847132653746
+    },
+    {
+      "accident": "RW",
+      "case": 27,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.9190759182141296
+    },
+    {
+      "accident": "RW",
+      "case": 28,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.5797492163560957
+    },
+    {
+      "accident": "RW",
+      "case": 29,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.5343808788722051
+    },
+    {
+      "accident": "RW",
+      "case": 30,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.5409882958158059
+    },
+    {
+      "accident": "RW",
+      "case": 31,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 32,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 33,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 34,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 35,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 36,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 37,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 38,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 39,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 40,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 41,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 42,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 43,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 44,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 45,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 46,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 47,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 48,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 49,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 50,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 51,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 52,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 53,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 3.339600851804506
+    },
+    {
+      "accident": "RW",
+      "case": 54,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 3.302396948242303
+    },
+    {
+      "accident": "RW",
+      "case": 55,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.6891032222131397
+    },
+    {
+      "accident": "RW",
+      "case": 56,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.9611517230987356
+    },
+    {
+      "accident": "RW",
+      "case": 57,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.9622930885938272
+    },
+    {
+      "accident": "RW",
+      "case": 58,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 3.0007305892063023
+    },
+    {
+      "accident": "RW",
+      "case": 59,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.56980170561507
+    },
+    {
+      "accident": "RW",
+      "case": 60,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.64935142193965
+    },
+    {
+      "accident": "RW",
+      "case": 61,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.650469729545952
+    },
+    {
+      "accident": "RW",
+      "case": 62,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.171050105829945
+    },
+    {
+      "accident": "RW",
+      "case": 63,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.2121277347088655
+    },
+    {
+      "accident": "RW",
+      "case": 64,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.171050105829945
+    },
+    {
+      "accident": "RW",
+      "case": 65,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 2.171050105829945
+    },
+    {
+      "accident": "RW",
+      "case": 66,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.8060783131217486
+    },
+    {
+      "accident": "RW",
+      "case": 67,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.7647931632437421
+    },
+    {
+      "accident": "RW",
+      "case": 68,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.387819739420493
+    },
+    {
+      "accident": "RW",
+      "case": 69,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.387819739420493
+    },
+    {
+      "accident": "RW",
+      "case": 70,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.3463847132653746
+    },
+    {
+      "accident": "RW",
+      "case": 71,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 1.387819739420493
+    },
+    {
+      "accident": "RW",
+      "case": 72,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.960706936423982
+    },
+    {
+      "accident": "RW",
+      "case": 73,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.8762343608428165
+    },
+    {
+      "accident": "RW",
+      "case": 74,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.5448229574348586
+    },
+    {
+      "accident": "RW",
+      "case": 75,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.551321770325612
+    },
+    {
+      "accident": "RW",
+      "case": 76,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.5779049586438548
+    },
+    {
+      "accident": "RW",
+      "case": 77,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 78,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 79,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 80,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 81,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 82,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 83,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 84,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 85,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 86,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 87,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 88,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 89,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 90,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 91,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 92,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 93,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 94,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 95,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 96,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 97,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 98,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 99,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "RW",
+      "case": 100,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 1,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 2,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 3,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 4,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 5,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 6,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 7,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 8,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 9,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 10,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 11,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 12,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 13,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 14,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 15,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 16,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 17,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 18,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 19,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 20,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 21,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 22,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 23,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 24,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 25,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 26,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 27,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 28,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 29,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 30,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 31,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 32,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 33,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 34,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 35,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 36,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 37,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 38,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 39,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 40,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 41,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 42,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 43,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 44,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 45,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 46,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 47,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 48,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 49,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 50,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 51,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 52,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 53,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 54,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 55,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 56,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 57,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 58,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 59,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 60,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 61,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 62,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 63,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 64,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 65,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 66,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 67,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 68,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 69,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 70,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 71,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 72,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 73,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 74,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 75,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 76,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 77,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 78,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 79,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 80,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 81,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 82,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 83,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 84,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 85,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 86,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 87,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 88,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 89,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 90,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 91,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 92,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 93,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 94,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 95,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 96,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 97,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 98,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 99,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGATR",
+      "case": 100,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 1,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 2,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 3,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 4,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 5,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 6,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 7,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 8,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 9,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 10,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 11,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 12,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 13,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 14,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 15,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 16,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 17,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 18,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 19,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 20,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 21,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 22,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 23,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 24,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 25,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 26,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 27,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 28,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 29,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 30,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 31,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 32,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 33,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 34,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 35,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 36,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 37,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 38,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 39,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 40,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 41,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 42,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 43,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 44,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 45,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 46,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 47,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 48,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 49,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 50,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 51,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 52,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 53,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 54,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 55,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 56,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 57,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 58,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 59,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 60,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 61,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 62,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 63,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 64,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 65,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 66,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 67,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 68,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 69,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 70,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 71,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 72,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 73,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 74,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 75,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 76,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 77,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 78,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 79,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 80,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 81,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 82,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 83,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 84,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 85,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 86,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 87,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 88,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 89,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 90,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 91,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 92,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 93,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 94,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 95,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 96,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 97,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 98,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 99,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 100,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 101,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 102,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 103,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 104,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 105,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 106,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 107,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 108,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 109,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "accident": "SGBTR",
+      "case": 110,
+      "alarm": false,
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    }
+  ],
+  "centroid_classifier": {
+    "rows": [
+      {
+        "accident": "FLB",
+        "case": 51,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 52,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 53,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 54,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 55,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 56,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 57,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 58,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 59,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 60,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 61,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 62,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 63,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 64,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 65,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 66,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 67,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 68,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 69,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 70,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 71,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 72,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 73,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 74,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 75,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 76,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 77,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 78,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 79,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 80,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 81,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 82,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 83,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 84,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 85,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 86,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 87,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 88,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 89,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 90,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 91,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 92,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 93,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 94,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 95,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 96,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 97,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "FLB",
+        "case": 98,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "FLB",
+        "case": 99,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "FLB",
+        "case": 100,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "LOCA",
+        "case": 51,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 52,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 53,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 54,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 55,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 56,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 57,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 58,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 59,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 60,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 61,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 62,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 63,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 64,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 65,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 66,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 67,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 68,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 69,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 70,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 71,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 72,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 73,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 74,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 75,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 76,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 77,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 78,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 79,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 80,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 81,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 82,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 83,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 84,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 85,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 86,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 87,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 88,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 89,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 90,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 91,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 92,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 93,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 94,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 95,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 96,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 97,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 98,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 99,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCA",
+        "case": 100,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 51,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 52,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 53,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 54,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 55,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 56,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 57,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 58,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 59,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 60,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 61,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 62,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 63,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 64,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 65,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 66,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 67,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 68,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 69,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 70,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 71,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 72,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 73,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 74,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 75,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 76,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 77,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 78,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 79,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 80,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 81,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 82,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 83,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 84,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 85,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 86,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 87,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 88,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 89,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 90,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 91,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 92,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 93,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 94,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 95,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 96,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 97,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 98,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 99,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "LOCAC",
+        "case": 100,
+        "actual": "LOCA_family",
+        "predicted": "LOCA_family",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 51,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 52,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 53,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 54,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 55,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 56,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 57,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 58,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 59,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 60,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 61,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 62,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 63,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 64,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 65,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 66,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 67,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 68,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 69,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 70,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 71,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 72,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 73,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 74,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 75,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 76,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 77,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 78,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 79,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 80,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 81,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 82,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 83,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 84,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 85,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 86,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 87,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 88,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 89,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 90,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 91,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 92,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 93,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 94,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 95,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 96,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 97,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 98,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 99,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "RW",
+        "case": 100,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 51,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 52,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 53,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 54,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 55,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 56,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 57,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 58,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 59,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 60,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 61,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 62,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 63,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 64,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 65,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 66,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 67,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 68,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 69,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 70,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 71,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 72,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 73,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 74,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 75,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 76,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 77,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 78,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 79,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 80,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 81,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 82,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 83,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 84,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 85,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 86,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 87,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 88,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 89,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 90,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 91,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 92,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 93,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 94,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 95,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 96,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 97,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 98,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 99,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGATR",
+        "case": 100,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 51,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 52,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 53,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 54,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 55,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 56,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 57,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 58,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 59,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 60,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 61,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 62,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 63,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 64,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 65,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 66,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 67,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 68,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 69,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 70,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 71,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 72,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 73,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 74,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 75,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 76,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 77,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 78,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 79,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 80,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 81,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 82,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 83,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 84,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 85,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 86,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 87,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 88,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 89,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 90,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 91,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 92,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 93,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 94,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 95,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 96,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 97,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 98,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 99,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 100,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 101,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 102,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 103,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 104,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 105,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 106,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 107,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 108,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 109,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SGBTR",
+        "case": 110,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 51,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 52,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 53,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 54,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 55,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 56,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 57,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 58,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 59,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 60,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 61,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 62,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 63,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 64,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 65,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 66,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 67,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 68,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 69,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 70,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 71,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 72,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 73,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 74,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 75,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 76,
+        "actual": "Other",
+        "predicted": "Other",
+        "correct": true
+      },
+      {
+        "accident": "SLBIC",
+        "case": 77,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 78,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 79,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 80,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 81,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 82,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 83,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 84,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 85,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 86,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 87,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 88,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 89,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 90,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 91,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 92,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 93,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 94,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 95,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 96,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 97,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 98,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 99,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 100,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      },
+      {
+        "accident": "SLBIC",
+        "case": 101,
+        "actual": "Other",
+        "predicted": "LOCA_family",
+        "correct": false
+      }
+    ],
+    "accuracy": 0.9224376731301939
+  }
+}

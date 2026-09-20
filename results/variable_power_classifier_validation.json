@@ -1,0 +1,96 @@
+{
+  "task": "variable_power_cross_direction_classifier",
+  "validation": {
+    "window_after_injection_s": 500.0,
+    "confidence_threshold": 0.6,
+    "faults": [
+      "LOCA",
+      "RW",
+      "SGATR",
+      "SGBTR"
+    ],
+    "direction_splits": [
+      {
+        "train_direction": "increase",
+        "test_direction": "decrease",
+        "plain_accuracy": 0.75,
+        "plain_balanced_accuracy": 0.75,
+        "accepted_cases": 2,
+        "coverage": 0.5,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "predictions": [
+          {
+            "scenario": "LOCA_100_to_80",
+            "actual": "LOCA",
+            "predicted": "LOCA",
+            "confidence": 0.9665305452627969,
+            "accepted": true
+          },
+          {
+            "scenario": "RW_100_to_80",
+            "actual": "RW",
+            "predicted": "RW",
+            "confidence": 0.9734688628807975,
+            "accepted": true
+          },
+          {
+            "scenario": "SGATR_100_to_80",
+            "actual": "SGATR",
+            "predicted": "SGBTR",
+            "confidence": 0.4942811620253882,
+            "accepted": false
+          },
+          {
+            "scenario": "SGBTR_100_to_80",
+            "actual": "SGBTR",
+            "predicted": "SGBTR",
+            "confidence": 0.4943810663230269,
+            "accepted": false
+          }
+        ]
+      },
+      {
+        "train_direction": "decrease",
+        "test_direction": "increase",
+        "plain_accuracy": 0.75,
+        "plain_balanced_accuracy": 0.75,
+        "accepted_cases": 2,
+        "coverage": 0.5,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "predictions": [
+          {
+            "scenario": "LOCA_80_to_100",
+            "actual": "LOCA",
+            "predicted": "LOCA",
+            "confidence": 0.9669796669085224,
+            "accepted": true
+          },
+          {
+            "scenario": "RW_80_to_100",
+            "actual": "RW",
+            "predicted": "RW",
+            "confidence": 0.9834225639411208,
+            "accepted": true
+          },
+          {
+            "scenario": "SGATR_80_to_100",
+            "actual": "SGATR",
+            "predicted": "SGATR",
+            "confidence": 0.4938840755617834,
+            "accepted": false
+          },
+          {
+            "scenario": "SGBTR_80_to_100",
+            "actual": "SGBTR",
+            "predicted": "SGATR",
+            "confidence": 0.49383397072647056,
+            "accepted": false
+          }
+        ]
+      }
+    ]
+  },
+  "limitation": "No variable-power SLBIC scenario is present; this report does not validate LOCA versus SLBIC under changing power."
+}

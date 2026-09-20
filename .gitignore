@@ -157,6 +157,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Large local NPPAD dataset; obtain it separately (see README)
+/data/
+
 # Spyder project settings
 .spyderproject
 .spyproject

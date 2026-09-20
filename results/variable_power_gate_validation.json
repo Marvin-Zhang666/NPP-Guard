@@ -1,0 +1,112 @@
+{
+  "stage": "condition_aware_anomaly_gate",
+  "rule_features": [
+    "WECS",
+    "WSTB",
+    "SCMA",
+    "TRB",
+    "PRB",
+    "LWRB",
+    "PRBA"
+  ],
+  "threshold": 5.0,
+  "min_consecutive": 3,
+  "scale_source": "complete matching normal transition template",
+  "classification_stage": "not transferred across power conditions; requires separate validation",
+  "rows": [
+    {
+      "normal_reference": "NORM_80_to_100",
+      "scenario": "LOCA_80_to_100",
+      "fault": "LOCA",
+      "first_alarm_s": 2440.0,
+      "peak_score": 24.91283829813873,
+      "injection_s": 2298.5,
+      "detection_delay_s": 141.5,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_80_to_100",
+      "scenario": "RW_80_to_100",
+      "fault": "RW",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 2296.5,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_80_to_100",
+      "scenario": "SGATR_80_to_100",
+      "fault": "SGATR",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 2303.0,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_80_to_100",
+      "scenario": "SGBTR_80_to_100",
+      "fault": "SGBTR",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 2299.5,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_100_to_80",
+      "scenario": "LOCA_100_to_80",
+      "fault": "LOCA",
+      "first_alarm_s": 1060.0,
+      "peak_score": 24.96394610864116,
+      "injection_s": 915.0,
+      "detection_delay_s": 145.0,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_100_to_80",
+      "scenario": "RW_100_to_80",
+      "fault": "RW",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 917.0,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_100_to_80",
+      "scenario": "SGATR_100_to_80",
+      "fault": "SGATR",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 905.0,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_100_to_80",
+      "scenario": "SGBTR_100_to_80",
+      "fault": "SGBTR",
+      "first_alarm_s": null,
+      "peak_score": 0.0,
+      "injection_s": 910.0,
+      "detection_delay_s": null,
+      "pre_injection_alarm": false
+    },
+    {
+      "normal_reference": "NORM_80_to_100",
+      "scenario": "NORM_80_to_100",
+      "fault": "Normal",
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    },
+    {
+      "normal_reference": "NORM_100_to_80",
+      "scenario": "NORM_100_to_80",
+      "fault": "Normal",
+      "first_alarm_s": null,
+      "peak_score": 0.0
+    }
+  ]
+}

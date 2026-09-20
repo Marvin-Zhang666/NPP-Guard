@@ -1,0 +1,156 @@
+{
+  "task": "gated_LOCA_SLBIC_FLB_classifier",
+  "unknown_policy": "max_probability_below_threshold",
+  "validation": {
+    "cutoff_s": 100.0,
+    "confidence_threshold": 0.6,
+    "classes": [
+      "LOCA",
+      "SLBIC",
+      "FLB"
+    ],
+    "features": [
+      "P",
+      "TSAT",
+      "HUP",
+      "LVCR",
+      "QMWT",
+      "WSTB",
+      "WSTA",
+      "WFWB",
+      "WFWA",
+      "QMGA",
+      "QMGB",
+      "TFSB",
+      "TFPK",
+      "TF",
+      "TBLD",
+      "DNBR",
+      "SCMA",
+      "SCMB",
+      "VOL",
+      "TRB",
+      "PRB",
+      "RRCB",
+      "WRCB",
+      "RRCO",
+      "WRCA",
+      "RRCA"
+    ],
+    "folds": [
+      {
+        "fold": "1-20",
+        "test_cases": 60,
+        "plain_accuracy": 1.0,
+        "accepted_cases": 40,
+        "coverage": 0.6666666666666666,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "accepted_by_class": {
+          "LOCA": 20,
+          "SLBIC": 20,
+          "FLB": 0
+        },
+        "rejected_by_class": {
+          "LOCA": 0,
+          "SLBIC": 0,
+          "FLB": 20
+        }
+      },
+      {
+        "fold": "21-40",
+        "test_cases": 60,
+        "plain_accuracy": 0.75,
+        "accepted_cases": 25,
+        "coverage": 0.4166666666666667,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "accepted_by_class": {
+          "LOCA": 20,
+          "SLBIC": 5,
+          "FLB": 0
+        },
+        "rejected_by_class": {
+          "LOCA": 0,
+          "SLBIC": 15,
+          "FLB": 20
+        }
+      },
+      {
+        "fold": "41-60",
+        "test_cases": 60,
+        "plain_accuracy": 0.6666666666666666,
+        "accepted_cases": 20,
+        "coverage": 0.3333333333333333,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "accepted_by_class": {
+          "LOCA": 20,
+          "SLBIC": 0,
+          "FLB": 0
+        },
+        "rejected_by_class": {
+          "LOCA": 0,
+          "SLBIC": 20,
+          "FLB": 20
+        }
+      },
+      {
+        "fold": "61-80",
+        "test_cases": 60,
+        "plain_accuracy": 0.6666666666666666,
+        "accepted_cases": 20,
+        "coverage": 0.3333333333333333,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "accepted_by_class": {
+          "LOCA": 20,
+          "SLBIC": 0,
+          "FLB": 0
+        },
+        "rejected_by_class": {
+          "LOCA": 0,
+          "SLBIC": 20,
+          "FLB": 20
+        }
+      },
+      {
+        "fold": "81-100",
+        "test_cases": 60,
+        "plain_accuracy": 0.6666666666666666,
+        "accepted_cases": 20,
+        "coverage": 0.3333333333333333,
+        "accepted_accuracy": 1.0,
+        "accepted_errors": 0,
+        "accepted_by_class": {
+          "LOCA": 20,
+          "SLBIC": 0,
+          "FLB": 0
+        },
+        "rejected_by_class": {
+          "LOCA": 0,
+          "SLBIC": 20,
+          "FLB": 20
+        }
+      }
+    ],
+    "mean_plain_accuracy": 0.7499999999999999,
+    "mean_coverage": 0.41666666666666663,
+    "accepted_errors_total": 0,
+    "accepted_accuracy_when_available": 1.0,
+    "protection_audit": {
+      "LOCA": {
+        "known_reports": 100,
+        "protection_at_or_before_cutoff": 1
+      },
+      "SLBIC": {
+        "known_reports": 87,
+        "protection_at_or_before_cutoff": 0
+      },
+      "FLB": {
+        "known_reports": 99,
+        "protection_at_or_before_cutoff": 0
+      }
+    }
+  }
+}
