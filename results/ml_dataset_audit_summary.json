@@ -1,0 +1,16 @@
+{
+  "ready_for_random_forest_baseline": false,
+  "fixed_power_normal_trajectories": 1,
+  "variable_power_normal_trajectories": 4,
+  "loca_trajectories": 100,
+  "unique_injection_times": 1,
+  "injection_time_s": 0.5,
+  "first_protection_min_s": 45.0,
+  "first_protection_median_s": 126.75,
+  "first_protection_max_s": 2031.5,
+  "strict_candidate_feature_count": 38,
+  "excluded_feature_count": 59,
+  "event_table_path": "results/loca_event_table.csv",
+  "feature_table_path": "results/feature_groups.csv",
+  "audit_table_path": "results/ml_dataset_audit_summary.csv"
+}

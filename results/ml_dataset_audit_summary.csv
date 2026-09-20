@@ -1,0 +1,8 @@
+check,status,evidence,action
+same_sample_id_across_splits,pass_for_template,Each of 100 LOCA trajectories is assigned to exactly one split.,Keep sample_id as the grouping unit.
+row_random_split,high_risk,471 time coordinates are shared across LOCA trajectories.,Do not use random row train_test_split.
+direct_label_variables,high_risk,Break/leak columns are identified in the README-backed feature table.,Exclude the direct_accident_or_leak group.
+post_protection_observations,high_risk,The report table supplies a first protection time for every LOCA case.,Use injection_s < TIME < first_protection_s for Early LOCA.
+severity_label_coupling,high_risk,The 1..100 LOCA filename is the README-defined break severity setting.,Use severity only for stratification/reporting.
+normal_sample_size,blocker,There is one fixed-power Normal CSV trajectory; four other Normal cases are variable-power MDB scenarios.,Acquire independent matched fixed-power Normal trajectories.
+normal_loca_condition_match,review,Normal and LOCA match at TIME=0 but diverge by TIME=10 and more by TIME=100.,Quantify operating-condition confounding before binary training.
