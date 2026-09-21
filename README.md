@@ -174,6 +174,14 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/15_coverage_aware_task_redesign.ipynb`、`src/coverage_task_redesign.py`、`results/15_*` 和 `results/figures/15_*`。15 阶段 Notebook 已全量执行通过；结果保留显式 `Unknown` reject 状态，但不构成安全部署能力承诺。
 
+## 第三阶段第六步：OOD-aware selective diagnosis
+
+16 阶段在 13 的 trajectory/sample_id grouped random / severity-blocked / severity-extrapolation split 上，使用固定 120 s family-level 诊断比较 calibrated probability、prediction margin、train-only class-conditional distance、组合门和 split conformal prediction。severity extrapolation 下 forced family baseline Macro-F1 为 `0.666`、risk 为 `0.194`；Conformal `alpha=0.10` 的 singleton coverage 为 `75.7%`、Selective Macro-F1 为 `0.670`、risk 为 `0.089`。
+
+Conformal `alpha=0.10` 在 extrapolation test 上的 empirical set coverage 仅为 `68.9%`，因此不能宣称达到 `90%` 统计覆盖保证。Distance OOD proxy 的 AUROC 为 `0.822`，但 standalone distance reject 会显著降低 coverage；建议的研究型策略为：`family classifier -> calibrated probability -> conformal alpha=.10 -> distance OOD warning -> accepted / Unknown / Requires review`。这些结果仍是 research prototype 证据，不适用于 safety-critical deployment；family-level 能力受 severity OOD 影响，subtype OOD 尚未解决。
+
+审计产物：`notebooks/16_ood_aware_selective_diagnosis.ipynb`、`src/ood_selective.py`、`results/16_*` 和 `results/figures/16_*`。16 阶段作为独立里程碑提交并推送到 `origin/main`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -214,7 +222,8 @@ NPP-Guard/
 │  ├─ ood_error_analysis.py                    # 14 方向性 OOD error decomposition
 │  ├─ hierarchical_diagnosis.py                # 14 family mapping 与两阶段诊断
 │  ├─ milestone14.py                            # 14 Notebook 编排与结果汇总
-│  └─ coverage_task_redesign.py                 # 15 coverage-aware family selective diagnosis
+│  ├─ coverage_task_redesign.py                 # 15 coverage-aware family selective diagnosis
+│  └─ ood_selective.py                           # 16 OOD-aware selective family diagnosis
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -230,7 +239,8 @@ NPP-Guard/
 │  ├─ 12_robust_validation.ipynb
 │  ├─ 13_ood_severity_blocked_validation.ipynb
 │  ├─ 14_severity_invariant_hierarchical_diagnosis.ipynb
-│  └─ 15_coverage_aware_task_redesign.ipynb
+│  ├─ 15_coverage_aware_task_redesign.ipynb
+│  └─ 16_ood_aware_selective_diagnosis.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -244,7 +254,8 @@ NPP-Guard/
 │  ├─ 13_ood_*.csv/json                      # 13 OOD 验证结果
 │  ├─ 14_*.csv/json                          # 14 severity-invariant/hierarchical 结果
 │  ├─ 15_*.csv/json                          # 15 coverage-aware/selective 结果
-│  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png, 15_*.png  # 11–15 分析图
+│  ├─ 16_*.csv/json                          # 16 OOD-aware/selective 结果
+│  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png, 15_*.png, 16_*.png  # 11–16 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -356,7 +367,7 @@ jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 - `13_ood_severity_blocked_validation` 已完成：505 条 strict matched trajectories；parser recovery 新增 LR 30 条、RI 6 条 protection event；120 s blocked Macro-F1 `0.593±0.064`、extrapolation `0.483±0.110`，nearest-severity gap 明显扩大，但 extrapolation 与稀疏类别 Recall 仍不足，因此暂不进入 GRU/LSTM/TCN；
 - `14_severity_invariant_hierarchical_diagnosis` 已完成：12-class 120 s extrapolation Macro-F1 `0.4826`、Balanced Accuracy `0.8125`；severity-invariant 特征仅升至 `0.4905`；family-level Macro-F1 `0.6331`，但两阶段 subtype Macro-F1 `0.4829`；RI/LOCAC/SLBIC 存在方向性不稳定，因此暂不进入深度学习，先进行 coverage/task redesign；
 - `15_coverage_aware_task_redesign` 已完成：class Tier A/B/C `8/1/8`、family Tier A/B/C `4/2/4`；120 s family-level Macro-F1 在 random / blocked / extrapolation 下约为 `0.8469/0.7603/0.6660`；现有 selective reject 仅 `23/1525=1.51%`，blocked/extrapolation 验证阈值为 `0`，无法有效拒绝大 severity-gap OOD，因此 family diagnosis 仍为有限能力，subtype OOD 与 reject 机制不足，暂不进入深度学习；
-- `16_ood_aware_selective_diagnosis` 是下一步研究任务：分离校准分类置信度与训练分布距离，评估 distance/conformal/Unknown 机制；在 16 完成并审计前，不把 reject 结果写成安全部署能力；
+- `16_ood_aware_selective_diagnosis` 已完成：120 s extrapolation forced family Macro-F1 `0.666`、risk `0.194`；Conformal `alpha=0.10` coverage `75.7%`、Selective Macro-F1 `0.670`、risk `0.089`，但 empirical set coverage 仅 `68.9%`，不能宣称 `90%` 统计覆盖保证；distance OOD proxy AUROC `0.822`。推荐研究型 Unknown/Requires review 策略，仍不适用于 safety-critical deployment；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；

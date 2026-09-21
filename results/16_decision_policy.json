@@ -1,0 +1,20 @@
+{
+  "status": "research_policy_only",
+  "warning": "These results are simulation/cohort-specific and are not safe-deployment evidence.",
+  "recommended_mechanism_from_validation_only": "probability",
+  "operating_target_coverage": 0.7,
+  "sequence": [
+    "family classifier",
+    "train-only fitted probability calibration",
+    "calibrated probability and train-only class-conditional distance checks",
+    "split-conformal prediction set at alpha=0.10 using validation calibration",
+    "singleton accepted family; prediction set size > 1 -> Requires review; empty set -> Unknown"
+  ],
+  "unknown_rule": "Reject to Unknown when the selected probability/distance policy fails or conformal set is empty.",
+  "requires_review_rule": "Output Requires review when conformal prediction set contains multiple families.",
+  "limitations": [
+    "Severity extrapolation and large severity gap are dataset-specific OOD proxies, not real production OOD labels.",
+    "Thresholds are split-specific validation thresholds and require independent external validation before any product use.",
+    "Family diagnosis does not establish reliable subtype diagnosis or safety function."
+  ]
+}
