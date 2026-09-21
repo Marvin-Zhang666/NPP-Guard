@@ -1,0 +1,65 @@
+{
+  "milestone": "20 final release package validation",
+  "checked_at": "2026-09-22",
+  "v19_commit": "bf6e0dcc20cbad31fa9535710f29f2edef86f973",
+  "git": {
+    "head": "bf6e0dcc20cbad31fa9535710f29f2edef86f973",
+    "origin_main": "bf6e0dcc20cbad31fa9535710f29f2edef86f973"
+  },
+  "v17_2": {
+    "pipeline_parity_passed": true,
+    "agreement": "101/101",
+    "agreement_rate": 1.0,
+    "max_float_abs_delta": 0.0,
+    "regression_passed": 18,
+    "regression_total": 18,
+    "regression_all_passed": true,
+    "locked_release_sample_count": 101,
+    "artifact_sha256_passed": true
+  },
+  "v18": {
+    "summary_status": "passed",
+    "artifact_sha256_passed": true,
+    "core_diagnosis_unchanged": true,
+    "api_batch_parity": {
+      "overall_pass": true,
+      "agreement_rate": 1.0,
+      "max_float_abs_delta": 0.0
+    },
+    "regression_tests": {
+      "passed": 18,
+      "total": 18,
+      "all_passed": true
+    },
+    "gate_passed": true
+  },
+  "v19": {
+    "summary_status": "passed",
+    "smoke_passed": true,
+    "smoke_count": 5,
+    "helper_passed": true,
+    "helper_count": 3,
+    "http": {
+      "status_code": 200,
+      "passed": true
+    },
+    "apptest_passed": true,
+    "export_excludes_raw_csv": true,
+    "frozen_artifacts_only": true
+  },
+  "repository_safety": {
+    "tracked_raw_data_files": [],
+    "tracked_venv_files": [],
+    "tracked_cache_files": [],
+    "large_tracked_files_over_20mb": [],
+    "requirements_contains_streamlit": true,
+    "gitignore_covers_data": true,
+    "gitignore_covers_venv": true
+  },
+  "command_outputs": {
+    "helper_tail": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.006s\n\nOK",
+    "smoke_tail": "lity_pass\": true,\n      \"passed\": true\n    },\n    {\n      \"example\": \"invalid_input\",\n      \"expected_status\": \"invalid_input\",\n      \"actual_status\": \"invalid_input\",\n      \"status_pass\": true,\n      \"explanation_available\": false,\n      \"severity_visible\": false,\n      \"severity_gate_pass\": true,\n      \"export_json_pass\": true,\n      \"input_quality_pass\": true,\n      \"passed\": true\n    }\n  ],\n  \"all_smoke_tests_passed\": true,\n  \"export_excludes_raw_csv\": true,\n  \"frozen_artifacts_only\": true\n}",
+    "apptest_tail": "APPTEST_EXCEPTIONS=0\n2026-09-22 00:09:05.234 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode."
+  },
+  "overall_pass": true
+}

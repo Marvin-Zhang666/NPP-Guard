@@ -11,6 +11,71 @@ NPP-Guard 是一个面向核电厂仿真时序数据的研究型原型，用于�
 
 这是科研和学习用途的可复现实验基线，不是核电厂安全保护系统，也不适用于真实机组运行或操作决策。
 
+## v1 最终交付概览
+
+NPP-Guard v1 将单条 NPPAD CSV 轨迹经过数据质量检查、120 s 过程特征、冻结 family classifier、概率校准、conformal 与 distance OOD policy，输出 `accepted`、`requires_review`、`unknown` 或 `invalid_input`。系统保留 LOCA severity 的严格门控、模型归因、OOD drivers、120 s 趋势和 JSON export，定位为 research prototype。
+
+### Quick Start
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run dashboard/app.py
+```
+
+命令行推理：
+
+```powershell
+.\.venv\Scripts\python.exe -m src.inference.cli --input <csv>
+```
+
+Python API：`diagnose_csv(path)` 和 `diagnose_dataframe(df)`。输入需要包含 `TIME` 与 38 个严格过程变量，并满足至少 120 s、约 10 s 采样、单调时间、无 NaN/Inf 和无重复时间点。
+
+### v1 架构
+
+```text
+CSV/DataFrame → Data Quality → 120 s Features → Family Classifier
+→ Probability Calibration → Conformal → Distance OOD
+→ accepted / requires_review / unknown → LOCA Severity Gating
+→ Explainability → Streamlit Dashboard / JSON Export
+```
+
+可维护图源：[`docs/figures/20_npp_guard_architecture.mmd`](docs/figures/20_npp_guard_architecture.mmd)。
+
+### Release evidence
+
+| 项目 | 当前记录 |
+| --- | --- |
+| 17.2 locked release parity | `101/101`, 最大浮点差 `0` |
+| 17.2 regression | `18/18` |
+| 18 explainability gate | artifact SHA-256、核心诊断未变化、parity/regression 通过 |
+| 19 Dashboard | 5/5 smoke、3/3 helper、HTTP `200`、AppTest `0` 异常 |
+| 19 release commit | `bf6e0dcc20cbad31fa9535710f29f2edef86f973` |
+
+### 能力边界
+
+| 能力 | 状态 |
+| --- | --- |
+| family diagnosis | Tier A/B/C 研究型能力分层 |
+| Unknown / Requires Review | 可用，依据 conformal、distance 与 capability gating |
+| LOCA severity | 仅 accepted + LOCA + Tier A，exploratory |
+| protection-time | 研究记录保留，v1 不可用 |
+| explainability | 模型归因，不是物理因果解释 |
+| Dashboard | Streamlit research prototype，不用于 safety-critical deployment |
+
+### 最终材料
+
+- [最终技术报告](docs/NPP-Guard_Final_Technical_Report.md)
+- [关键结果总表](docs/NPP-Guard_Key_Results_Table.md)
+- [竞赛 / 科研申报文字](docs/competition_materials.md)
+- [3–5 分钟 Demo 脚本](docs/demo_script.md)
+- [简历与面试材料](docs/resume_project_bullets.md)
+- [竞赛演示文稿（PPTX）](docs/NPP-Guard_Competition_Presentation.pptx)
+- [竞赛演示版（PDF）](docs/NPP-Guard_Competition_Presentation.pdf)
+- [v1 Release Checklist](docs/NPP-Guard_v1_Release_Checklist.md)
+- [机器可读关键结果](results/20_key_results.csv)
+- [最终发布验证摘要](results/20_release_validation_summary.json)
+- [研究路线图源文件](docs/figures/20_research_route.mmd)
+
 ## 研究动机
 
 事故诊断系统不能只在事故已经明显发生、甚至保护动作已经完成后再给出结论。NPP-Guard 因此把“较早发现异常”和“在不确定时拒答”作为当前设计重点：先用异常门判断测试曲线是否持续偏离正常参考，再在限定的早期窗口内进行分类。

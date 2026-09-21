@@ -1,0 +1,125 @@
+{
+  "milestone": "20 final release package review",
+  "reviewed_at": "2026-09-22",
+  "reviewed_files": [
+    "README.md",
+    "requirements.txt",
+    "src/inference/cli.py",
+    "dashboard/app.py",
+    "docs/NPP-Guard_Final_Technical_Report.md",
+    "docs/NPP-Guard_Key_Results_Table.md",
+    "docs/competition_materials.md",
+    "docs/demo_script.md",
+    "docs/resume_project_bullets.md",
+    "docs/NPP-Guard_Competition_Presentation.pptx",
+    "docs/NPP-Guard_Competition_Presentation.pdf",
+    "docs/figures/20_npp_guard_architecture.mmd",
+    "docs/figures/20_research_route.mmd",
+    "docs/NPP-Guard_v1_Release_Checklist.md",
+    "results/20_key_results.csv",
+    "results/20_release_validation_summary.json",
+    "results/07_severity_summary.json",
+    "results/08_protection_time_summary.json",
+    "results/10_multi_accident_summary.json",
+    "results/11_temporal_diagnosability_summary.json",
+    "results/12_robust_validation_summary.json",
+    "results/13_ood_summary.json",
+    "results/14_summary.json",
+    "results/15_summary.json",
+    "results/16_summary.json",
+    "results/17_v1_pipeline_parity.json",
+    "results/17_v1_release_benchmark.json",
+    "results/17_v1_regression_tests.csv",
+    "results/18_summary.json",
+    "results/19_dashboard_summary.json"
+  ],
+  "issues_found": [
+    {
+      "id": "readme-final-material-links",
+      "severity": "low",
+      "description": "README final-materials section did not link the competition PPTX/PDF, machine-readable key results, release validation summary, or research-route source.",
+      "status": "fixed"
+    },
+    {
+      "id": "pptx-minor-line-wrap",
+      "severity": "low",
+      "description": "Slides 2 and 6 place the final Chinese full stop on its own wrapped line.",
+      "status": "accepted-nonblocking",
+      "reason": "Text remains legible, the source deck was already complete, and changing the text box would alter the existing design without affecting correctness."
+    },
+    {
+      "id": "checklist-pre-release-state",
+      "severity": "low",
+      "description": "Release Checklist still described the 20 package as awaiting review and commit/push.",
+      "status": "fixed"
+    }
+  ],
+  "issues_fixed": [
+    "Added final PPTX/PDF, CSV, JSON, and research-route links to README.md.",
+    "Generated docs/NPP-Guard_Competition_Presentation.pdf from the unchanged 15-slide PPTX.",
+    "Updated the Release Checklist to record completed review and PDF generation."
+  ],
+  "content_checks": {
+    "markdown_relative_links_missing": 0,
+    "pptx_slide_count": 15,
+    "pptx_content_matches_report": true,
+    "terminology_consistent": {
+      "family_vs_subtype": true,
+      "random_blocked_extrapolation_locked_protocols": true,
+      "accepted_requires_review_unknown_invalid_input": true,
+      "research_prototype_boundary": true,
+      "not_for_safety_critical_deployment": true
+    },
+    "numeric_consistency": {
+      "status": "passed",
+      "key_results_rows_checked": 39,
+      "source_results_reconciled": true,
+      "locked_release_parity": "101/101",
+      "locked_release_regression": "18/18",
+      "dashboard_smoke": "5/5",
+      "dashboard_helper": "3/3"
+    },
+    "readme_checks": {
+      "quick_start_matches_repository": true,
+      "cli_matches_repository": true,
+      "dashboard_command_matches_repository": true,
+      "requirements_contains_streamlit": true,
+      "artifact_paths_exist": true,
+      "demo_sample_paths_exist": true
+    }
+  },
+  "pdf_check": {
+    "source": "docs/NPP-Guard_Competition_Presentation.pptx",
+    "output": "docs/NPP-Guard_Competition_Presentation.pdf",
+    "pages": 15,
+    "page_size_pt": "960 x 540",
+    "rendered_pages": 15,
+    "blank_pages": 0,
+    "clipping_or_font_defects": false,
+    "visual_review": "passed with the two nonblocking line-wrap notes above"
+  },
+  "final_validation": {
+    "pipeline_parity": "101/101",
+    "max_float_abs_delta": 0.0,
+    "regression": "18/18",
+    "explainability_gate": "passed",
+    "dashboard_smoke": "5/5",
+    "dashboard_helper": "3/3",
+    "release_validation_summary_still_passed": true,
+    "tracked_raw_data": [],
+    "tracked_venv": [],
+    "tracked_cache": [],
+    "tracked_files_over_20mb": []
+  },
+  "remaining_known_limitations": [
+    "Normal reference coverage is insufficient for a strong early-warning claim.",
+    "30/60 s multi-accident separation is weak and the 120 s cohort changes, so the 120 s result is exploratory.",
+    "Severity extrapolation performance declines and some classes have sparse support.",
+    "Conformal empirical coverage is not a statistical coverage guarantee.",
+    "Subtype OOD remains unresolved.",
+    "Protection-time prediction is not connected as a valid v1 inference chain.",
+    "Explainability describes model attribution, not physical causality.",
+    "The project remains a research prototype and is not for safety-critical deployment or real plant control."
+  ],
+  "release_ready": true
+}

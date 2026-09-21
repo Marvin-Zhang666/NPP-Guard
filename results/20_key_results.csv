@@ -1,0 +1,40 @@
+﻿stage,task,protocol/window,metric,value,interpretation,limitation
+07,LOCA severity estimation,grouped 60/20/20 trajectory split; 120 s; test,MAE,0.4492 percentage points,120 s过程特征能重建仿真严重度,与过程量—严重度耦合敏感；不作外部泛化承诺
+07,LOCA severity estimation,grouped 60/20/20 trajectory split; 120 s; test,RMSE,0.5673 percentage points,记录同一测试协议下的误差,标签来自文件编号，属于仿真严重度
+07,LOCA severity estimation,grouped 60/20/20 trajectory split; 120 s; test,R²,0.9996,Ridge + 120 s 为 validation 选择结果,强耦合变量审计后结果下降
+08,Protection-time prediction,strict landmark; 60 s; severity_only; test,MAE,86.826 s,可作为研究性 landmark 回归记录,保护时间稀疏；未接入 v1 链式推理
+08,Protection-time prediction,strict landmark; 60 s; severity_only; test,RMSE,338.735 s,记录误差分布中的大误差影响,300 s 仅 6 条轨迹，不能作为泛化证据
+08,Protection-time prediction,strict landmark; 60 s; severity_only; test,R²,0.3303,60 s + Random Forest 是严格 validation 选择结果,保护动作定义和样本覆盖限制结论
+10,Multi-accident classification,random grouped trajectory split; 30 s; A strict 38; test,Macro-F1,0.1928,报告类别不均衡下的平均分类表现,30/60 s 区分度弱；30/60 s 结果逐字节相同需谨慎解释
+10,Multi-accident classification,random grouped trajectory split; 30 s; A strict 38; test,Balanced Accuracy,0.2727,报告各类召回的均衡表现,30/60 s 区分度弱；30/60 s 结果逐字节相同需谨慎解释
+10,Multi-accident classification,random grouped trajectory split; 60 s; A strict 38; test,Macro-F1,0.1928,报告类别不均衡下的平均分类表现,30/60 s 区分度弱；30/60 s 结果逐字节相同需谨慎解释
+10,Multi-accident classification,random grouped trajectory split; 60 s; A strict 38; test,Balanced Accuracy,0.2727,报告各类召回的均衡表现,30/60 s 区分度弱；30/60 s 结果逐字节相同需谨慎解释
+10,Multi-accident classification,random grouped trajectory split; 120 s; A strict 38; test,Macro-F1,0.7526,报告类别不均衡下的平均分类表现,120 s cohort 不完整且改变；属于探索性 all-sample 结果
+10,Multi-accident classification,random grouped trajectory split; 120 s; A strict 38; test,Balanced Accuracy,0.7924,报告各类召回的均衡表现,120 s cohort 不完整且改变；属于探索性 all-sample 结果
+12,Robust temporal validation,10 repeated grouped 60/20/20 splits; strict pre-protection; 120 s; A strict 38,Fixed-12 Macro-F1,0.5784,120 s 优势在 matched cohort 的重复 split 上保持,LLB/LR/MD/SLBOC 无严格保护时间；RW 支持稀疏
+12,Robust temporal validation,10 repeated grouped 60/20/20 splits; strict pre-protection; 120 s; A strict 38,Balanced Accuracy,0.9888,作为 Macro-F1 的平衡指标补充,阶段 gate 仍要求更严格数据或外部验证
+13,OOD / severity-blocked validation,random; 120 s; A strict 38,Fixed-12 Macro-F1,0.6573,区分 random、severity-blocked 与 severity-extrapolation,extrapolation 低于 0.50；不是部署泛化保证
+13,OOD / severity-blocked validation,random; 120 s; A strict 38,Balanced Accuracy,0.9839,补充类别均衡视角,OOD cohort 仍受类别支持度影响
+13,OOD / severity-blocked validation,severity_blocked; 120 s; A strict 38,Fixed-12 Macro-F1,0.5931,区分 random、severity-blocked 与 severity-extrapolation,extrapolation 低于 0.50；不是部署泛化保证
+13,OOD / severity-blocked validation,severity_blocked; 120 s; A strict 38,Balanced Accuracy,0.9213,补充类别均衡视角,OOD cohort 仍受类别支持度影响
+13,OOD / severity-blocked validation,severity_extrapolation; 120 s; A strict 38,Fixed-12 Macro-F1,0.4826,区分 random、severity-blocked 与 severity-extrapolation,extrapolation 低于 0.50；不是部署泛化保证
+13,OOD / severity-blocked validation,severity_extrapolation; 120 s; A strict 38,Balanced Accuracy,0.8125,补充类别均衡视角,OOD cohort 仍受类别支持度影响
+14,Family / hierarchical diagnosis,severity extrapolation; 120 s; 505 matched trajectories,Family model Macro-F1,0.6331,family-level 任务比细分类更稳健,two-stage end-to-end subtype 未改善
+14,Family / hierarchical diagnosis,severity extrapolation; 120 s; 505 matched trajectories,Two-stage subtype Macro-F1,0.4829,量化 family→subtype 的端到端代价,stable_hierarchical_improvement = false
+15,Coverage-aware / selective diagnosis,severity extrapolation; 120 s; family_selective,Macro-F1,0.6660,选择性 family 诊断在当前阈值下与 forced family 相同,当前 extrapolation 阈值均值为 0，拒答能力有限
+15,Coverage-aware / selective diagnosis,random; 120 s; family_selective,Coverage,97.7%,随机协议下选择性策略覆盖较高,random 与 extrapolation 不能混用
+15,Coverage-aware / selective diagnosis,all selected test rows; family rejection analysis,Reject rate,1.5%,仅少量样本被当前 rejection policy 拒答,拒答机制尚不能独立识别所有 severity OOD
+16,OOD-aware selective diagnosis,severity extrapolation proxy; 120 s; conformal alpha=0.10,Conformal empirical set coverage,68.9%,保留实际经验覆盖率，而不声称 90% 保证,经验覆盖率为 68.9%，无统计覆盖保证
+16,OOD-aware selective diagnosis,severity extrapolation vs random proxy; 120 s; distance,OOD proxy AUROC,0.8221,距离机制能区分一部分 severity-shift proxy,这是 severity-shift proxy，不是生产 OOD 标签
+16,OOD-aware selective diagnosis,severity extrapolation; 120 s; conformal alpha=0.10,Selective Macro-F1,0.6700,为 v1 Unknown policy 提供研究依据,class-level / subtype OOD 仍未解决
+17.2,Locked release benchmark,locked release test; 101 trajectories; frozen artifact,API/batch parity,101/101 = 100%,逐样本离散决策一致，浮点最大绝对差 0,这是 pipeline parity，不是与 16 研究协议的数值 parity
+17.2,Locked release benchmark,locked release test; 101 trajectories; selective policy,Coverage,51.5%,冻结 v1 选择性输出的接受覆盖,locked cohort 与 research stress cohort 不同
+17.2,Locked release benchmark,locked release test; 101 trajectories; selective policy,Macro-F1,0.5000,只在 accepted 样本上计算,接受覆盖只有 51.5%，不能转成全面部署性能
+17.2,Locked release benchmark,locked release test; 101 trajectories; selective policy,Risk,0.0000,accepted 子集上记录零错误风险,样本量和冻结 cohort 限制结论；不是安全风险保证
+17.2,Locked release benchmark,locked release test; 101 trajectories; status policy,Status distribution,accepted=52; requires_review=39; unknown=10,系统保留主动拒答与人工复核状态,状态分布依赖固定 cohort 与 policy
+18,Explainability,locked release test; frozen model,Top variables,P / WSTA / TAVG / WFWA / LSGA,模型归因层把 engineered features 聚合回原始变量,归因不是物理因果证明
+18,Explainability,repeat + perturbation stability,Top-5 Jaccard,0.9722,轻微输入扰动下解释排序总体稳定,仍是当前模型和样本 cohort 的稳定性
+18,Explainability,faithfulness audit,Family top-k minus random,+0.7532,top-k 归因对模型输出的影响高于随机移除,解释只描述模型行为
+18,Explainability,frozen v1 regression gate,Gate,SHA-256 10/10; parity 101/101; regression 18/18,解释层未改变冻结推理核心,不等于物理解释或部署安全证明
+19,Dashboard,real examples; Streamlit; AppTest + smoke,Validation,5/5 smoke; 3/3 helper; HTTP 200; AppTest 0 exceptions,四种状态、LOCA gating、解释与 JSON 导出均通过,Dashboard 是 research prototype
+19,Dashboard,frozen artifacts only; JSON export,Data policy,raw full CSV excluded,导出包含 metadata、推理、解释和 limitations,不替代独立数据治理或运行控制系统

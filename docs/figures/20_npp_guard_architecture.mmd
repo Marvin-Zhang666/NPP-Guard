@@ -1,0 +1,23 @@
+flowchart LR
+    A[CSV / DataFrame] --> B["Data Quality<br/>TIME + 38 strict variables<br/>&gt;=120 s, NaN/Inf, duplicates"]
+    B -->|valid| C["120 s feature extraction<br/>last / delta_t0 / mean / std / slope"]
+    B -->|invalid| X[invalid_input
+no prediction]
+    C --> D[Family classifier
+frozen v1 artifact]
+    D --> E["Probability calibration"]
+    E --> F["Conformal alpha=0.10"]
+    F --> G["Distance OOD check"]
+    G --> H{Policy status}
+    H -->|singleton + in-distribution| I["accepted"]
+    H -->|OOD / Tier B / ambiguous| J["requires_review"]
+    H -->|empty set / Tier C| K["unknown"]
+    I --> L{LOCA + Tier A?}
+    L -->|yes| M["LOCA severity<br/>exploratory gated path"]
+    L -->|no| N["severity not run"]
+    I --> O["Explainability<br/>model attribution + OOD drivers"]
+    J --> O
+    K --> O
+    M --> O
+    O --> P[Streamlit Dashboard]
+    O --> Q[JSON export]
