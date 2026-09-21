@@ -1,0 +1,4100 @@
+{
+  "protocol_version": "v1_release_protocol_17_2",
+  "created_at": "2026-09-21T14:45:32.773759+00:00",
+  "random_seed": 20260921,
+  "split_rule": "Lock the existing random/seed_20260921 test partition as release test; stratify the remaining development pool by accident_class with a deterministic permutation.",
+  "source": "results/13_split_inventory.csv random/seed_20260921 train+validation+test and results/09_multi_accident_class_inventory.csv",
+  "locked_release_source": "results/13_split_inventory.csv random/seed_20260921 test",
+  "family_mapping_version": "official_local_README_Table_1_mapping_v14",
+  "family_mapping_hash": "f9a7191c9a98610e608c7acab99efe2dbe4b8511c0c3d52e6ed1e56680cf0495",
+  "feature_schema_hash": "f9b91c558cf8bb32cf7374668ae4e75a75e2608215f40d1bfed5ceb3539e7c5a",
+  "records": [
+    {
+      "sample_id": "FLB_10",
+      "accident_class": "FLB",
+      "severity": 10.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/10.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_100",
+      "accident_class": "FLB",
+      "severity": 100.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/100.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_11",
+      "accident_class": "FLB",
+      "severity": 11.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/11.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_12",
+      "accident_class": "FLB",
+      "severity": 12.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/12.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_13",
+      "accident_class": "FLB",
+      "severity": 13.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/13.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_14",
+      "accident_class": "FLB",
+      "severity": 14.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/14.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_15",
+      "accident_class": "FLB",
+      "severity": 15.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/15.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_16",
+      "accident_class": "FLB",
+      "severity": 16.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/16.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_17",
+      "accident_class": "FLB",
+      "severity": 17.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/17.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_18",
+      "accident_class": "FLB",
+      "severity": 18.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/18.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_19",
+      "accident_class": "FLB",
+      "severity": 19.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/19.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_2",
+      "accident_class": "FLB",
+      "severity": 2.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/2.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_20",
+      "accident_class": "FLB",
+      "severity": 20.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/20.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_21",
+      "accident_class": "FLB",
+      "severity": 21.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/21.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_22",
+      "accident_class": "FLB",
+      "severity": 22.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/22.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_23",
+      "accident_class": "FLB",
+      "severity": 23.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/23.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_24",
+      "accident_class": "FLB",
+      "severity": 24.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/24.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_25",
+      "accident_class": "FLB",
+      "severity": 25.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/25.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_26",
+      "accident_class": "FLB",
+      "severity": 26.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/26.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_27",
+      "accident_class": "FLB",
+      "severity": 27.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/27.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_28",
+      "accident_class": "FLB",
+      "severity": 28.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/28.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_29",
+      "accident_class": "FLB",
+      "severity": 29.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/29.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_3",
+      "accident_class": "FLB",
+      "severity": 3.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/3.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_30",
+      "accident_class": "FLB",
+      "severity": 30.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/30.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_31",
+      "accident_class": "FLB",
+      "severity": 31.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/31.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_32",
+      "accident_class": "FLB",
+      "severity": 32.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/32.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_33",
+      "accident_class": "FLB",
+      "severity": 33.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/33.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_34",
+      "accident_class": "FLB",
+      "severity": 34.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/34.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_35",
+      "accident_class": "FLB",
+      "severity": 35.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/35.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_36",
+      "accident_class": "FLB",
+      "severity": 36.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/36.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_37",
+      "accident_class": "FLB",
+      "severity": 37.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/37.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_38",
+      "accident_class": "FLB",
+      "severity": 38.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/38.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_39",
+      "accident_class": "FLB",
+      "severity": 39.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/39.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_4",
+      "accident_class": "FLB",
+      "severity": 4.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/4.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_40",
+      "accident_class": "FLB",
+      "severity": 40.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/40.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_41",
+      "accident_class": "FLB",
+      "severity": 41.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/41.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_42",
+      "accident_class": "FLB",
+      "severity": 42.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/42.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_43",
+      "accident_class": "FLB",
+      "severity": 43.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/43.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_44",
+      "accident_class": "FLB",
+      "severity": 44.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/44.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_45",
+      "accident_class": "FLB",
+      "severity": 45.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/45.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_46",
+      "accident_class": "FLB",
+      "severity": 46.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/46.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_47",
+      "accident_class": "FLB",
+      "severity": 47.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/47.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_48",
+      "accident_class": "FLB",
+      "severity": 48.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/48.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_49",
+      "accident_class": "FLB",
+      "severity": 49.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/49.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_5",
+      "accident_class": "FLB",
+      "severity": 5.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/5.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_50",
+      "accident_class": "FLB",
+      "severity": 50.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/50.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_51",
+      "accident_class": "FLB",
+      "severity": 51.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/51.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_52",
+      "accident_class": "FLB",
+      "severity": 52.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/52.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_53",
+      "accident_class": "FLB",
+      "severity": 53.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/53.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_54",
+      "accident_class": "FLB",
+      "severity": 54.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/54.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_55",
+      "accident_class": "FLB",
+      "severity": 55.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/55.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_56",
+      "accident_class": "FLB",
+      "severity": 56.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/56.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_57",
+      "accident_class": "FLB",
+      "severity": 57.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/57.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_58",
+      "accident_class": "FLB",
+      "severity": 58.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_59",
+      "accident_class": "FLB",
+      "severity": 59.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/59.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_6",
+      "accident_class": "FLB",
+      "severity": 6.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/6.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_60",
+      "accident_class": "FLB",
+      "severity": 60.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/60.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_61",
+      "accident_class": "FLB",
+      "severity": 61.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/61.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_62",
+      "accident_class": "FLB",
+      "severity": 62.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/62.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_63",
+      "accident_class": "FLB",
+      "severity": 63.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/63.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_64",
+      "accident_class": "FLB",
+      "severity": 64.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/64.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_65",
+      "accident_class": "FLB",
+      "severity": 65.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/65.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_66",
+      "accident_class": "FLB",
+      "severity": 66.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/66.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_67",
+      "accident_class": "FLB",
+      "severity": 67.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/67.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_68",
+      "accident_class": "FLB",
+      "severity": 68.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/68.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_69",
+      "accident_class": "FLB",
+      "severity": 69.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/69.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_7",
+      "accident_class": "FLB",
+      "severity": 7.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/7.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_70",
+      "accident_class": "FLB",
+      "severity": 70.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/70.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_71",
+      "accident_class": "FLB",
+      "severity": 71.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/71.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_72",
+      "accident_class": "FLB",
+      "severity": 72.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/72.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_73",
+      "accident_class": "FLB",
+      "severity": 73.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/73.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_74",
+      "accident_class": "FLB",
+      "severity": 74.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/74.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_75",
+      "accident_class": "FLB",
+      "severity": 75.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/75.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_76",
+      "accident_class": "FLB",
+      "severity": 76.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/76.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_77",
+      "accident_class": "FLB",
+      "severity": 77.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/77.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_78",
+      "accident_class": "FLB",
+      "severity": 78.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/78.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_79",
+      "accident_class": "FLB",
+      "severity": 79.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/79.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_8",
+      "accident_class": "FLB",
+      "severity": 8.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/8.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_80",
+      "accident_class": "FLB",
+      "severity": 80.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/80.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_81",
+      "accident_class": "FLB",
+      "severity": 81.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/81.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_82",
+      "accident_class": "FLB",
+      "severity": 82.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/82.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_83",
+      "accident_class": "FLB",
+      "severity": 83.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/83.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_84",
+      "accident_class": "FLB",
+      "severity": 84.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/84.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_85",
+      "accident_class": "FLB",
+      "severity": 85.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/85.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_86",
+      "accident_class": "FLB",
+      "severity": 86.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/86.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_87",
+      "accident_class": "FLB",
+      "severity": 87.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/87.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_88",
+      "accident_class": "FLB",
+      "severity": 88.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/88.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_89",
+      "accident_class": "FLB",
+      "severity": 89.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/89.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_9",
+      "accident_class": "FLB",
+      "severity": 9.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/9.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_90",
+      "accident_class": "FLB",
+      "severity": 90.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/90.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_91",
+      "accident_class": "FLB",
+      "severity": 91.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/91.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_92",
+      "accident_class": "FLB",
+      "severity": 92.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/92.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "FLB_93",
+      "accident_class": "FLB",
+      "severity": 93.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/93.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_94",
+      "accident_class": "FLB",
+      "severity": 94.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/94.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "FLB_95",
+      "accident_class": "FLB",
+      "severity": 95.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/95.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_96",
+      "accident_class": "FLB",
+      "severity": 96.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/96.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_97",
+      "accident_class": "FLB",
+      "severity": 97.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/97.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "FLB_98",
+      "accident_class": "FLB",
+      "severity": 98.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/98.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "FLB_99",
+      "accident_class": "FLB",
+      "severity": 99.0,
+      "family": "feedwater_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/99.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_1",
+      "accident_class": "LOCAC",
+      "severity": 1.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/1.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_10",
+      "accident_class": "LOCAC",
+      "severity": 10.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/10.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_11",
+      "accident_class": "LOCAC",
+      "severity": 11.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/11.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_12",
+      "accident_class": "LOCAC",
+      "severity": 12.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/12.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_13",
+      "accident_class": "LOCAC",
+      "severity": 13.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/13.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_14",
+      "accident_class": "LOCAC",
+      "severity": 14.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/14.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_15",
+      "accident_class": "LOCAC",
+      "severity": 15.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/15.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_16",
+      "accident_class": "LOCAC",
+      "severity": 16.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/16.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_17",
+      "accident_class": "LOCAC",
+      "severity": 17.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/17.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_18",
+      "accident_class": "LOCAC",
+      "severity": 18.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/18.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_19",
+      "accident_class": "LOCAC",
+      "severity": 19.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/19.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_2",
+      "accident_class": "LOCAC",
+      "severity": 2.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/2.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_20",
+      "accident_class": "LOCAC",
+      "severity": 20.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/20.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_21",
+      "accident_class": "LOCAC",
+      "severity": 21.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/21.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_22",
+      "accident_class": "LOCAC",
+      "severity": 22.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/22.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_23",
+      "accident_class": "LOCAC",
+      "severity": 23.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/23.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_24",
+      "accident_class": "LOCAC",
+      "severity": 24.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/24.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_25",
+      "accident_class": "LOCAC",
+      "severity": 25.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/25.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_26",
+      "accident_class": "LOCAC",
+      "severity": 26.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/26.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_27",
+      "accident_class": "LOCAC",
+      "severity": 27.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/27.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_28",
+      "accident_class": "LOCAC",
+      "severity": 28.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/28.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_29",
+      "accident_class": "LOCAC",
+      "severity": 29.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/29.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_3",
+      "accident_class": "LOCAC",
+      "severity": 3.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/3.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_30",
+      "accident_class": "LOCAC",
+      "severity": 30.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/30.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_31",
+      "accident_class": "LOCAC",
+      "severity": 31.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/31.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_32",
+      "accident_class": "LOCAC",
+      "severity": 32.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/32.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_33",
+      "accident_class": "LOCAC",
+      "severity": 33.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/33.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_34",
+      "accident_class": "LOCAC",
+      "severity": 34.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/34.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_35",
+      "accident_class": "LOCAC",
+      "severity": 35.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/35.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_36",
+      "accident_class": "LOCAC",
+      "severity": 36.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/36.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_37",
+      "accident_class": "LOCAC",
+      "severity": 37.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/37.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_38",
+      "accident_class": "LOCAC",
+      "severity": 38.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/38.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_39",
+      "accident_class": "LOCAC",
+      "severity": 39.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/39.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_4",
+      "accident_class": "LOCAC",
+      "severity": 4.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/4.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_40",
+      "accident_class": "LOCAC",
+      "severity": 40.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/40.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_41",
+      "accident_class": "LOCAC",
+      "severity": 41.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/41.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_42",
+      "accident_class": "LOCAC",
+      "severity": 42.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/42.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_43",
+      "accident_class": "LOCAC",
+      "severity": 43.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/43.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_44",
+      "accident_class": "LOCAC",
+      "severity": 44.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/44.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_45",
+      "accident_class": "LOCAC",
+      "severity": 45.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/45.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_46",
+      "accident_class": "LOCAC",
+      "severity": 46.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/46.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_47",
+      "accident_class": "LOCAC",
+      "severity": 47.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/47.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_48",
+      "accident_class": "LOCAC",
+      "severity": 48.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/48.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_49",
+      "accident_class": "LOCAC",
+      "severity": 49.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/49.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_5",
+      "accident_class": "LOCAC",
+      "severity": 5.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/5.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_50",
+      "accident_class": "LOCAC",
+      "severity": 50.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/50.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_51",
+      "accident_class": "LOCAC",
+      "severity": 51.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/51.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_52",
+      "accident_class": "LOCAC",
+      "severity": 52.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/52.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_53",
+      "accident_class": "LOCAC",
+      "severity": 53.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/53.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_54",
+      "accident_class": "LOCAC",
+      "severity": 54.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/54.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_55",
+      "accident_class": "LOCAC",
+      "severity": 55.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/55.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_56",
+      "accident_class": "LOCAC",
+      "severity": 56.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/56.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_57",
+      "accident_class": "LOCAC",
+      "severity": 57.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/57.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_58",
+      "accident_class": "LOCAC",
+      "severity": 58.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_59",
+      "accident_class": "LOCAC",
+      "severity": 59.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/59.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_6",
+      "accident_class": "LOCAC",
+      "severity": 6.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/6.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_60",
+      "accident_class": "LOCAC",
+      "severity": 60.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/60.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_61",
+      "accident_class": "LOCAC",
+      "severity": 61.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/61.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_62",
+      "accident_class": "LOCAC",
+      "severity": 62.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/62.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_63",
+      "accident_class": "LOCAC",
+      "severity": 63.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/63.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_64",
+      "accident_class": "LOCAC",
+      "severity": 64.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/64.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_65",
+      "accident_class": "LOCAC",
+      "severity": 65.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/65.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_66",
+      "accident_class": "LOCAC",
+      "severity": 66.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/66.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_67",
+      "accident_class": "LOCAC",
+      "severity": 67.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/67.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_68",
+      "accident_class": "LOCAC",
+      "severity": 68.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/68.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_69",
+      "accident_class": "LOCAC",
+      "severity": 69.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/69.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_7",
+      "accident_class": "LOCAC",
+      "severity": 7.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/7.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_70",
+      "accident_class": "LOCAC",
+      "severity": 70.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/70.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_71",
+      "accident_class": "LOCAC",
+      "severity": 71.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/71.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_72",
+      "accident_class": "LOCAC",
+      "severity": 72.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/72.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_73",
+      "accident_class": "LOCAC",
+      "severity": 73.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/73.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_74",
+      "accident_class": "LOCAC",
+      "severity": 74.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/74.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_75",
+      "accident_class": "LOCAC",
+      "severity": 75.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/75.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_76",
+      "accident_class": "LOCAC",
+      "severity": 76.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/76.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCAC_77",
+      "accident_class": "LOCAC",
+      "severity": 77.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/77.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCAC_78",
+      "accident_class": "LOCAC",
+      "severity": 78.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/78.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_79",
+      "accident_class": "LOCAC",
+      "severity": 79.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/79.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCAC_8",
+      "accident_class": "LOCAC",
+      "severity": 8.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/8.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCAC_9",
+      "accident_class": "LOCAC",
+      "severity": 9.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/9.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_1",
+      "accident_class": "LOCA",
+      "severity": 1.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/1.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_10",
+      "accident_class": "LOCA",
+      "severity": 10.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/10.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_11",
+      "accident_class": "LOCA",
+      "severity": 11.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/11.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_12",
+      "accident_class": "LOCA",
+      "severity": 12.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/12.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_13",
+      "accident_class": "LOCA",
+      "severity": 13.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/13.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_14",
+      "accident_class": "LOCA",
+      "severity": 14.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/14.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_15",
+      "accident_class": "LOCA",
+      "severity": 15.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/15.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_16",
+      "accident_class": "LOCA",
+      "severity": 16.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/16.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_17",
+      "accident_class": "LOCA",
+      "severity": 17.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/17.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_18",
+      "accident_class": "LOCA",
+      "severity": 18.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/18.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_19",
+      "accident_class": "LOCA",
+      "severity": 19.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/19.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_2",
+      "accident_class": "LOCA",
+      "severity": 2.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/2.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_20",
+      "accident_class": "LOCA",
+      "severity": 20.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/20.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_21",
+      "accident_class": "LOCA",
+      "severity": 21.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/21.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_22",
+      "accident_class": "LOCA",
+      "severity": 22.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/22.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_23",
+      "accident_class": "LOCA",
+      "severity": 23.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/23.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_24",
+      "accident_class": "LOCA",
+      "severity": 24.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/24.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_25",
+      "accident_class": "LOCA",
+      "severity": 25.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/25.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_26",
+      "accident_class": "LOCA",
+      "severity": 26.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/26.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_27",
+      "accident_class": "LOCA",
+      "severity": 27.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/27.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_28",
+      "accident_class": "LOCA",
+      "severity": 28.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/28.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_29",
+      "accident_class": "LOCA",
+      "severity": 29.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/29.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_3",
+      "accident_class": "LOCA",
+      "severity": 3.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/3.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_30",
+      "accident_class": "LOCA",
+      "severity": 30.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/30.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_31",
+      "accident_class": "LOCA",
+      "severity": 31.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/31.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_32",
+      "accident_class": "LOCA",
+      "severity": 32.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/32.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_33",
+      "accident_class": "LOCA",
+      "severity": 33.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/33.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_34",
+      "accident_class": "LOCA",
+      "severity": 34.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/34.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_35",
+      "accident_class": "LOCA",
+      "severity": 35.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/35.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_36",
+      "accident_class": "LOCA",
+      "severity": 36.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/36.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_37",
+      "accident_class": "LOCA",
+      "severity": 37.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/37.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_38",
+      "accident_class": "LOCA",
+      "severity": 38.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/38.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_39",
+      "accident_class": "LOCA",
+      "severity": 39.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/39.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_4",
+      "accident_class": "LOCA",
+      "severity": 4.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/4.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_40",
+      "accident_class": "LOCA",
+      "severity": 40.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/40.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_41",
+      "accident_class": "LOCA",
+      "severity": 41.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/41.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_42",
+      "accident_class": "LOCA",
+      "severity": 42.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/42.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_44",
+      "accident_class": "LOCA",
+      "severity": 44.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/44.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_45",
+      "accident_class": "LOCA",
+      "severity": 45.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/45.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_46",
+      "accident_class": "LOCA",
+      "severity": 46.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/46.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_47",
+      "accident_class": "LOCA",
+      "severity": 47.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/47.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_48",
+      "accident_class": "LOCA",
+      "severity": 48.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/48.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_49",
+      "accident_class": "LOCA",
+      "severity": 49.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/49.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_5",
+      "accident_class": "LOCA",
+      "severity": 5.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/5.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_50",
+      "accident_class": "LOCA",
+      "severity": 50.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/50.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_51",
+      "accident_class": "LOCA",
+      "severity": 51.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/51.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_52",
+      "accident_class": "LOCA",
+      "severity": 52.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/52.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_53",
+      "accident_class": "LOCA",
+      "severity": 53.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/53.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_54",
+      "accident_class": "LOCA",
+      "severity": 54.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/54.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_55",
+      "accident_class": "LOCA",
+      "severity": 55.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/55.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_56",
+      "accident_class": "LOCA",
+      "severity": 56.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/56.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_57",
+      "accident_class": "LOCA",
+      "severity": 57.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/57.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_58",
+      "accident_class": "LOCA",
+      "severity": 58.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_59",
+      "accident_class": "LOCA",
+      "severity": 59.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/59.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_6",
+      "accident_class": "LOCA",
+      "severity": 6.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/6.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_60",
+      "accident_class": "LOCA",
+      "severity": 60.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/60.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_61",
+      "accident_class": "LOCA",
+      "severity": 61.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/61.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_62",
+      "accident_class": "LOCA",
+      "severity": 62.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/62.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_63",
+      "accident_class": "LOCA",
+      "severity": 63.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/63.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_64",
+      "accident_class": "LOCA",
+      "severity": 64.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/64.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_65",
+      "accident_class": "LOCA",
+      "severity": 65.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/65.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_66",
+      "accident_class": "LOCA",
+      "severity": 66.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/66.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_67",
+      "accident_class": "LOCA",
+      "severity": 67.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/67.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_68",
+      "accident_class": "LOCA",
+      "severity": 68.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/68.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_69",
+      "accident_class": "LOCA",
+      "severity": 69.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/69.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_7",
+      "accident_class": "LOCA",
+      "severity": 7.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/7.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_70",
+      "accident_class": "LOCA",
+      "severity": 70.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/70.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_71",
+      "accident_class": "LOCA",
+      "severity": 71.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/71.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LOCA_72",
+      "accident_class": "LOCA",
+      "severity": 72.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/72.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_73",
+      "accident_class": "LOCA",
+      "severity": 73.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/73.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_74",
+      "accident_class": "LOCA",
+      "severity": 74.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/74.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_75",
+      "accident_class": "LOCA",
+      "severity": 75.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/75.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_76",
+      "accident_class": "LOCA",
+      "severity": 76.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/76.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LOCA_77",
+      "accident_class": "LOCA",
+      "severity": 77.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/77.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LOCA_8",
+      "accident_class": "LOCA",
+      "severity": 8.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/8.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LOCA_9",
+      "accident_class": "LOCA",
+      "severity": 9.0,
+      "family": "primary_coolant_boundary_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCA/9.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_70",
+      "accident_class": "LR",
+      "severity": 70.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/70.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_71",
+      "accident_class": "LR",
+      "severity": 71.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/71.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_72",
+      "accident_class": "LR",
+      "severity": 72.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/72.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_73",
+      "accident_class": "LR",
+      "severity": 73.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/73.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LR_74",
+      "accident_class": "LR",
+      "severity": 74.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/74.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_75",
+      "accident_class": "LR",
+      "severity": 75.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/75.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_76",
+      "accident_class": "LR",
+      "severity": 76.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/76.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LR_77",
+      "accident_class": "LR",
+      "severity": 77.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/77.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_78",
+      "accident_class": "LR",
+      "severity": 78.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/78.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_79",
+      "accident_class": "LR",
+      "severity": 79.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/79.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LR_80",
+      "accident_class": "LR",
+      "severity": 80.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/80.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LR_81",
+      "accident_class": "LR",
+      "severity": 81.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/81.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_82",
+      "accident_class": "LR",
+      "severity": 82.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/82.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LR_83",
+      "accident_class": "LR",
+      "severity": 83.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/83.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_84",
+      "accident_class": "LR",
+      "severity": 84.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/84.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_85",
+      "accident_class": "LR",
+      "severity": 85.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/85.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_86",
+      "accident_class": "LR",
+      "severity": 86.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/86.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LR_87",
+      "accident_class": "LR",
+      "severity": 87.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/87.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_88",
+      "accident_class": "LR",
+      "severity": 88.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/88.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_89",
+      "accident_class": "LR",
+      "severity": 89.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/89.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_90",
+      "accident_class": "LR",
+      "severity": 90.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/90.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "LR_93",
+      "accident_class": "LR",
+      "severity": 93.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/93.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LR_94",
+      "accident_class": "LR",
+      "severity": 94.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/94.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "LR_95",
+      "accident_class": "LR",
+      "severity": 95.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/95.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LR_96",
+      "accident_class": "LR",
+      "severity": 96.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/96.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_97",
+      "accident_class": "LR",
+      "severity": 97.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/97.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "LR_98",
+      "accident_class": "LR",
+      "severity": 98.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/98.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "LR_99",
+      "accident_class": "LR",
+      "severity": 99.0,
+      "family": "turbine_and_load_transient",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/99.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-1",
+      "accident_class": "RI",
+      "severity": -1.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-1.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-10",
+      "accident_class": "RI",
+      "severity": -10.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-10.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-11",
+      "accident_class": "RI",
+      "severity": -11.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-11.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-12",
+      "accident_class": "RI",
+      "severity": -12.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-12.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-13",
+      "accident_class": "RI",
+      "severity": -13.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-13.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "RI_-14",
+      "accident_class": "RI",
+      "severity": -14.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-14.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-15",
+      "accident_class": "RI",
+      "severity": -15.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-15.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "RI_-16",
+      "accident_class": "RI",
+      "severity": -16.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-16.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RI_-17",
+      "accident_class": "RI",
+      "severity": -17.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-17.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-18",
+      "accident_class": "RI",
+      "severity": -18.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-18.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-19",
+      "accident_class": "RI",
+      "severity": -19.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-19.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "RI_-2",
+      "accident_class": "RI",
+      "severity": -2.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-2.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-20",
+      "accident_class": "RI",
+      "severity": -20.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-20.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-21",
+      "accident_class": "RI",
+      "severity": -21.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-21.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RI_-22",
+      "accident_class": "RI",
+      "severity": -22.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-22.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-23",
+      "accident_class": "RI",
+      "severity": -23.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-23.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RI_-25",
+      "accident_class": "RI",
+      "severity": -25.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-25.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RI_-26",
+      "accident_class": "RI",
+      "severity": -26.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-26.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RI_-27",
+      "accident_class": "RI",
+      "severity": -27.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-27.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-28",
+      "accident_class": "RI",
+      "severity": -28.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-28.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-29",
+      "accident_class": "RI",
+      "severity": -29.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-29.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-3",
+      "accident_class": "RI",
+      "severity": -3.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-3.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-30",
+      "accident_class": "RI",
+      "severity": -30.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-30.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-31",
+      "accident_class": "RI",
+      "severity": -31.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-31.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-32",
+      "accident_class": "RI",
+      "severity": -32.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-32.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-33",
+      "accident_class": "RI",
+      "severity": -33.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-33.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-34",
+      "accident_class": "RI",
+      "severity": -34.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-34.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-35",
+      "accident_class": "RI",
+      "severity": -35.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-35.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-4",
+      "accident_class": "RI",
+      "severity": -4.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-4.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-5",
+      "accident_class": "RI",
+      "severity": -5.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-5.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "RI_-6",
+      "accident_class": "RI",
+      "severity": -6.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-6.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-7",
+      "accident_class": "RI",
+      "severity": -7.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-7.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RI_-8",
+      "accident_class": "RI",
+      "severity": -8.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-8.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "RI_-9",
+      "accident_class": "RI",
+      "severity": -9.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RI/-9.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "RW_1",
+      "accident_class": "RW",
+      "severity": 1.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RW/1.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "RW_2",
+      "accident_class": "RW",
+      "severity": 2.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RW/2.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "RW_3",
+      "accident_class": "RW",
+      "severity": 3.0,
+      "family": "reactivity_and_control",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/RW/3.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_100",
+      "accident_class": "SGATR",
+      "severity": 100.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/100.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_57",
+      "accident_class": "SGATR",
+      "severity": 57.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/57.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_58",
+      "accident_class": "SGATR",
+      "severity": 58.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_59",
+      "accident_class": "SGATR",
+      "severity": 59.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/59.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_60",
+      "accident_class": "SGATR",
+      "severity": 60.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/60.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_61",
+      "accident_class": "SGATR",
+      "severity": 61.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/61.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_62",
+      "accident_class": "SGATR",
+      "severity": 62.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/62.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_63",
+      "accident_class": "SGATR",
+      "severity": 63.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/63.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_64",
+      "accident_class": "SGATR",
+      "severity": 64.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/64.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_65",
+      "accident_class": "SGATR",
+      "severity": 65.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/65.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_66",
+      "accident_class": "SGATR",
+      "severity": 66.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/66.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_67",
+      "accident_class": "SGATR",
+      "severity": 67.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/67.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_68",
+      "accident_class": "SGATR",
+      "severity": 68.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/68.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_69",
+      "accident_class": "SGATR",
+      "severity": 69.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/69.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_70",
+      "accident_class": "SGATR",
+      "severity": 70.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/70.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_71",
+      "accident_class": "SGATR",
+      "severity": 71.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/71.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_72",
+      "accident_class": "SGATR",
+      "severity": 72.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/72.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_73",
+      "accident_class": "SGATR",
+      "severity": 73.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/73.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_74",
+      "accident_class": "SGATR",
+      "severity": 74.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/74.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_75",
+      "accident_class": "SGATR",
+      "severity": 75.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/75.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_76",
+      "accident_class": "SGATR",
+      "severity": 76.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/76.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_77",
+      "accident_class": "SGATR",
+      "severity": 77.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/77.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_78",
+      "accident_class": "SGATR",
+      "severity": 78.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/78.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_79",
+      "accident_class": "SGATR",
+      "severity": 79.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/79.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_80",
+      "accident_class": "SGATR",
+      "severity": 80.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/80.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_81",
+      "accident_class": "SGATR",
+      "severity": 81.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/81.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_82",
+      "accident_class": "SGATR",
+      "severity": 82.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/82.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_83",
+      "accident_class": "SGATR",
+      "severity": 83.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/83.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_84",
+      "accident_class": "SGATR",
+      "severity": 84.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/84.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_85",
+      "accident_class": "SGATR",
+      "severity": 85.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/85.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_86",
+      "accident_class": "SGATR",
+      "severity": 86.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/86.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_87",
+      "accident_class": "SGATR",
+      "severity": 87.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/87.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_88",
+      "accident_class": "SGATR",
+      "severity": 88.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/88.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_89",
+      "accident_class": "SGATR",
+      "severity": 89.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/89.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_90",
+      "accident_class": "SGATR",
+      "severity": 90.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/90.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_91",
+      "accident_class": "SGATR",
+      "severity": 91.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/91.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_92",
+      "accident_class": "SGATR",
+      "severity": 92.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/92.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_93",
+      "accident_class": "SGATR",
+      "severity": 93.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/93.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_94",
+      "accident_class": "SGATR",
+      "severity": 94.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/94.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGATR_95",
+      "accident_class": "SGATR",
+      "severity": 95.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/95.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_96",
+      "accident_class": "SGATR",
+      "severity": 96.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/96.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGATR_97",
+      "accident_class": "SGATR",
+      "severity": 97.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/97.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGATR_98",
+      "accident_class": "SGATR",
+      "severity": 98.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/98.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGATR_99",
+      "accident_class": "SGATR",
+      "severity": 99.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGATR/99.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_100",
+      "accident_class": "SGBTR",
+      "severity": 100.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/100.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_101",
+      "accident_class": "SGBTR",
+      "severity": 101.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/101.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_102",
+      "accident_class": "SGBTR",
+      "severity": 102.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/102.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_103",
+      "accident_class": "SGBTR",
+      "severity": 103.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/103.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_104",
+      "accident_class": "SGBTR",
+      "severity": 104.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/104.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_105",
+      "accident_class": "SGBTR",
+      "severity": 105.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/105.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_106",
+      "accident_class": "SGBTR",
+      "severity": 106.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/106.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_107",
+      "accident_class": "SGBTR",
+      "severity": 107.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/107.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_108",
+      "accident_class": "SGBTR",
+      "severity": 108.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/108.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_109",
+      "accident_class": "SGBTR",
+      "severity": 109.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/109.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_110",
+      "accident_class": "SGBTR",
+      "severity": 110.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/110.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_57",
+      "accident_class": "SGBTR",
+      "severity": 57.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/57.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_58",
+      "accident_class": "SGBTR",
+      "severity": 58.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_59",
+      "accident_class": "SGBTR",
+      "severity": 59.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/59.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_60",
+      "accident_class": "SGBTR",
+      "severity": 60.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/60.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_61",
+      "accident_class": "SGBTR",
+      "severity": 61.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/61.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_62",
+      "accident_class": "SGBTR",
+      "severity": 62.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/62.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_63",
+      "accident_class": "SGBTR",
+      "severity": 63.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/63.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_64",
+      "accident_class": "SGBTR",
+      "severity": 64.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/64.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_65",
+      "accident_class": "SGBTR",
+      "severity": 65.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/65.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_66",
+      "accident_class": "SGBTR",
+      "severity": 66.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/66.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_67",
+      "accident_class": "SGBTR",
+      "severity": 67.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/67.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_68",
+      "accident_class": "SGBTR",
+      "severity": 68.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/68.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_69",
+      "accident_class": "SGBTR",
+      "severity": 69.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/69.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_70",
+      "accident_class": "SGBTR",
+      "severity": 70.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/70.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_71",
+      "accident_class": "SGBTR",
+      "severity": 71.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/71.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_72",
+      "accident_class": "SGBTR",
+      "severity": 72.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/72.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_73",
+      "accident_class": "SGBTR",
+      "severity": 73.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/73.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_74",
+      "accident_class": "SGBTR",
+      "severity": 74.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/74.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_75",
+      "accident_class": "SGBTR",
+      "severity": 75.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/75.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_76",
+      "accident_class": "SGBTR",
+      "severity": 76.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/76.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_77",
+      "accident_class": "SGBTR",
+      "severity": 77.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/77.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_78",
+      "accident_class": "SGBTR",
+      "severity": 78.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/78.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_79",
+      "accident_class": "SGBTR",
+      "severity": 79.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/79.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_80",
+      "accident_class": "SGBTR",
+      "severity": 80.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/80.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SGBTR_81",
+      "accident_class": "SGBTR",
+      "severity": 81.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/81.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_82",
+      "accident_class": "SGBTR",
+      "severity": 82.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/82.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_83",
+      "accident_class": "SGBTR",
+      "severity": 83.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/83.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_84",
+      "accident_class": "SGBTR",
+      "severity": 84.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/84.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_85",
+      "accident_class": "SGBTR",
+      "severity": 85.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/85.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_86",
+      "accident_class": "SGBTR",
+      "severity": 86.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/86.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_87",
+      "accident_class": "SGBTR",
+      "severity": 87.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/87.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_88",
+      "accident_class": "SGBTR",
+      "severity": 88.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/88.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_89",
+      "accident_class": "SGBTR",
+      "severity": 89.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/89.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_90",
+      "accident_class": "SGBTR",
+      "severity": 90.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/90.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_91",
+      "accident_class": "SGBTR",
+      "severity": 91.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/91.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_92",
+      "accident_class": "SGBTR",
+      "severity": 92.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/92.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SGBTR_93",
+      "accident_class": "SGBTR",
+      "severity": 93.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/93.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_94",
+      "accident_class": "SGBTR",
+      "severity": 94.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/94.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_95",
+      "accident_class": "SGBTR",
+      "severity": 95.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/95.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SGBTR_96",
+      "accident_class": "SGBTR",
+      "severity": 96.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/96.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_97",
+      "accident_class": "SGBTR",
+      "severity": 97.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/97.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_98",
+      "accident_class": "SGBTR",
+      "severity": 98.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/98.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SGBTR_99",
+      "accident_class": "SGBTR",
+      "severity": 99.0,
+      "family": "steam_generator_tube_rupture",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SGBTR/99.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_100",
+      "accident_class": "SLBIC",
+      "severity": 100.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/100.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_101",
+      "accident_class": "SLBIC",
+      "severity": 101.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/101.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_14",
+      "accident_class": "SLBIC",
+      "severity": 14.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/14.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_15",
+      "accident_class": "SLBIC",
+      "severity": 15.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/15.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_16",
+      "accident_class": "SLBIC",
+      "severity": 16.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/16.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_17",
+      "accident_class": "SLBIC",
+      "severity": 17.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/17.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_18",
+      "accident_class": "SLBIC",
+      "severity": 18.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/18.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_19",
+      "accident_class": "SLBIC",
+      "severity": 19.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/19.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_20",
+      "accident_class": "SLBIC",
+      "severity": 20.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/20.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_21",
+      "accident_class": "SLBIC",
+      "severity": 21.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/21.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_22",
+      "accident_class": "SLBIC",
+      "severity": 22.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/22.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_23",
+      "accident_class": "SLBIC",
+      "severity": 23.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/23.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_24",
+      "accident_class": "SLBIC",
+      "severity": 24.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/24.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_25",
+      "accident_class": "SLBIC",
+      "severity": 25.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/25.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_26",
+      "accident_class": "SLBIC",
+      "severity": 26.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/26.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_27",
+      "accident_class": "SLBIC",
+      "severity": 27.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/27.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_28",
+      "accident_class": "SLBIC",
+      "severity": 28.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/28.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_29",
+      "accident_class": "SLBIC",
+      "severity": 29.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/29.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_30",
+      "accident_class": "SLBIC",
+      "severity": 30.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/30.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_31",
+      "accident_class": "SLBIC",
+      "severity": 31.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/31.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_32",
+      "accident_class": "SLBIC",
+      "severity": 32.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/32.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_33",
+      "accident_class": "SLBIC",
+      "severity": 33.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/33.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_34",
+      "accident_class": "SLBIC",
+      "severity": 34.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/34.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_35",
+      "accident_class": "SLBIC",
+      "severity": 35.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/35.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_36",
+      "accident_class": "SLBIC",
+      "severity": 36.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/36.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_37",
+      "accident_class": "SLBIC",
+      "severity": 37.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/37.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_38",
+      "accident_class": "SLBIC",
+      "severity": 38.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/38.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_39",
+      "accident_class": "SLBIC",
+      "severity": 39.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/39.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_40",
+      "accident_class": "SLBIC",
+      "severity": 40.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/40.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_41",
+      "accident_class": "SLBIC",
+      "severity": 41.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/41.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_42",
+      "accident_class": "SLBIC",
+      "severity": 42.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/42.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_43",
+      "accident_class": "SLBIC",
+      "severity": 43.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/43.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_44",
+      "accident_class": "SLBIC",
+      "severity": 44.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/44.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_45",
+      "accident_class": "SLBIC",
+      "severity": 45.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/45.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_46",
+      "accident_class": "SLBIC",
+      "severity": 46.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/46.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_47",
+      "accident_class": "SLBIC",
+      "severity": 47.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/47.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_48",
+      "accident_class": "SLBIC",
+      "severity": 48.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/48.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_49",
+      "accident_class": "SLBIC",
+      "severity": 49.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/49.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_50",
+      "accident_class": "SLBIC",
+      "severity": 50.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/50.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_51",
+      "accident_class": "SLBIC",
+      "severity": 51.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/51.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_52",
+      "accident_class": "SLBIC",
+      "severity": 52.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/52.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_53",
+      "accident_class": "SLBIC",
+      "severity": 53.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/53.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_54",
+      "accident_class": "SLBIC",
+      "severity": 54.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/54.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_55",
+      "accident_class": "SLBIC",
+      "severity": 55.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/55.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_56",
+      "accident_class": "SLBIC",
+      "severity": 56.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/56.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_57",
+      "accident_class": "SLBIC",
+      "severity": 57.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/57.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_58",
+      "accident_class": "SLBIC",
+      "severity": 58.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/58.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_59",
+      "accident_class": "SLBIC",
+      "severity": 59.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/59.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_60",
+      "accident_class": "SLBIC",
+      "severity": 60.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/60.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_61",
+      "accident_class": "SLBIC",
+      "severity": 61.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/61.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_62",
+      "accident_class": "SLBIC",
+      "severity": 62.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/62.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_63",
+      "accident_class": "SLBIC",
+      "severity": 63.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/63.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_64",
+      "accident_class": "SLBIC",
+      "severity": 64.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/64.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_65",
+      "accident_class": "SLBIC",
+      "severity": 65.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/65.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_66",
+      "accident_class": "SLBIC",
+      "severity": 66.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/66.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_67",
+      "accident_class": "SLBIC",
+      "severity": 67.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/67.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_68",
+      "accident_class": "SLBIC",
+      "severity": 68.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/68.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_69",
+      "accident_class": "SLBIC",
+      "severity": 69.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/69.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_70",
+      "accident_class": "SLBIC",
+      "severity": 70.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/70.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_71",
+      "accident_class": "SLBIC",
+      "severity": 71.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/71.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_72",
+      "accident_class": "SLBIC",
+      "severity": 72.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/72.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_73",
+      "accident_class": "SLBIC",
+      "severity": 73.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/73.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_74",
+      "accident_class": "SLBIC",
+      "severity": 74.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/74.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_75",
+      "accident_class": "SLBIC",
+      "severity": 75.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/75.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_76",
+      "accident_class": "SLBIC",
+      "severity": 76.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/76.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_77",
+      "accident_class": "SLBIC",
+      "severity": 77.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/77.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_78",
+      "accident_class": "SLBIC",
+      "severity": 78.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/78.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_79",
+      "accident_class": "SLBIC",
+      "severity": 79.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/79.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_80",
+      "accident_class": "SLBIC",
+      "severity": 80.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/80.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_81",
+      "accident_class": "SLBIC",
+      "severity": 81.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/81.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_82",
+      "accident_class": "SLBIC",
+      "severity": 82.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/82.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_83",
+      "accident_class": "SLBIC",
+      "severity": 83.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/83.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_84",
+      "accident_class": "SLBIC",
+      "severity": 84.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/84.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_85",
+      "accident_class": "SLBIC",
+      "severity": 85.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/85.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_86",
+      "accident_class": "SLBIC",
+      "severity": 86.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/86.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_87",
+      "accident_class": "SLBIC",
+      "severity": 87.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/87.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_88",
+      "accident_class": "SLBIC",
+      "severity": 88.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/88.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_89",
+      "accident_class": "SLBIC",
+      "severity": 89.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/89.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_90",
+      "accident_class": "SLBIC",
+      "severity": 90.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/90.csv",
+      "partition": "locked_release_test"
+    },
+    {
+      "sample_id": "SLBIC_91",
+      "accident_class": "SLBIC",
+      "severity": 91.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/91.csv",
+      "partition": "calibration"
+    },
+    {
+      "sample_id": "SLBIC_92",
+      "accident_class": "SLBIC",
+      "severity": 92.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/92.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_93",
+      "accident_class": "SLBIC",
+      "severity": 93.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/93.csv",
+      "partition": "development_validation"
+    },
+    {
+      "sample_id": "SLBIC_94",
+      "accident_class": "SLBIC",
+      "severity": 94.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/94.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_95",
+      "accident_class": "SLBIC",
+      "severity": 95.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/95.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_96",
+      "accident_class": "SLBIC",
+      "severity": 96.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/96.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_97",
+      "accident_class": "SLBIC",
+      "severity": 97.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/97.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_98",
+      "accident_class": "SLBIC",
+      "severity": 98.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/98.csv",
+      "partition": "development_train"
+    },
+    {
+      "sample_id": "SLBIC_99",
+      "accident_class": "SLBIC",
+      "severity": 99.0,
+      "family": "steam_line_break",
+      "operation_csv": "data/NuclearPowerPlantAccidentData/Operation_csv_data/SLBIC/99.csv",
+      "partition": "development_train"
+    }
+  ],
+  "partition_counts": {
+    "development_train": 241,
+    "locked_release_test": 101,
+    "calibration": 82,
+    "development_validation": 81
+  },
+  "sets": {
+    "family_classifier_train": {
+      "partition": "development_train",
+      "source": "protocol/development_train"
+    },
+    "family_classifier_validation": {
+      "partition": "development_validation",
+      "source": "protocol/development_validation"
+    },
+    "probability_calibrator_fit": {
+      "partition": "calibration",
+      "source": "protocol/calibration"
+    },
+    "conformal_calibration": {
+      "partition": "calibration",
+      "source": "protocol/calibration"
+    },
+    "distance_ood_fit": {
+      "partition": "development_train",
+      "source": "protocol/development_train"
+    },
+    "distance_threshold_calibration": {
+      "partition": "calibration",
+      "source": "protocol/calibration"
+    },
+    "loca_severity_train": {
+      "partition": "development_train",
+      "accident_class": "LOCA",
+      "source": "protocol/development_train/LOCA"
+    },
+    "loca_severity_validation": {
+      "partition": "development_validation",
+      "accident_class": "LOCA",
+      "source": "protocol/development_validation/LOCA"
+    },
+    "release_evaluation_test": {
+      "partition": "locked_release_test",
+      "source": "locked release test"
+    }
+  },
+  "content_sha256": "c7277ed9c233e741169d902d4ef41527b947bd600d6a2413a86cb177c111c1f3"
+}

@@ -182,6 +182,22 @@ Conformal `alpha=0.10` 在 extrapolation test 上的 empirical set coverage 仅�
 
 审计产物：`notebooks/16_ood_aware_selective_diagnosis.ipynb`、`src/ood_selective.py`、`results/16_*` 和 `results/figures/16_*`。16 阶段作为独立里程碑提交并推送到 `origin/main`。
 
+## 第三阶段第七步：NPP-Guard v1 integration（17.2 Protocol Alignment）
+
+17 阶段建立了固定 artifact 的统一研究型推理 API：`diagnose_csv(path)` 和 `diagnose_dataframe(df)`，以及 CLI：`python -m src.inference.cli --input <csv>`。输入必须包含 `TIME` 与 38 个严格过程变量，并通过时间单调性、约 10 s 采样、至少 120 s 窗口、重复时间点和 NaN/Inf 校验；缺列或窗口不足时只返回 `invalid_input`，不强制预测。
+
+v1 policy 固定为：`family classifier -> calibrated probability -> conformal alpha=.10 -> distance OOD check`。conformal 空集返回 `unknown`；单一 family 且距离正常返回 `accepted`；单一 family 但 distance OOD 或多个 family 返回 `requires_review`；Tier B 强制 `requires_review`，Tier C 为 `unknown/not-supported`，不输出强制 12-class subtype。模型、概率校准器、特征提取 schema、conformal artifact、Ledoit-Wolf distance model、能力门控和 policy 均保存在 `artifacts/v1/`，推理阶段不重新训练。
+
+17.2 固定了永久隔离的 trajectory/sample_id release protocol：沿用 `results/13_split_inventory.csv` 中 `random/seed_20260921/test` 的 101 条轨迹作为 `artifacts/v1/release_split_manifest.json` 的 locked release test；剩余轨迹按 accident class 和固定种子拆成 development-train `241`、development-validation `81`、calibration `82`。family classifier 只在 development-train 拟合，probability/conformal/distance threshold 只在 calibration 拟合，distance reference 只在 development-train 拟合；release test 与所有 fit/calibration 集合交集为 `0`。完整 sample_id、来源、集合 hash 和两两交集见 `results/17_v1_overlap_audit.csv/json`。
+
+LOCA family 继续使用 120 s、排除 `LVPZ/P/TSAT/VOL` 的 Random Forest severity estimator，并将 LOCA train `37` / validation `12` / release `15` 条轨迹显式分离；当前 validation MAE `0.966`、RMSE `1.114`、R² `0.997`，仍标记为 exploratory。只有 `status=accepted`、family 为 `primary_coolant_boundary_break` 且 capability 为 Tier A 时运行 severity；`unknown`、`requires_review`、非 LOCA、Tier B/C 和 `invalid_input` 均返回 `not_run_due_to_family_gating`。08 protection-time 没有建立方法学正确的 severity 链式输入，因此 v1 返回 `not_available_in_v1`。17.2 仍是 research prototype，不适用于 safety-critical deployment；subtype OOD 和 conformal 的统计保证仍未解决。
+
+locked release benchmark（101 条轨迹）记录为：forced family Accuracy/Macro-F1/Balanced Accuracy `1.000/1.000/1.000`；selective accepted coverage `0.515`、Selective Accuracy `1.000`、Macro-F1 `0.500`、Balanced Accuracy `1.000`、risk `0.000`、reject rate `0.485`；conformal empirical set coverage `0.901`、平均 set size `0.901`；distance OOD warning rate `0.347`。这些只描述当前锁定 cohort，不是部署泛化承诺。
+
+16 的 severity-extrapolation 结果仍作为独立 research stress benchmark 引用（conformal coverage `0.7573`、Selective Macro-F1 `0.6700`、risk `0.0886`），与 locked release benchmark 使用不同训练/测试协议，不能做严格数值 parity。17.2 的 exact pipeline parity 改为同一 locked cohort 上 batch evaluator 与 `diagnose_dataframe()` 的逐样本比较：离散决策一致率 `101/101 = 100%`，浮点最大绝对差 `0`；不再以“贴近16指标”作为 Gate。
+
+17.2 产物包括：`notebooks/17_npp_guard_v1_integration.ipynb`、`src/inference/`、`examples/run_v1_inference.py`、`artifacts/v1/release_split_manifest.json`、`artifacts/v1/manifest.json`、`results/17_v1_overlap_audit.csv/json`、`results/17_v1_pipeline_parity.csv/json`、`results/17_v1_release_benchmark.csv/json`、`results/17_v1_example_outputs.json` 和 `results/17_v1_regression_tests.csv`。当前五类行为示例均观察到：accepted Tier-A、accepted LOCA、requires_review、unknown、invalid_input；回归测试 `18/18` 通过。`results/17_v1_artifact_parity.csv/json` 保留为 17.1 历史诊断，不再是 release gate。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -223,7 +239,8 @@ NPP-Guard/
 │  ├─ hierarchical_diagnosis.py                # 14 family mapping 与两阶段诊断
 │  ├─ milestone14.py                            # 14 Notebook 编排与结果汇总
 │  ├─ coverage_task_redesign.py                 # 15 coverage-aware family selective diagnosis
-│  └─ ood_selective.py                           # 16 OOD-aware selective family diagnosis
+│  ├─ ood_selective.py                           # 16 OOD-aware selective family diagnosis
+│  └─ inference/                                 # 17 fixed-artifact v1 inference API and CLI
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -240,7 +257,9 @@ NPP-Guard/
 │  ├─ 13_ood_severity_blocked_validation.ipynb
 │  ├─ 14_severity_invariant_hierarchical_diagnosis.ipynb
 │  ├─ 15_coverage_aware_task_redesign.ipynb
-│  └─ 16_ood_aware_selective_diagnosis.ipynb
+│  ├─ 16_ood_aware_selective_diagnosis.ipynb
+│  └─ 17_npp_guard_v1_integration.ipynb
+├─ artifacts/v1/                                # fixed v1 research artifacts and manifest
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -368,6 +387,7 @@ jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 - `14_severity_invariant_hierarchical_diagnosis` 已完成：12-class 120 s extrapolation Macro-F1 `0.4826`、Balanced Accuracy `0.8125`；severity-invariant 特征仅升至 `0.4905`；family-level Macro-F1 `0.6331`，但两阶段 subtype Macro-F1 `0.4829`；RI/LOCAC/SLBIC 存在方向性不稳定，因此暂不进入深度学习，先进行 coverage/task redesign；
 - `15_coverage_aware_task_redesign` 已完成：class Tier A/B/C `8/1/8`、family Tier A/B/C `4/2/4`；120 s family-level Macro-F1 在 random / blocked / extrapolation 下约为 `0.8469/0.7603/0.6660`；现有 selective reject 仅 `23/1525=1.51%`，blocked/extrapolation 验证阈值为 `0`，无法有效拒绝大 severity-gap OOD，因此 family diagnosis 仍为有限能力，subtype OOD 与 reject 机制不足，暂不进入深度学习；
 - `16_ood_aware_selective_diagnosis` 已完成：120 s extrapolation forced family Macro-F1 `0.666`、risk `0.194`；Conformal `alpha=0.10` coverage `75.7%`、Selective Macro-F1 `0.670`、risk `0.089`，但 empirical set coverage 仅 `68.9%`，不能宣称 `90%` 统计覆盖保证；distance OOD proxy AUROC `0.822`。推荐研究型 Unknown/Requires review 策略，仍不适用于 safety-critical deployment；
+- `17_npp_guard_v1_integration` 的 17.2 Protocol Alignment 已完成：固定 release split、zero-overlap audit、artifact SHA-256、exact batch/API parity、LOCA gating、locked release benchmark 和 `18/18` regression 全部通过；16 的 severity-extrapolation 结果仅作为独立 research stress benchmark，不能与 release benchmark 做严格数值 parity。保护时间暂不接入 v1，系统仍明确标记 research prototype、not for safety-critical deployment、severity OOD/subtype OOD 与 conformal 实际 coverage 限制；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；

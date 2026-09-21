@@ -1,0 +1,27 @@
+{
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "decision_policy": "family classifier -> calibrated probability -> conformal alpha=.10 -> distance OOD check",
+  "conformal_alpha": 0.1,
+  "distance_warning_threshold": 3.0417115477851966,
+  "distance_threshold_source": "protocol/calibration distance 70th percentile",
+  "status_rules": {
+    "empty_conformal_set": "unknown",
+    "singleton_and_distance_normal": "accepted",
+    "singleton_and_distance_ood": "requires_review",
+    "multi_family_set": "requires_review",
+    "tier_B": "requires_review",
+    "tier_C": "unknown"
+  },
+  "assessment_gating": {
+    "loca_severity": "status == accepted and accident_family == primary_coolant_boundary_break and capability tier == Tier A",
+    "otherwise": "not_run_due_to_family_gating"
+  },
+  "limitations": [
+    "Research prototype; not for safety-critical deployment.",
+    "Family-level diagnosis remains affected by severity out-of-distribution shift.",
+    "The milestone-16 conformal empirical set coverage was 68.9%; no 90% statistical coverage guarantee is claimed.",
+    "Subtype OOD is unresolved; v1 never forces a 12-class subtype output.",
+    "LOCA severity estimation is exploratory and simulation-specific.",
+    "Protection-time prediction is exploratory in the research record and is not available in v1 because a valid chained input was not established."
+  ]
+}

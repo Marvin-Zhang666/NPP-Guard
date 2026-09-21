@@ -1,0 +1,19 @@
+test,passed,status,detail
+valid_120s_input,True,requires_review,LOCA/1.csv full trajectory
+missing_required_column,True,invalid_input,removed one strict process variable
+window_shorter_than_120s,True,invalid_input,LOCA/1.csv truncated at 50 s
+nan_inf_rejected,True,invalid_input,inserted NaN in a strict variable
+inf_rejected,True,invalid_input,inserted Inf in a strict variable
+extra_column_ignored,True,requires_review,extra column is ignored and reported
+duplicate_time_rejected,True,invalid_input,duplicated TIME point
+loca_severity_gate_matches_policy,True,requires_review,LOCA severity only runs for accepted LOCA Tier-A decisions
+ood_sample_runs,True,unknown,real LOCA/100.csv severity-shift proxy
+requires_review_does_not_run_loca_severity,True,requires_review,locked release behavior example
+accepted_non_loca_does_not_run_loca_severity,True,accepted,locked release behavior example
+accepted_loca_runs_severity,True,accepted,locked release accepted LOCA example
+invalid_input_does_not_run_assessment,True,invalid_input,controlled 50 s truncation
+repeat_inference_consistent,True,requires_review,same input and fixed artifacts
+artifact_sha256_verification,True,verified,manifest-listed artifacts
+zero_overlap,True,passed,locked release test versus all fit/calibration sets
+exact_pipeline_parity,True,passed,Exact API/batch discrete parity passed at 100% with float deltas within 1e-9.
+locked_release_benchmark,True,generated,locked release benchmark generated without refit

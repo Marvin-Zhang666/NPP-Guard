@@ -1,0 +1,17 @@
+comparison_scope,metric,research_target,frozen_result,delta,tolerance,pass,cohort_size
+forced_family,coverage,1.0,1.0,0.0,0.03,True,206
+forced_family,selective_accuracy,0.8058252427184467,1.0,0.1941747572815533,0.03,False,206
+forced_family,selective_macro_f1,0.6659730091313389,1.0,0.33402699086866106,0.03,False,206
+forced_family,family_balanced_accuracy,0.8314732142857142,1.0,0.1685267857142858,0.03,False,206
+forced_family,risk,0.19417475728155328,0.0,-0.19417475728155328,0.03,False,206
+forced_family,reject_rate,0.0,0.0,0.0,0.03,True,206
+conformal_alpha_0.10,coverage,0.7572815533980582,0.8446601941747572,0.08737864077669899,0.03,False,206
+conformal_alpha_0.10,selective_accuracy,0.9113924050632911,1.0,0.08860759493670889,0.03,False,206
+conformal_alpha_0.10,selective_macro_f1,0.6700141465416635,1.0,0.32998585345833653,0.03,False,206
+conformal_alpha_0.10,family_balanced_accuracy,0.8999999999999999,1.0,0.10000000000000009,0.03,False,206
+conformal_alpha_0.10,risk,0.0886075949367088,0.0,-0.0886075949367088,0.03,False,206
+conformal_alpha_0.10,reject_rate,0.2427184466019417,0.15533980582524276,-0.08737864077669893,0.03,False,206
+conformal_alpha_0.10,empirical_set_coverage,0.6893203883495146,0.8446601941747572,0.15533980582524265,0.03,False,206
+conformal_alpha_0.10,RI_reject_rate,0.3428571428571428,0.5714285714285714,0.2285714285714286,0.03,False,206
+conformal_alpha_0.10,LOCAC_reject_rate,0.1541666666666666,0.0,-0.1541666666666666,0.03,False,206
+conformal_alpha_0.10,SLBIC_reject_rate,0.3,0.5,0.2,0.03,False,206

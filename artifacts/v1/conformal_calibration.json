@@ -1,0 +1,18 @@
+{
+  "method": "split_conformal_probability_threshold",
+  "alpha": 0.1,
+  "labels": [
+    "feedwater_line_break",
+    "primary_coolant_boundary_break",
+    "reactivity_and_control",
+    "steam_generator_tube_rupture",
+    "steam_line_break",
+    "turbine_and_load_transient"
+  ],
+  "probability_cutoff": 0.8709500473269975,
+  "nonconformity_score_quantile": 0.12904995267300245,
+  "calibration_rows": 82,
+  "calibration_split": "protocol/calibration only",
+  "empirical_milestone_16_set_coverage": 0.689,
+  "coverage_claim": "No 90% statistical coverage guarantee; empirical set coverage was 68.9% in milestone 16."
+}

@@ -1,0 +1,38 @@
+metric_group,metric,family,value
+forced_family,coverage,,1.0
+forced_family,accuracy,,1.0
+forced_family,macro_f1,,1.0
+forced_family,balanced_accuracy,,1.0
+forced_family,risk,,0.0
+forced_family,reject_rate,,0.0
+selective_policy,coverage,,0.5148514851485149
+selective_policy,accuracy,,1.0
+selective_policy,macro_f1,,0.5
+selective_policy,balanced_accuracy,,1.0
+selective_policy,risk,,0.0
+selective_policy,reject_rate,,0.48514851485148514
+conformal,empirical_set_coverage,,0.900990099009901
+conformal,average_set_size,,0.900990099009901
+conformal,empty_set_rate,,0.09900990099009901
+distance_ood,warning_rate,,0.3465346534653465
+distance_ood,warning_count,,35.0
+per_family_recall,recall,feedwater_line_break,1.0
+per_family_recall,support,feedwater_line_break,20.0
+per_family_recall,recall,primary_coolant_boundary_break,1.0
+per_family_recall,support,primary_coolant_boundary_break,31.0
+per_family_recall,recall,reactivity_and_control,1.0
+per_family_recall,support,reactivity_and_control,7.0
+per_family_recall,recall,steam_generator_tube_rupture,1.0
+per_family_recall,support,steam_generator_tube_rupture,20.0
+per_family_recall,recall,steam_line_break,1.0
+per_family_recall,support,steam_line_break,18.0
+per_family_recall,recall,turbine_and_load_transient,1.0
+per_family_recall,support,turbine_and_load_transient,5.0
+status_distribution,count,accepted,52.0
+status_distribution,count,requires_review,39.0
+status_distribution,count,unknown,10.0
+tier_status_distribution,count,Tier A::accepted,52.0
+tier_status_distribution,count,Tier A::requires_review,22.0
+tier_status_distribution,count,Tier A::unknown,2.0
+tier_status_distribution,count,Tier B::requires_review,17.0
+tier_status_distribution,count,Tier B::unknown,8.0

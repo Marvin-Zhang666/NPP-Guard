@@ -1,0 +1,236 @@
+{
+  "accepted_tier_a": {
+    "sample_id": "FLB_10",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/10.csv",
+    "input_kind": "full_trajectory",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "FLB",
+      "reference_severity": 10.0
+    },
+    "status": "accepted",
+    "accident_family": "feedwater_line_break",
+    "family_confidence": 0.9076882515834948,
+    "conformal_set": [
+      "feedwater_line_break"
+    ],
+    "ood_warning": {
+      "flag": false,
+      "method": "class_conditional_ledoit_wolf_mahalanobis",
+      "threshold": 3.0417115477851966,
+      "reason": "distance_within_validation_threshold",
+      "proxy_note": "This is a research severity-shift proxy, not a production OOD label."
+    },
+    "distance_score": 1.0000000000000004,
+    "severity_gating": {
+      "status": "not_run_due_to_family_gating",
+      "estimate": null,
+      "exploratory": true,
+      "reason": "LOCA severity runs only for an accepted Tier-A LOCA family diagnosis."
+    },
+    "data_quality": {
+      "row_count": 245,
+      "window_s": 2440.0,
+      "valid": true
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "accepted_non_loca_tier_a": {
+    "sample_id": "FLB_10",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/10.csv",
+    "input_kind": "full_trajectory",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "FLB",
+      "reference_severity": 10.0
+    },
+    "status": "accepted",
+    "accident_family": "feedwater_line_break",
+    "family_confidence": 0.9076882515834948,
+    "conformal_set": [
+      "feedwater_line_break"
+    ],
+    "ood_warning": {
+      "flag": false,
+      "method": "class_conditional_ledoit_wolf_mahalanobis",
+      "threshold": 3.0417115477851966,
+      "reason": "distance_within_validation_threshold",
+      "proxy_note": "This is a research severity-shift proxy, not a production OOD label."
+    },
+    "distance_score": 1.0000000000000004,
+    "severity_gating": {
+      "status": "not_run_due_to_family_gating",
+      "estimate": null,
+      "exploratory": true,
+      "reason": "LOCA severity runs only for an accepted Tier-A LOCA family diagnosis."
+    },
+    "data_quality": {
+      "row_count": 245,
+      "window_s": 2440.0,
+      "valid": true
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "requires_review": {
+    "sample_id": "LOCAC_12",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/12.csv",
+    "input_kind": "full_trajectory",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "LOCAC",
+      "reference_severity": 12.0
+    },
+    "status": "requires_review",
+    "accident_family": "primary_coolant_boundary_break",
+    "family_confidence": 0.9214365357600279,
+    "conformal_set": [
+      "primary_coolant_boundary_break"
+    ],
+    "ood_warning": {
+      "flag": true,
+      "method": "class_conditional_ledoit_wolf_mahalanobis",
+      "threshold": 3.0417115477851966,
+      "reason": "distance_above_validation_threshold",
+      "proxy_note": "This is a research severity-shift proxy, not a production OOD label."
+    },
+    "distance_score": 4.061860954001071,
+    "severity_gating": {
+      "status": "not_run_due_to_family_gating",
+      "estimate": null,
+      "exploratory": true,
+      "reason": "LOCA severity runs only for an accepted Tier-A LOCA family diagnosis."
+    },
+    "data_quality": {
+      "row_count": 508,
+      "window_s": 5070.0,
+      "valid": true
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "accepted_loca_severity": {
+    "sample_id": "LOCAC_19",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LOCAC/19.csv",
+    "input_kind": "full_trajectory",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "LOCAC",
+      "reference_severity": 19.0
+    },
+    "status": "accepted",
+    "accident_family": "primary_coolant_boundary_break",
+    "family_confidence": 0.9393107566002737,
+    "conformal_set": [
+      "primary_coolant_boundary_break"
+    ],
+    "ood_warning": {
+      "flag": false,
+      "method": "class_conditional_ledoit_wolf_mahalanobis",
+      "threshold": 3.0417115477851966,
+      "reason": "distance_within_validation_threshold",
+      "proxy_note": "This is a research severity-shift proxy, not a production OOD label."
+    },
+    "distance_score": 2.626357398934843,
+    "severity_gating": {
+      "status": "available_exploratory",
+      "estimate": 12.950941798941805,
+      "unit": "% of 100 cm2 break area",
+      "model": "random_forest",
+      "window_s": 120,
+      "excluded_bases": [
+        "LVPZ",
+        "P",
+        "TSAT",
+        "VOL"
+      ],
+      "validation_mae": 0.9655100308641985,
+      "exploratory": true
+    },
+    "data_quality": {
+      "row_count": 495,
+      "window_s": 4940.0,
+      "valid": true
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "unknown": {
+    "sample_id": "LR_93",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/LR/93.csv",
+    "input_kind": "full_trajectory",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "LR",
+      "reference_severity": 93.0
+    },
+    "status": "unknown",
+    "accident_family": null,
+    "family_confidence": 0.8445498680550958,
+    "conformal_set": [],
+    "ood_warning": {
+      "flag": true,
+      "method": "class_conditional_ledoit_wolf_mahalanobis",
+      "threshold": 3.0417115477851966,
+      "reason": "distance_above_validation_threshold",
+      "proxy_note": "This is a research severity-shift proxy, not a production OOD label."
+    },
+    "distance_score": 1883.4252034481717,
+    "severity_gating": {
+      "status": "not_run_due_to_family_gating",
+      "estimate": null,
+      "exploratory": true,
+      "reason": "LOCA severity runs only for an accepted Tier-A LOCA family diagnosis."
+    },
+    "data_quality": {
+      "row_count": 557,
+      "window_s": 5560.0,
+      "valid": true
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "invalid_input": {
+    "sample_id": "FLB_10",
+    "source": "data/NuclearPowerPlantAccidentData/Operation_csv_data/FLB/10.csv",
+    "input_kind": "controlled_truncation_to_50s",
+    "evaluation_cohort": {
+      "split_type": "locked_release",
+      "split_id": "v1_release_protocol_17_2",
+      "partition": "locked_release_test",
+      "reference_accident_class": "FLB",
+      "reference_severity": 10.0
+    },
+    "status": "invalid_input",
+    "accident_family": null,
+    "family_confidence": null,
+    "conformal_set": [],
+    "ood_warning": {
+      "flag": null,
+      "reason": "No prediction was attempted."
+    },
+    "distance_score": null,
+    "severity_gating": null,
+    "data_quality": {
+      "row_count": 6,
+      "window_s": 50.0,
+      "valid": false,
+      "errors": [
+        "window_shorter_than_120_s"
+      ]
+    },
+    "model_version": "npp_guard_v1_17_2_20260921"
+  },
+  "search_protocol": {
+    "source": "artifacts/v1/release_split_manifest.json locked_release_test",
+    "cohort_size": 101,
+    "uses_frozen_artifacts": true,
+    "inference_does_not_use_reference_labels": true
+  }
+}

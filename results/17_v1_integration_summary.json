@@ -1,0 +1,1830 @@
+{
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "api": [
+    "diagnose_csv(path)",
+    "diagnose_dataframe(df)"
+  ],
+  "cli": "python -m src.inference.cli --input <csv>",
+  "decision_policy": {
+    "model_version": "npp_guard_v1_17_2_20260921",
+    "decision_policy": "family classifier -> calibrated probability -> conformal alpha=.10 -> distance OOD check",
+    "conformal_alpha": 0.1,
+    "distance_warning_threshold": 3.0417115477851966,
+    "distance_threshold_source": "protocol/calibration distance 70th percentile",
+    "status_rules": {
+      "empty_conformal_set": "unknown",
+      "singleton_and_distance_normal": "accepted",
+      "singleton_and_distance_ood": "requires_review",
+      "multi_family_set": "requires_review",
+      "tier_B": "requires_review",
+      "tier_C": "unknown"
+    },
+    "assessment_gating": {
+      "loca_severity": "status == accepted and accident_family == primary_coolant_boundary_break and capability tier == Tier A",
+      "otherwise": "not_run_due_to_family_gating"
+    },
+    "limitations": [
+      "Research prototype; not for safety-critical deployment.",
+      "Family-level diagnosis remains affected by severity out-of-distribution shift.",
+      "The milestone-16 conformal empirical set coverage was 68.9%; no 90% statistical coverage guarantee is claimed.",
+      "Subtype OOD is unresolved; v1 never forces a 12-class subtype output.",
+      "LOCA severity estimation is exploratory and simulation-specific.",
+      "Protection-time prediction is exploratory in the research record and is not available in v1 because a valid chained input was not established."
+    ]
+  },
+  "artifact_manifest": "artifacts/v1/manifest.json",
+  "protocol": {
+    "version": "v1_release_protocol_17_2",
+    "split_manifest": "artifacts/v1/release_split_manifest.json",
+    "split_manifest_sha256": "7dd8014ac839f0d60cffc40c33e54217cae19df4fee75813a585df5def5929f4",
+    "overlap_audit": "results/17_v1_overlap_audit.json",
+    "release_test_disjoint_from_fit_sets": true
+  },
+  "release_protocol_alignment": {
+    "status": "passed",
+    "protocol": "v1_release_protocol_17_2"
+  },
+  "overlap_audit": {
+    "release_test_disjoint_from_all_fit_sets": true,
+    "all_records_unique": true
+  },
+  "exact_pipeline_parity": {
+    "model_version": "npp_guard_v1_17_2_20260921",
+    "cohort": {
+      "split_manifest": "artifacts/v1/release_split_manifest.json",
+      "sample_count": 101,
+      "sample_id_sha256": "575b19ec801f2098fa524810cf2270b6f3ea06c81e35502f693458ed8696f6e8"
+    },
+    "discrete_decision_agreement_rate": 1.0,
+    "discrete_decision_agreement_100_percent": true,
+    "max_float_abs_delta": 0.0,
+    "float_tolerance": 1e-09,
+    "manifest_verification": {
+      "all_passed": true,
+      "checks": {
+        "family_classifier.joblib": {
+          "exists": true,
+          "sha256": "86302cb63faeed87d9c8f25ff846edb1e4095ed63e094e7532446a44ece0101b",
+          "expected_sha256": "86302cb63faeed87d9c8f25ff846edb1e4095ed63e094e7532446a44ece0101b",
+          "passed": true
+        },
+        "probability_calibrator.joblib": {
+          "exists": true,
+          "sha256": "af59b9774c63c31e82c7769dc82f966582be5a2bfbf80679894b5b5e59ed94ed",
+          "expected_sha256": "af59b9774c63c31e82c7769dc82f966582be5a2bfbf80679894b5b5e59ed94ed",
+          "passed": true
+        },
+        "distance_ood_model.joblib": {
+          "exists": true,
+          "sha256": "b1cffea1ea7174483213e47dd25183c9c4164c8272aab8f1704de8b7a80d4efa",
+          "expected_sha256": "b1cffea1ea7174483213e47dd25183c9c4164c8272aab8f1704de8b7a80d4efa",
+          "passed": true
+        },
+        "loca_severity_model.joblib": {
+          "exists": true,
+          "sha256": "519e65ae949612b4c48e38258a88a281ef1ab79d87f92e22fb0e24962909b3fb",
+          "expected_sha256": "519e65ae949612b4c48e38258a88a281ef1ab79d87f92e22fb0e24962909b3fb",
+          "passed": true
+        },
+        "feature_extractor.json": {
+          "exists": true,
+          "sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+          "expected_sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+          "passed": true
+        },
+        "family_mapping.json": {
+          "exists": true,
+          "sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+          "expected_sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+          "passed": true
+        },
+        "capability_matrix.json": {
+          "exists": true,
+          "sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+          "expected_sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+          "passed": true
+        },
+        "conformal_calibration.json": {
+          "exists": true,
+          "sha256": "9c01a87cabf2a9103bfc0270652c95f755e178b4135932fad949ec6ad6788e4d",
+          "expected_sha256": "9c01a87cabf2a9103bfc0270652c95f755e178b4135932fad949ec6ad6788e4d",
+          "passed": true
+        },
+        "policy.json": {
+          "exists": true,
+          "sha256": "2ce8c6b45edb9ab038b06bba883b3ffe7efde574550e8d7cf3981e0265072b25",
+          "expected_sha256": "2ce8c6b45edb9ab038b06bba883b3ffe7efde574550e8d7cf3981e0265072b25",
+          "passed": true
+        },
+        "release_split_manifest.json": {
+          "exists": true,
+          "sha256": "7dd8014ac839f0d60cffc40c33e54217cae19df4fee75813a585df5def5929f4",
+          "expected_sha256": "7dd8014ac839f0d60cffc40c33e54217cae19df4fee75813a585df5def5929f4",
+          "passed": true
+        }
+      }
+    },
+    "overall_pass": true,
+    "gate_reason": "Exact API/batch discrete parity passed at 100% with float deltas within 1e-9."
+  },
+  "locked_release_benchmark": {
+    "benchmark_name": "v1 release benchmark",
+    "model_version": "npp_guard_v1_17_2_20260921",
+    "protocol": {
+      "split_manifest": "artifacts/v1/release_split_manifest.json",
+      "release_sample_count": 101,
+      "release_sample_id_sha256": "575b19ec801f2098fa524810cf2270b6f3ea06c81e35502f693458ed8696f6e8",
+      "not_the_milestone_16_research_protocol": true
+    },
+    "forced_family": {
+      "coverage": 1.0,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.0
+    },
+    "selective_policy": {
+      "coverage": 0.5148514851485149,
+      "accuracy": 1.0,
+      "macro_f1": 0.5,
+      "balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.48514851485148514
+    },
+    "conformal": {
+      "empirical_set_coverage": 0.900990099009901,
+      "average_set_size": 0.900990099009901,
+      "empty_set_rate": 0.09900990099009901
+    },
+    "distance_ood": {
+      "warning_rate": 0.3465346534653465,
+      "warning_count": 35
+    },
+    "per_family_recall": {
+      "feedwater_line_break": {
+        "support": 20,
+        "recall": 1.0
+      },
+      "primary_coolant_boundary_break": {
+        "support": 31,
+        "recall": 1.0
+      },
+      "reactivity_and_control": {
+        "support": 7,
+        "recall": 1.0
+      },
+      "steam_generator_tube_rupture": {
+        "support": 20,
+        "recall": 1.0
+      },
+      "steam_line_break": {
+        "support": 18,
+        "recall": 1.0
+      },
+      "turbine_and_load_transient": {
+        "support": 5,
+        "recall": 1.0
+      }
+    },
+    "status_distribution": {
+      "accepted": 52,
+      "requires_review": 39,
+      "unknown": 10
+    },
+    "tier_status_distribution": {
+      "Tier A::accepted": 52,
+      "Tier A::requires_review": 22,
+      "Tier A::unknown": 2,
+      "Tier B::requires_review": 17,
+      "Tier B::unknown": 8
+    },
+    "sample_results": [
+      {
+        "sample_id": "FLB_10",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_12",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_14",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_25",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_36",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_38",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_40",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_41",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_52",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_55",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_60",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_62",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_63",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_66",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_72",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_8",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_81",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_83",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_85",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "FLB_92",
+        "true_family": "feedwater_line_break",
+        "true_class": "FLB",
+        "family_top1": "feedwater_line_break",
+        "family_confidence": 0.9076882515834948,
+        "conformal_set": [
+          "feedwater_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.0000000000000004,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_12",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9214365357600279,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.061860954001071,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_19",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9393107566002737,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.626357398934843,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_20",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9393107566002737,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.487187862821789,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_24",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9229684409055066,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.148621565345512,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_25",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9391239848938148,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.176020000416182,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_27",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9391239848938148,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.227333396767511,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_3",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9349490390394811,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 6.841350084680626,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_31",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9391239848938148,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.2203764513860866,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_33",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9291883532785191,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.275507343323872,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_39",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9391239848938148,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.6184402885758957,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_53",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9291883532785191,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.529731030939086,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_54",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9229684409055066,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.4354628258222437,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCAC_67",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9361945919600583,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 3.9794022201955226,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_71",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9313466911264283,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 5.272133454060704,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_77",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9202206847698963,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 8.182912144858651,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCAC_9",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCAC",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9306710899442764,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.963738196141119,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_16",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9343370950995535,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.863579497339033,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_19",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9440679663979517,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.409155157771312,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_23",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9440679663979517,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.996941298090654,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_40",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9425916087298448,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.2335698346873474,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_41",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9425916087298448,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.558507263530131,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_42",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9425916087298448,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.351486994462576,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_46",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9425916087298448,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.36145598829314,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_48",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9425916087298448,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.368981913029014,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "available_exploratory"
+      },
+      {
+        "sample_id": "LOCA_5",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9437751264452158,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 5.779487011029103,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_59",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9300852682532452,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 3.1736323149418073,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_69",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.930490707944634,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 6.0320566224246175,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_70",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.927030916522504,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 6.522677010955473,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_73",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9214959713794052,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 8.607906276479293,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_75",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9221765342170896,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 10.242806207921292,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LOCA_77",
+        "true_family": "primary_coolant_boundary_break",
+        "true_class": "LOCA",
+        "family_top1": "primary_coolant_boundary_break",
+        "family_confidence": 0.9214959713794052,
+        "conformal_set": [
+          "primary_coolant_boundary_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 12.252326756395117,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LR_79",
+        "true_family": "turbine_and_load_transient",
+        "true_class": "LR",
+        "family_top1": "turbine_and_load_transient",
+        "family_confidence": 0.9172575895783729,
+        "conformal_set": [
+          "turbine_and_load_transient"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.289403530882913,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LR_80",
+        "true_family": "turbine_and_load_transient",
+        "true_class": "LR",
+        "family_top1": "turbine_and_load_transient",
+        "family_confidence": 0.9172575895783729,
+        "conformal_set": [
+          "turbine_and_load_transient"
+        ],
+        "ood_warning": true,
+        "distance_score": 3.4070690654671845,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LR_93",
+        "true_family": "turbine_and_load_transient",
+        "true_class": "LR",
+        "family_top1": "turbine_and_load_transient",
+        "family_confidence": 0.8445498680550958,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 1883.4252034481717,
+        "status": "unknown",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LR_95",
+        "true_family": "turbine_and_load_transient",
+        "true_class": "LR",
+        "family_top1": "turbine_and_load_transient",
+        "family_confidence": 0.9172575895783729,
+        "conformal_set": [
+          "turbine_and_load_transient"
+        ],
+        "ood_warning": true,
+        "distance_score": 8.927632733909576,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "LR_97",
+        "true_family": "turbine_and_load_transient",
+        "true_class": "LR",
+        "family_top1": "turbine_and_load_transient",
+        "family_confidence": 0.9172575895783729,
+        "conformal_set": [
+          "turbine_and_load_transient"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.038915589867151,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-20",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.852193936304334,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 30.456666026168143,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-29",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8670530884077341,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 7.1929134711459515,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-33",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8670530884077341,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 18.334834646432014,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-34",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8670530884077341,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 34.597294807956146,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-35",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8670530884077341,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 51.0713103415585,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-4",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8645365982748412,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 8.97283238001652,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "RI_-8",
+        "true_family": "reactivity_and_control",
+        "true_class": "RI",
+        "family_top1": "reactivity_and_control",
+        "family_confidence": 0.8513431743788124,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 13.064717691786871,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_57",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": true,
+        "distance_score": 5.495512079470521,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_67",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.8177552259790106,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_68",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.622458289579414,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_76",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.4831424909856443,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_77",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.4036911049121632,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_79",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.2847585558894177,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_82",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9304524979475844,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.2761040961091374,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_92",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9168844567025667,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.5115128999935106,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGATR_97",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGATR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9134436711311837,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.0973567433049976,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_100",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9146205006359682,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.66020416161275,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_109",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.8981225969006611,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": true,
+        "distance_score": 5.395476765845568,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_57",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.8697052516360747,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 5.605362788805099,
+        "status": "unknown",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_59",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9272732217740574,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": true,
+        "distance_score": 4.9556063151916625,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_65",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9282663891056722,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": true,
+        "distance_score": 3.254635134447958,
+        "status": "requires_review",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_75",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9300951439709705,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.413356536515641,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_81",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9300951439709705,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.9505756640368637,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_83",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9300951439709705,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.8844823973874217,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_85",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9300951439709705,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.8820545625473415,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_91",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9300951439709705,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.2254691156618425,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SGBTR_95",
+        "true_family": "steam_generator_tube_rupture",
+        "true_class": "SGBTR",
+        "family_top1": "steam_generator_tube_rupture",
+        "family_confidence": 0.9146205006359682,
+        "conformal_set": [
+          "steam_generator_tube_rupture"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.6836236718897502,
+        "status": "accepted",
+        "tier": "Tier A",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_16",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 8.680289434878466,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_18",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 8.53538008649926,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_22",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.8615268195824246,
+        "conformal_set": [],
+        "ood_warning": true,
+        "distance_score": 8.502770694988932,
+        "status": "unknown",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_27",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.899637506303782,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": true,
+        "distance_score": 3.2827420802691005,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_31",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.591774651376431,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_34",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.1541025393321513,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_35",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 2.0220085883333803,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_37",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9014514907180515,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.7778769302734787,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_42",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9018924027043882,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.2678922153814098,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_44",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.923696223668697,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.096937456273001,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_55",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.923696223668697,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.433836459031053,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_57",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.3619212220293263,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_63",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.23711747006524847,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_66",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.22819834390341198,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_67",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.23354292071295749,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_68",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.24379063503987675,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_74",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.925624085588004,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 0.3969573679171764,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      },
+      {
+        "sample_id": "SLBIC_90",
+        "true_family": "steam_line_break",
+        "true_class": "SLBIC",
+        "family_top1": "steam_line_break",
+        "family_confidence": 0.9254394253741283,
+        "conformal_set": [
+          "steam_line_break"
+        ],
+        "ood_warning": false,
+        "distance_score": 1.6480295224891393,
+        "status": "requires_review",
+        "tier": "Tier B",
+        "severity_status": "not_run_due_to_family_gating"
+      }
+    ]
+  },
+  "research_stress_benchmark": {
+    "source": "results/16_summary.json and results/16_*",
+    "same_protocol_as_release_benchmark": false,
+    "strict_parity_gate": false,
+    "note": "Milestone 16 used severity-extrapolation research splits; v1 release uses the permanently locked random/seed_20260921 test cohort."
+  },
+  "behavior_examples": {
+    "accepted_tier_a": "accepted",
+    "accepted_non_loca_tier_a": "accepted",
+    "requires_review": "requires_review",
+    "accepted_loca_severity": "accepted",
+    "unknown": "unknown",
+    "invalid_input": "invalid_input"
+  },
+  "regression_tests": {
+    "count": 18,
+    "passed": 18,
+    "all_passed": true
+  },
+  "loca_severity": {
+    "model": "random_forest",
+    "window_s": 120,
+    "excluded_bases": [
+      "LVPZ",
+      "P",
+      "TSAT",
+      "VOL"
+    ],
+    "validation_metrics": {
+      "mae": 0.9655100308641985,
+      "rmse": 1.1140628506602828,
+      "r2": 0.9973634533306995
+    },
+    "train_sample_count": 37,
+    "validation_sample_count": 12,
+    "release_sample_count": 15,
+    "train_set": "loca_severity_train",
+    "validation_set": "loca_severity_validation",
+    "exploratory": true
+  },
+  "protection_time": {
+    "status": "not_available_in_v1",
+    "exploratory": true,
+    "reason": "No methodologically valid chain from the 120 s severity estimate to the sparse protection-time landmark target was established.",
+    "reported_limitations": {
+      "test_mae_s": 86.82564467592593,
+      "test_rmse_s": 338.73522013129934,
+      "test_r2": 0.3302622978959968
+    }
+  },
+  "capability_boundary": {
+    "auxiliary_letdown_break": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LLB",
+      "matched_trajectories": 0
+    },
+    "electrical_power_loss": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LACP",
+      "matched_trajectories": 0
+    },
+    "feedwater_line_break": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "FLB",
+      "matched_trajectories": 99
+    },
+    "hydrogen_combustion": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "SP",
+      "matched_trajectories": 0
+    },
+    "primary_coolant_boundary_break": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "LOCA;LOCAC",
+      "matched_trajectories": 155
+    },
+    "reactivity_and_control": {
+      "tier": "Tier B",
+      "status": "exploratory",
+      "reason": "Family has some matched support but at least one fixed-12 member is missing or support is sparse.",
+      "official_members": "ATWS;MD;RI;RW",
+      "matched_trajectories": 37
+    },
+    "reactor_coolant_flow_loss": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LOF",
+      "matched_trajectories": 0
+    },
+    "steam_generator_tube_rupture": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "SGATR;SGBTR",
+      "matched_trajectories": 98
+    },
+    "steam_line_break": {
+      "tier": "Tier B",
+      "status": "exploratory",
+      "reason": "Family has some matched support but at least one fixed-12 member is missing or support is sparse.",
+      "official_members": "SLBIC;SLBOC",
+      "matched_trajectories": 88
+    },
+    "turbine_and_load_transient": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "LR;TT",
+      "matched_trajectories": 28
+    }
+  },
+  "limitations": [
+    "Research prototype; not for safety-critical deployment.",
+    "Family-level diagnosis remains affected by severity out-of-distribution shift.",
+    "The milestone-16 conformal empirical set coverage was 68.9%; no 90% statistical coverage guarantee is claimed.",
+    "Subtype OOD is unresolved; v1 never forces a 12-class subtype output.",
+    "LOCA severity estimation is exploratory and simulation-specific.",
+    "Protection-time prediction is exploratory in the research record and is not available in v1 because a valid chained input was not established."
+  ]
+}

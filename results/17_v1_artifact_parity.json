@@ -1,0 +1,336 @@
+{
+  "model_version": "npp_guard_v1_17_20260921",
+  "overall_pass": false,
+  "gate_reason": "Frozen artifact parity is outside the declared tolerance or artifact hashes failed.",
+  "parity_tolerance": 0.03,
+  "cohort": {
+    "window_s": 120,
+    "split_type": "severity_extrapolation",
+    "split_ids": [
+      "high_train_to_low_test",
+      "low_train_to_high_test"
+    ],
+    "sample_count": 206,
+    "research_target_source": "results/16_selective_metrics.csv and results/16_conformal_metrics.csv",
+    "frozen_artifact_training_protocol": {
+      "model": "hist_gradient_boosting",
+      "calibration": "train_only_sigmoid_cv",
+      "calibration_folds": 3,
+      "train_rows": 303
+    },
+    "cohort_difference": "Same 206 trajectory/sample_id grouped test rows as milestone 16; v1 artifacts were fit once on random/seed_20260921 train rows, whereas milestone 16 fit separate severity-extrapolation direction models."
+  },
+  "research_targets": {
+    "forced_family": {
+      "coverage": 1.0,
+      "selective_accuracy": 0.8058252427184467,
+      "selective_macro_f1": 0.6659730091313389,
+      "selective_balanced_accuracy": 0.8314732142857142,
+      "risk": 0.19417475728155328,
+      "reject_rate": 0.0
+    },
+    "conformal_alpha_0.10": {
+      "empirical_set_coverage": 0.6893203883495146,
+      "coverage": 0.7572815533980582,
+      "selective_accuracy": 0.9113924050632911,
+      "selective_macro_f1": 0.6700141465416635,
+      "selective_balanced_accuracy": 0.8999999999999999,
+      "risk": 0.0886075949367088,
+      "reject_rate": 0.2427184466019417
+    }
+  },
+  "frozen_metrics": {
+    "forced_family": {
+      "cohort_size": 206,
+      "accepted_count": 206,
+      "coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "selective_macro_f1": 1.0,
+      "family_balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.0
+    },
+    "conformal_alpha_0.10": {
+      "cohort_size": 206,
+      "accepted_count": 174,
+      "coverage": 0.8446601941747572,
+      "selective_accuracy": 1.0,
+      "selective_macro_f1": 1.0,
+      "family_balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.15533980582524276,
+      "empirical_set_coverage": 0.8446601941747572
+    },
+    "v1_status_policy": {
+      "cohort_size": 206,
+      "accepted_count": 67,
+      "coverage": 0.32524271844660196,
+      "selective_accuracy": 1.0,
+      "selective_macro_f1": 0.5,
+      "family_balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.674757281553398
+    }
+  },
+  "reject_rates": {
+    "conformal_alpha_0.10": {
+      "RI": 0.5714285714285714,
+      "LOCAC": 0.0,
+      "SLBIC": 0.5
+    },
+    "v1_status_policy": {
+      "RI": 1.0,
+      "LOCAC": 0.84375,
+      "SLBIC": 1.0
+    }
+  },
+  "policy_diagnostic": {
+    "status_counts": {
+      "requires_review": 107,
+      "accepted": 67,
+      "unknown": 32
+    },
+    "metrics": {
+      "cohort_size": 206,
+      "accepted_count": 67,
+      "coverage": 0.32524271844660196,
+      "selective_accuracy": 1.0,
+      "selective_macro_f1": 0.5,
+      "family_balanced_accuracy": 1.0,
+      "risk": 0.0,
+      "reject_rate": 0.674757281553398
+    },
+    "reject_rates": {
+      "RI": 1.0,
+      "LOCAC": 0.84375,
+      "SLBIC": 1.0
+    },
+    "note": "Diagnostic only: milestone-16 parity targets are the conformal singleton policy, while v1 status policy also applies distance and capability gates."
+  },
+  "manifest_verification": {
+    "all_passed": true,
+    "checks": {
+      "family_classifier.joblib": {
+        "exists": true,
+        "sha256": "97d342429d1822b0795faeca9d175099c3b29d3b6d8a6f378e9e290b5b6bbb8f",
+        "expected_sha256": "97d342429d1822b0795faeca9d175099c3b29d3b6d8a6f378e9e290b5b6bbb8f",
+        "passed": true
+      },
+      "probability_calibrator.joblib": {
+        "exists": true,
+        "sha256": "8bc968f703d1b75a2d5ce2d6cba60c44418caeb43c8d08f81bde6a1e7cd0cf9d",
+        "expected_sha256": "8bc968f703d1b75a2d5ce2d6cba60c44418caeb43c8d08f81bde6a1e7cd0cf9d",
+        "passed": true
+      },
+      "distance_ood_model.joblib": {
+        "exists": true,
+        "sha256": "9bb60878b364f8c2291cf55de4033287976857b9069135ad30bfd1a97f608f34",
+        "expected_sha256": "9bb60878b364f8c2291cf55de4033287976857b9069135ad30bfd1a97f608f34",
+        "passed": true
+      },
+      "loca_severity_model.joblib": {
+        "exists": true,
+        "sha256": "4ed1eeb7a22216b26d389b8246adf5cce8f72f3dee027bdcea181ace405ca623",
+        "expected_sha256": "4ed1eeb7a22216b26d389b8246adf5cce8f72f3dee027bdcea181ace405ca623",
+        "passed": true
+      },
+      "feature_extractor.json": {
+        "exists": true,
+        "sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+        "expected_sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+        "passed": true
+      },
+      "family_mapping.json": {
+        "exists": true,
+        "sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+        "expected_sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+        "passed": true
+      },
+      "capability_matrix.json": {
+        "exists": true,
+        "sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+        "expected_sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+        "passed": true
+      },
+      "conformal_calibration.json": {
+        "exists": true,
+        "sha256": "09e69dad95e87588851c95a041bdafb6dbbc5abebe24b26c33fd5b176b4f50bb",
+        "expected_sha256": "09e69dad95e87588851c95a041bdafb6dbbc5abebe24b26c33fd5b176b4f50bb",
+        "passed": true
+      },
+      "policy.json": {
+        "exists": true,
+        "sha256": "b6ccb9a4f96223b44c6eae4e4b9a1ebb5fc70b2a48f8900bd1e97613bfff7d70",
+        "expected_sha256": "b6ccb9a4f96223b44c6eae4e4b9a1ebb5fc70b2a48f8900bd1e97613bfff7d70",
+        "passed": true
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "comparison_scope": "forced_family",
+      "metric": "coverage",
+      "research_target": 1.0,
+      "frozen_result": 1.0,
+      "delta": 0.0,
+      "tolerance": 0.03,
+      "pass": true,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "forced_family",
+      "metric": "selective_accuracy",
+      "research_target": 0.8058252427184467,
+      "frozen_result": 1.0,
+      "delta": 0.1941747572815533,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "forced_family",
+      "metric": "selective_macro_f1",
+      "research_target": 0.6659730091313389,
+      "frozen_result": 1.0,
+      "delta": 0.33402699086866106,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "forced_family",
+      "metric": "family_balanced_accuracy",
+      "research_target": 0.8314732142857142,
+      "frozen_result": 1.0,
+      "delta": 0.1685267857142858,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "forced_family",
+      "metric": "risk",
+      "research_target": 0.19417475728155328,
+      "frozen_result": 0.0,
+      "delta": -0.19417475728155328,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "forced_family",
+      "metric": "reject_rate",
+      "research_target": 0.0,
+      "frozen_result": 0.0,
+      "delta": 0.0,
+      "tolerance": 0.03,
+      "pass": true,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "coverage",
+      "research_target": 0.7572815533980582,
+      "frozen_result": 0.8446601941747572,
+      "delta": 0.08737864077669899,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "selective_accuracy",
+      "research_target": 0.9113924050632911,
+      "frozen_result": 1.0,
+      "delta": 0.08860759493670889,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "selective_macro_f1",
+      "research_target": 0.6700141465416635,
+      "frozen_result": 1.0,
+      "delta": 0.32998585345833653,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "family_balanced_accuracy",
+      "research_target": 0.8999999999999999,
+      "frozen_result": 1.0,
+      "delta": 0.10000000000000009,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "risk",
+      "research_target": 0.0886075949367088,
+      "frozen_result": 0.0,
+      "delta": -0.0886075949367088,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "reject_rate",
+      "research_target": 0.2427184466019417,
+      "frozen_result": 0.15533980582524276,
+      "delta": -0.08737864077669893,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "empirical_set_coverage",
+      "research_target": 0.6893203883495146,
+      "frozen_result": 0.8446601941747572,
+      "delta": 0.15533980582524265,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "RI_reject_rate",
+      "research_target": 0.3428571428571428,
+      "frozen_result": 0.5714285714285714,
+      "delta": 0.2285714285714286,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "LOCAC_reject_rate",
+      "research_target": 0.1541666666666666,
+      "frozen_result": 0.0,
+      "delta": -0.1541666666666666,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    },
+    {
+      "comparison_scope": "conformal_alpha_0.10",
+      "metric": "SLBIC_reject_rate",
+      "research_target": 0.3,
+      "frozen_result": 0.5,
+      "delta": 0.2,
+      "tolerance": 0.03,
+      "pass": false,
+      "cohort_size": 206
+    }
+  ],
+  "gate": {
+    "comparison_count": 16,
+    "passed_count": 2,
+    "all_comparisons_pass": false
+  }
+}

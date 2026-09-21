@@ -1,0 +1,75 @@
+{
+  "family_gate": {
+    "auxiliary_letdown_break": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LLB",
+      "matched_trajectories": 0
+    },
+    "electrical_power_loss": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LACP",
+      "matched_trajectories": 0
+    },
+    "feedwater_line_break": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "FLB",
+      "matched_trajectories": 99
+    },
+    "hydrogen_combustion": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "SP",
+      "matched_trajectories": 0
+    },
+    "primary_coolant_boundary_break": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "LOCA;LOCAC",
+      "matched_trajectories": 155
+    },
+    "reactivity_and_control": {
+      "tier": "Tier B",
+      "status": "exploratory",
+      "reason": "Family has some matched support but at least one fixed-12 member is missing or support is sparse.",
+      "official_members": "ATWS;MD;RI;RW",
+      "matched_trajectories": 37
+    },
+    "reactor_coolant_flow_loss": {
+      "tier": "Tier C",
+      "status": "not-supported",
+      "reason": "No strict matched trajectory is available for this family in the evaluated 120 s cohort.",
+      "official_members": "LOF",
+      "matched_trajectories": 0
+    },
+    "steam_generator_tube_rupture": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "SGATR;SGBTR",
+      "matched_trajectories": 98
+    },
+    "steam_line_break": {
+      "tier": "Tier B",
+      "status": "exploratory",
+      "reason": "Family has some matched support but at least one fixed-12 member is missing or support is sparse.",
+      "official_members": "SLBIC;SLBOC",
+      "matched_trajectories": 88
+    },
+    "turbine_and_load_transient": {
+      "tier": "Tier A",
+      "status": "supported",
+      "reason": "The evaluated fixed-12 members have adequate matched and two-direction OOD support.",
+      "official_members": "LR;TT",
+      "matched_trajectories": 28
+    }
+  },
+  "source": "results/15_npp_guard_v1_capability_matrix.json"
+}

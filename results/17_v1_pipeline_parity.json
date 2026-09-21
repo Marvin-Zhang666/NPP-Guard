@@ -1,0 +1,79 @@
+{
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "cohort": {
+    "split_manifest": "artifacts/v1/release_split_manifest.json",
+    "sample_count": 101,
+    "sample_id_sha256": "575b19ec801f2098fa524810cf2270b6f3ea06c81e35502f693458ed8696f6e8"
+  },
+  "discrete_decision_agreement_rate": 1.0,
+  "discrete_decision_agreement_100_percent": true,
+  "max_float_abs_delta": 0.0,
+  "float_tolerance": 1e-09,
+  "manifest_verification": {
+    "all_passed": true,
+    "checks": {
+      "family_classifier.joblib": {
+        "exists": true,
+        "sha256": "86302cb63faeed87d9c8f25ff846edb1e4095ed63e094e7532446a44ece0101b",
+        "expected_sha256": "86302cb63faeed87d9c8f25ff846edb1e4095ed63e094e7532446a44ece0101b",
+        "passed": true
+      },
+      "probability_calibrator.joblib": {
+        "exists": true,
+        "sha256": "af59b9774c63c31e82c7769dc82f966582be5a2bfbf80679894b5b5e59ed94ed",
+        "expected_sha256": "af59b9774c63c31e82c7769dc82f966582be5a2bfbf80679894b5b5e59ed94ed",
+        "passed": true
+      },
+      "distance_ood_model.joblib": {
+        "exists": true,
+        "sha256": "b1cffea1ea7174483213e47dd25183c9c4164c8272aab8f1704de8b7a80d4efa",
+        "expected_sha256": "b1cffea1ea7174483213e47dd25183c9c4164c8272aab8f1704de8b7a80d4efa",
+        "passed": true
+      },
+      "loca_severity_model.joblib": {
+        "exists": true,
+        "sha256": "519e65ae949612b4c48e38258a88a281ef1ab79d87f92e22fb0e24962909b3fb",
+        "expected_sha256": "519e65ae949612b4c48e38258a88a281ef1ab79d87f92e22fb0e24962909b3fb",
+        "passed": true
+      },
+      "feature_extractor.json": {
+        "exists": true,
+        "sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+        "expected_sha256": "301a87f045de63850b3b830aece5dd472c5ce33a9152a759a7211ca897f6e952",
+        "passed": true
+      },
+      "family_mapping.json": {
+        "exists": true,
+        "sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+        "expected_sha256": "ad7331c2c11ca54c9e1176bd75a62b8abd1e1a51c8a0cc024acc1c49e690bee4",
+        "passed": true
+      },
+      "capability_matrix.json": {
+        "exists": true,
+        "sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+        "expected_sha256": "2c230d34cb0b31968adbac6ad1566e2a740ac70653ae7b58ab3f6df8cd9617ad",
+        "passed": true
+      },
+      "conformal_calibration.json": {
+        "exists": true,
+        "sha256": "9c01a87cabf2a9103bfc0270652c95f755e178b4135932fad949ec6ad6788e4d",
+        "expected_sha256": "9c01a87cabf2a9103bfc0270652c95f755e178b4135932fad949ec6ad6788e4d",
+        "passed": true
+      },
+      "policy.json": {
+        "exists": true,
+        "sha256": "2ce8c6b45edb9ab038b06bba883b3ffe7efde574550e8d7cf3981e0265072b25",
+        "expected_sha256": "2ce8c6b45edb9ab038b06bba883b3ffe7efde574550e8d7cf3981e0265072b25",
+        "passed": true
+      },
+      "release_split_manifest.json": {
+        "exists": true,
+        "sha256": "7dd8014ac839f0d60cffc40c33e54217cae19df4fee75813a585df5def5929f4",
+        "expected_sha256": "7dd8014ac839f0d60cffc40c33e54217cae19df4fee75813a585df5def5929f4",
+        "passed": true
+      }
+    }
+  },
+  "overall_pass": true,
+  "gate_reason": "Exact API/batch discrete parity passed at 100% with float deltas within 1e-9."
+}

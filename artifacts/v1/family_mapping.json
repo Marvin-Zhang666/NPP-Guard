@@ -1,0 +1,155 @@
+[
+  {
+    "class": "ATWS",
+    "official_description": "Anticipated Transient Without Scram",
+    "family": "reactivity_and_control",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Name explicitly identifies a reactivity/control transient.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "FLB",
+    "official_description": "Feedwater Line Break",
+    "family": "feedwater_line_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies a feedwater-line boundary break.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LACP",
+    "official_description": "Loss of AC Power",
+    "family": "electrical_power_loss",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies loss of alternating-current power.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LLB",
+    "official_description": "Letdown Line Break in auxiliary buildings",
+    "family": "auxiliary_letdown_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies an auxiliary-building letdown-line break.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LOCA",
+    "official_description": "Loss of Coolant Accident (Hot Leg)",
+    "family": "primary_coolant_boundary_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Hot-leg LOCA and cold-leg LOCA share the primary-coolant boundary-break mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LOCAC",
+    "official_description": "Loss of Coolant Accident (Cold Leg)",
+    "family": "primary_coolant_boundary_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Hot-leg LOCA and cold-leg LOCA share the primary-coolant boundary-break mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LOF",
+    "official_description": "Loss of Flow (Locked Rotor)",
+    "family": "reactor_coolant_flow_loss",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies a locked-rotor loss-of-flow event.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "LR",
+    "official_description": "Load Rejection",
+    "family": "turbine_and_load_transient",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Load rejection and turbine trip are grouped by the official turbine/load transient descriptions.",
+    "confidence": "medium",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "MD",
+    "official_description": "Moderator Dilution",
+    "family": "reactivity_and_control",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies a moderator/reactivity event; grouped with other reactivity/control transients.",
+    "confidence": "medium",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "RI",
+    "official_description": "Rod Insertion",
+    "family": "reactivity_and_control",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Rod insertion and rod withdrawal are grouped by the official control-rod descriptions.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "RW",
+    "official_description": "Rod Withdrawal",
+    "family": "reactivity_and_control",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Rod insertion and rod withdrawal are grouped by the official control-rod descriptions.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "SGATR",
+    "official_description": "Steam Generator A Tube Rupture",
+    "family": "steam_generator_tube_rupture",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Steam-generator A/B tube ruptures share the official tube-rupture mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "SGBTR",
+    "official_description": "Steam Generator B Tube Rupture",
+    "family": "steam_generator_tube_rupture",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Steam-generator A/B tube ruptures share the official tube-rupture mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "SLBIC",
+    "official_description": "Steam Line Break Inside Containment",
+    "family": "steam_line_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Inside/outside-containment steam-line breaks share the official steam-line-break mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "SLBOC",
+    "official_description": "Steam Line Break Outside Containment",
+    "family": "steam_line_break",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Inside/outside-containment steam-line breaks share the official steam-line-break mechanism.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "SP",
+    "official_description": "Spark Presence for Hydrogen Burn",
+    "family": "hydrogen_combustion",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Official name identifies a hydrogen-burn spark event.",
+    "confidence": "high",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  },
+  {
+    "class": "TT",
+    "official_description": "Turbine Trip",
+    "family": "turbine_and_load_transient",
+    "source": "data/NuclearPowerPlantAccidentData/README.md Table 1 (local copy)",
+    "justification": "Load rejection and turbine trip are grouped by the official turbine/load transient descriptions.",
+    "confidence": "medium",
+    "notes": "Family is a research taxonomy derived from the official description; it is not an NPPAD-native label."
+  }
+]
