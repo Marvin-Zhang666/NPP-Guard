@@ -1,0 +1,71 @@
+{
+  "milestone": "19 Dashboard",
+  "status": "passed",
+  "technology": "Streamlit",
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "examples": [
+    {
+      "example": "accepted",
+      "expected_status": "accepted",
+      "actual_status": "accepted",
+      "status_pass": true,
+      "explanation_available": true,
+      "severity_visible": false,
+      "severity_gate_pass": true,
+      "export_json_pass": true,
+      "input_quality_pass": true,
+      "passed": true
+    },
+    {
+      "example": "accepted_loca",
+      "expected_status": "accepted",
+      "actual_status": "accepted",
+      "status_pass": true,
+      "explanation_available": true,
+      "severity_visible": true,
+      "severity_gate_pass": true,
+      "export_json_pass": true,
+      "input_quality_pass": true,
+      "passed": true
+    },
+    {
+      "example": "requires_review",
+      "expected_status": "requires_review",
+      "actual_status": "requires_review",
+      "status_pass": true,
+      "explanation_available": true,
+      "severity_visible": false,
+      "severity_gate_pass": true,
+      "export_json_pass": true,
+      "input_quality_pass": true,
+      "passed": true
+    },
+    {
+      "example": "unknown",
+      "expected_status": "unknown",
+      "actual_status": "unknown",
+      "status_pass": true,
+      "explanation_available": true,
+      "severity_visible": false,
+      "severity_gate_pass": true,
+      "export_json_pass": true,
+      "input_quality_pass": true,
+      "passed": true
+    },
+    {
+      "example": "invalid_input",
+      "expected_status": "invalid_input",
+      "actual_status": "invalid_input",
+      "status_pass": true,
+      "explanation_available": false,
+      "severity_visible": false,
+      "severity_gate_pass": true,
+      "export_json_pass": true,
+      "input_quality_pass": true,
+      "passed": true
+    }
+  ],
+  "all_smoke_tests_passed": true,
+  "export_excludes_raw_csv": true,
+  "frozen_artifacts_only": true
+}

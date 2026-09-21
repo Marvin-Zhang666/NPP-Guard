@@ -212,6 +212,23 @@ locked release benchmark（101 条轨迹）记录为：forced family Accuracy/Ma
 
 18 产物包括：`notebooks/18_explainability.ipynb`、`src/explainability/`、`results/18_summary.json`、`results/18_local_explanations.json`、`results/18_global_*.csv`、`results/18_ood_explanations.csv`、`results/18_severity_explanations.csv`、`results/18_explanation_*.csv` 和 `results/figures/18_*`。
 
+## 第三阶段第九步：Dashboard（19）
+
+19 阶段将 17.2 冻结推理 API 与 18 解释层接入 Streamlit 研究展示原型。Dashboard 只加载 `artifacts/v1/`，不在页面启动时重新训练，也不允许修改 conformal、distance 或其他 policy 参数。它支持本地 demo CSV 和单轨迹 CSV 上传，并在诊断前展示 `TIME`、38 个严格过程变量、至少 120 s 覆盖、采样间隔、NaN/Inf、重复时间点和额外列检查。
+
+页面包含：`Data Quality`、`Diagnostic Status`、family/confidence/conformal/OOD、自动选择解释 Top 变量的 120 s 趋势、18 的 family/OOD/uncertainty/severity 解释、LOCA gating、protection-time `not_available_in_v1` 和 JSON 导出。状态文案明确区分 accepted（研究模型接受）、requires_review（需要人工复核）、unknown（模型证据不足）与 invalid_input（预测前拒绝）。LOCA severity 仅在 accepted + LOCA family + Tier A 时显示；其他状态显示 `Not run due to family gating`。
+
+从仓库根目录运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run dashboard/app.py
+```
+
+19 验证使用真实的 `FLB_10`、`LOCAC_19`、`LOCAC_12`、`LR_93` 和 50 s 截断 invalid-input 样本；5/5 smoke tests、3/3 helper tests、Streamlit HTTP `200` 和 AppTest `0` 个运行异常均通过。17.2 parity 保持 `101/101`、regression 保持 `18/18`，18 explainability gate 仍通过。四种状态、LOCA gating、解释可用性和导出 JSON 均通过验证；导出只包含输入 metadata、冻结推理结果、解释和 limitations，不包含原始全量 CSV。Dashboard 是 research prototype，不用于真实核电站运行控制或 safety-critical decision。
+
+19 产物包括：`dashboard/app.py`、`dashboard/view_model.py`、`dashboard/smoke_tests.py`、`dashboard/test_view_model.py`、`notebooks/19_dashboard_validation.ipynb`、`results/19_dashboard_summary.json`、`results/19_dashboard_smoke_tests.csv` 和 `results/19_example_exports.json`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -254,7 +271,9 @@ NPP-Guard/
 │  ├─ milestone14.py                            # 14 Notebook 编排与结果汇总
 │  ├─ coverage_task_redesign.py                 # 15 coverage-aware family selective diagnosis
 │  ├─ ood_selective.py                           # 16 OOD-aware selective family diagnosis
-│  └─ inference/                                 # 17 fixed-artifact v1 inference API and CLI
+│  ├─ inference/                                 # 17 fixed-artifact v1 inference API and CLI
+│  └─ explainability/                            # 18 frozen-model attribution and explanation
+├─ dashboard/                                    # 19 Streamlit research dashboard and smoke tests
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -272,7 +291,9 @@ NPP-Guard/
 │  ├─ 14_severity_invariant_hierarchical_diagnosis.ipynb
 │  ├─ 15_coverage_aware_task_redesign.ipynb
 │  ├─ 16_ood_aware_selective_diagnosis.ipynb
-│  └─ 17_npp_guard_v1_integration.ipynb
+│  ├─ 17_npp_guard_v1_integration.ipynb
+│  ├─ 18_explainability.ipynb
+│  └─ 19_dashboard_validation.ipynb
 ├─ artifacts/v1/                                # fixed v1 research artifacts and manifest
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
@@ -288,7 +309,9 @@ NPP-Guard/
 │  ├─ 14_*.csv/json                          # 14 severity-invariant/hierarchical 结果
 │  ├─ 15_*.csv/json                          # 15 coverage-aware/selective 结果
 │  ├─ 16_*.csv/json                          # 16 OOD-aware/selective 结果
-│  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png, 15_*.png, 16_*.png  # 11–16 分析图
+│  ├─ 18_*.csv/json                          # 18 explainability 结果
+│  ├─ 19_dashboard_*.json/csv, 19_example_exports.json # 19 dashboard 验证结果
+│  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png, 15_*.png, 16_*.png, 18_*.png # 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -402,10 +425,12 @@ jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 - `15_coverage_aware_task_redesign` 已完成：class Tier A/B/C `8/1/8`、family Tier A/B/C `4/2/4`；120 s family-level Macro-F1 在 random / blocked / extrapolation 下约为 `0.8469/0.7603/0.6660`；现有 selective reject 仅 `23/1525=1.51%`，blocked/extrapolation 验证阈值为 `0`，无法有效拒绝大 severity-gap OOD，因此 family diagnosis 仍为有限能力，subtype OOD 与 reject 机制不足，暂不进入深度学习；
 - `16_ood_aware_selective_diagnosis` 已完成：120 s extrapolation forced family Macro-F1 `0.666`、risk `0.194`；Conformal `alpha=0.10` coverage `75.7%`、Selective Macro-F1 `0.670`、risk `0.089`，但 empirical set coverage 仅 `68.9%`，不能宣称 `90%` 统计覆盖保证；distance OOD proxy AUROC `0.822`。推荐研究型 Unknown/Requires review 策略，仍不适用于 safety-critical deployment；
 - `17_npp_guard_v1_integration` 的 17.2 Protocol Alignment 已完成：固定 release split、zero-overlap audit、artifact SHA-256、exact batch/API parity、LOCA gating、locked release benchmark 和 `18/18` regression 全部通过；16 的 severity-extrapolation 结果仅作为独立 research stress benchmark，不能与 release benchmark 做严格数值 parity。保护时间暂不接入 v1，系统仍明确标记 research prototype、not for safety-critical deployment、severity OOD/subtype OOD 与 conformal 实际 coverage 限制；
+- `18_explainability` 已完成并独立提交：Permutation importance、冻结训练中心替换 local attribution、Ledoit–Wolf 距离对角近似和 Random Forest severity perturbation 均通过验证；Top 变量为 `P/WSTA/TAVG/WFWA/LSGA`，解释稳定性 top-5 Jaccard `0.9722`，family faithfulness top-k 相对随机差 `+0.7532`，且 17.2 parity/regression 仍为 `101/101`、`18/18`；解释是模型归因，不是物理因果；
+- `19_dashboard` 已完成本地验证：Streamlit 页面可启动，真实四状态与 accepted LOCA gating smoke test 全部通过，导出不含原始全量 CSV；当前工作区保留 19 的未提交变更，等待单独审阅后再提交；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
-- 最后再考虑面向研究展示的可视化界面。
+- 下一阶段可整理最终报告、比赛材料和可复现实验说明，但不应把 Dashboard 研究展示能力表述为安全部署能力。
 
 Roadmap 中的项目尚未完成，不代表当前版本已经具备对应能力。
 

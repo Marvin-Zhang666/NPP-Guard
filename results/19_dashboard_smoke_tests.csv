@@ -1,0 +1,6 @@
+example,expected_status,actual_status,status_pass,explanation_available,severity_visible,severity_gate_pass,export_json_pass,input_quality_pass,passed
+accepted,accepted,accepted,True,True,False,True,True,True,True
+accepted_loca,accepted,accepted,True,True,True,True,True,True,True
+requires_review,requires_review,requires_review,True,True,False,True,True,True,True
+unknown,unknown,unknown,True,True,False,True,True,True,True
+invalid_input,invalid_input,invalid_input,True,False,False,True,True,True,True
