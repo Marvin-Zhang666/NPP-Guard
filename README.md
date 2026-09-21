@@ -132,6 +132,16 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 11 阶段的结果说明事故早期过程响应可能包含可用于分类的信息，但不等于已经获得可靠的早期诊断能力；在稳健性和外部验证完成前，不直接进入 Transformer。
 
+## 第三阶段第二步：Robust temporal validation
+
+12 阶段在 471 条 strict matched trajectories 上完成了重复稳健性验证：使用 10 个固定 seed、按完整 `trajectory/sample_id` 的 60/20/20 分层划分，并让 30/60/90/120 s 共用同一 cohort 和 split。比较 Logistic Regression、Random Forest、HistGradientBoosting，以及普通和 class-balanced 训练；95% CI 使用重复 test split 的正态近似。
+
+在固定 12 类指标、38 个严格过程变量的 A 组下，120 s 的结果为 Fixed-12 Macro-F1 `0.578±0.004`、Observed-class Macro-F1 `0.991±0.007`、Balanced Accuracy `0.989±0.011`；60 s 对应约为 `0.220±0.010`、`0.377±0.018`、`0.448±0.011`。同一 matched cohort 下，120 s 的优势对 10 个 split 稳定，且排除 `LVCR` 或 14 个 SLBIC 初始工况候选变量的敏感性结果基本不变。
+
+该结果仍不能直接作为进入深度学习的依据：120 s cohort 中 `RW` 只有 3 条轨迹，10 次 test support 均为 0；`LLB`、`LR`、`MD`、`SLBOC` 没有已知 `first_protection_time`，不具备严格 pre-protection 评估资格。可评估类别为 `FLB`、`LOCA`、`LOCAC`、`RI`、`SGBTR`，其 Recall 均值分别约为 `1.000`、`0.980`、`0.975`、`0.967`、`1.000`。12 阶段判定为先进行更严格的 OOD / severity-blocked validation 和 event-parser recovery。
+
+审计产物：`notebooks/12_robust_validation.ipynb`、`src/robust_validation.py`、`results/12_*` 和 `results/figures/12_*`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -177,7 +187,8 @@ NPP-Guard/
 │  ├─ 08_protection_time_prediction.ipynb
 │  ├─ 09_multi_accident_dataset_audit.ipynb
 │  ├─ 10_multi_accident_classification.ipynb
-│  └─ 11_temporal_diagnosability_analysis.ipynb
+│  ├─ 11_temporal_diagnosability_analysis.ipynb
+│  └─ 12_robust_validation.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -187,7 +198,8 @@ NPP-Guard/
 │  ├─ normal_reference_*.csv/json            # 06 Normal reference 审计
 │  ├─ 10_multi_accident_*.csv/json          # 10 多事故分类结果
 │  ├─ 11_temporal_*.csv/json                # 11 时间可诊断性结果
-│  └─ figures/11_*.png                      # 11 分析图
+│  ├─ 12_robust_*.csv/json                  # 12 稳健性验证结果
+│  └─ figures/11_*.png, 12_*.png            # 11/12 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -281,6 +293,7 @@ jupyter notebook notebooks/08_protection_time_prediction.ipynb
 jupyter notebook notebooks/09_multi_accident_dataset_audit.ipynb
 jupyter notebook notebooks/10_multi_accident_classification.ipynb
 jupyter notebook notebooks/11_temporal_diagnosability_analysis.ipynb
+jupyter notebook notebooks/12_robust_validation.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
@@ -293,7 +306,8 @@ jupyter notebook notebooks/11_temporal_diagnosability_analysis.ipynb
 - 09 multi-accident dataset audit 已完成：17 类、1216 条轨迹；12 类进入首版分类，5 个单样本类别暂缓；30/60 s 全覆盖、120 s 覆盖率 98.52%；已固定 38 个严格过程变量、SLBIC schema 差异、16 个潜在 leakage 组合和 SLBIC 初始工况混杂审计；
 - 10 multi-accident classification 已完成：按完整 trajectory/sample_id 分组，比较 12 类、38 个严格过程变量以及 leakage/SLBIC 初始工况敏感性；
 - 11 temporal diagnosability analysis 已完成：all-sample 的 120 s Macro-F1 为 `0.749`，strict pre-protection-only 的固定 12 类 Macro-F1 为 `0.647`、Observed-class Macro-F1 为 `0.971`，但 strict 集只有 8 个有支持类别且部分 test support 很小；
-- 下一步进行 `12_robust_validation`：重复 grouped/stratified 验证、置信区间、最低 test support、class-balanced/downsampled 对照、matched cohort 和 strict pre-protection 分析；在此之前不宣称可靠早期诊断能力，也不直接进入 Transformer；
+- `12_robust_validation` 已完成：471 条 strict matched trajectories、10 个固定 seed、共用 matched cohort/split；120 s Fixed-12 Macro-F1 `0.578±0.004`、Observed-class Macro-F1 `0.991±0.007`、Balanced Accuracy `0.989±0.011`，但 RW 仅 3 条且 test support 为 0，LLB/LR/MD/SLBOC 无 `first_protection_time`，暂不进入深度学习；
+- 下一步进行 `13_ood_severity_blocked_validation`：severity-blocked / extrapolation 验证、nearest-severity gap audit，以及 LLB/LR/MD/SLBOC protection-event parser recovery；只有 OOD 结果仍稳健时才评估 GRU/LSTM/TCN；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
