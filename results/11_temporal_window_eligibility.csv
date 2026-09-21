@@ -1,0 +1,15 @@
+scope,window_s,trajectory_count
+all_sample,10,1211
+all_sample,20,1211
+all_sample,30,1211
+all_sample,40,1211
+all_sample,60,1211
+all_sample,90,1211
+all_sample,120,1193
+strict_pre_protection_only,10,660
+strict_pre_protection_only,20,660
+strict_pre_protection_only,30,660
+strict_pre_protection_only,40,660
+strict_pre_protection_only,60,659
+strict_pre_protection_only,90,659
+strict_pre_protection_only,120,471

@@ -120,6 +120,18 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/09_multi_accident_dataset_audit.ipynb`、`src/multi_accident.py`、`results/09_multi_accident_*` 和 `results/figures/09_*`。数据划分单位固定为完整 trajectory/sample_id，禁止随机拆分时间行。
 
+## 第三阶段第一步：Temporal diagnosability analysis
+
+11 阶段使用 12 个样本充足事故类别和 38 个严格过程变量，比较 `10/20/30/40/60/90/120 s` 窗口，并分别报告 all-sample 与 strict pre-protection-only 结果。strict 集只保留已知 `first_protection_s` 且窗口末点仍早于首次保护动作的轨迹；未知保护时间的轨迹全部排除。
+
+- all-sample 在 `10–90 s` 的 Macro-F1 约为 `0.193`；`120 s` 验证选择 Random Forest，Accuracy `0.785`、Macro-F1 `0.749`、Balanced Accuracy `0.785`。
+- strict pre-protection-only 在 `10–40 s` 有 660 条轨迹、`60/90 s` 有 659 条、`120 s` 有 471 条；`10–90 s` 固定 12 类 Macro-F1 约为 `0.195`，Observed-class Macro-F1 约为 `0.293`。`120 s` 验证选择 Logistic Regression，固定 12 类 Macro-F1 `0.647`、Observed-class Macro-F1 `0.971`、Balanced Accuracy `0.969`。
+- strict `120 s` 只有 8 个类别有有效支持；`RI` 和 `RW` 的 test support 很小，`LLB`、`LR`、`MD`、`SLBOC` 没有可用保护时间，因此这些类别不能据此作可靠 Recall 结论。
+- 在固定 `120 s` 可用轨迹的 matched cohort 中，strict pre-protection 的 HGB Macro-F1 仍从 `60 s` 的 `0.202` 提升到 `120 s` 的 `0.566`。因此 120 s 的提升不能全部归因于保护动作后的信息，但类别组成、样本量和支持度变化仍要求外部稳健验证。
+- B 组排除 `LVCR` 后性能基本不变；C 组排除 14 个 SLBIC 初始工况变量后，`10–90 s` 基本不变，但 `120 s` strict 结果受稀疏支持影响，不能据此宣称已经消除混杂。
+
+11 阶段的结果说明事故早期过程响应可能包含可用于分类的信息，但不等于已经获得可靠的早期诊断能力；在稳健性和外部验证完成前，不直接进入 Transformer。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -152,7 +164,8 @@ NPP-Guard/
 │  ├─ protection_time_features.py            # landmark 保护时间特征
 │  ├─ protection_time_models.py              # 分组保护时间回归 baseline
 │  ├─ protection_time_report.py              # 08 结果汇总与敏感性审计
-│  └─ multi_accident.py                       # 09 多事故数据集审计
+│  ├─ multi_accident.py                       # 09 多事故数据集审计
+│  └─ temporal_diagnosability.py              # 11 时间可诊断性分析
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -162,14 +175,19 @@ NPP-Guard/
 │  ├─ 06_normal_reference_expansion.ipynb
 │  ├─ 07_LOCA_severity_estimation.ipynb
 │  ├─ 08_protection_time_prediction.ipynb
-│  └─ 09_multi_accident_dataset_audit.ipynb
+│  ├─ 09_multi_accident_dataset_audit.ipynb
+│  ├─ 10_multi_accident_classification.ipynb
+│  └─ 11_temporal_diagnosability_analysis.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
 ├─ results/                                 # 已保存的验证报告、轻量 CSV 和 figures/
 │  ├─ early_anomaly_detection_*.csv         # 04 静态 baseline
 │  ├─ dynamic_early_warning_*.csv           # 05 动态特征实验
-│  └─ normal_reference_*.csv/json           # 06 Normal reference 审计
+│  ├─ normal_reference_*.csv/json            # 06 Normal reference 审计
+│  ├─ 10_multi_accident_*.csv/json          # 10 多事故分类结果
+│  ├─ 11_temporal_*.csv/json                # 11 时间可诊断性结果
+│  └─ figures/11_*.png                      # 11 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -261,6 +279,8 @@ jupyter notebook notebooks/06_normal_reference_expansion.ipynb
 jupyter notebook notebooks/07_LOCA_severity_estimation.ipynb
 jupyter notebook notebooks/08_protection_time_prediction.ipynb
 jupyter notebook notebooks/09_multi_accident_dataset_audit.ipynb
+jupyter notebook notebooks/10_multi_accident_classification.ipynb
+jupyter notebook notebooks/11_temporal_diagnosability_analysis.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
@@ -271,7 +291,9 @@ jupyter notebook notebooks/09_multi_accident_dataset_audit.ipynb
 - 07 LOCA severity estimation 已完成：比较 30/60/120/300 s 窗口和三类回归模型，并完成过程量—严重度耦合敏感性审计；
 - 08 protection-time prediction 已完成：严格最佳点为 60 s Random Forest，Test `MAE=86.826 s`、`RMSE=338.735 s`、`R²=0.330`；30/60 s 的 process-only 未超过 severity-only，300 s 样本过少；
 - 09 multi-accident dataset audit 已完成：17 类、1216 条轨迹；12 类进入首版分类，5 个单样本类别暂缓；30/60 s 全覆盖、120 s 覆盖率 98.52%；已固定 38 个严格过程变量、SLBIC schema 差异、16 个潜在 leakage 组合和 SLBIC 初始工况混杂审计；
-- 下一步进行 10 multi-accident classification：以 30/60 s 为主窗口，按完整 trajectory/sample_id 分组，并比较严格变量、leakage 敏感性和 SLBIC 初始工况敏感性；
+- 10 multi-accident classification 已完成：按完整 trajectory/sample_id 分组，比较 12 类、38 个严格过程变量以及 leakage/SLBIC 初始工况敏感性；
+- 11 temporal diagnosability analysis 已完成：all-sample 的 120 s Macro-F1 为 `0.749`，strict pre-protection-only 的固定 12 类 Macro-F1 为 `0.647`、Observed-class Macro-F1 为 `0.971`，但 strict 集只有 8 个有支持类别且部分 test support 很小；
+- 下一步进行 `12_robust_validation`：重复 grouped/stratified 验证、置信区间、最低 test support、class-balanced/downsampled 对照、matched cohort 和 strict pre-protection 分析；在此之前不宣称可靠早期诊断能力，也不直接进入 Transformer；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
