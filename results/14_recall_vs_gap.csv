@@ -1,0 +1,17 @@
+direction,accident_class,recall,nearest_severity_gap_mean,test_support
+low_train_to_high_test,FLB,1.0,27.5,20
+low_train_to_high_test,LOCA,1.0,21.5,16
+low_train_to_high_test,LOCAC,1.0,21.5,16
+low_train_to_high_test,LR,1.0,10.5,6
+low_train_to_high_test,RI,0.0,10.0,7
+low_train_to_high_test,SGATR,1.0,13.0,9
+low_train_to_high_test,SGBTR,1.0,15.0,11
+low_train_to_high_test,SLBIC,1.0,24.5,18
+high_train_to_low_test,FLB,1.0,27.5,20
+high_train_to_low_test,LOCA,1.0,21.5,16
+high_train_to_low_test,LOCAC,0.0,21.5,16
+high_train_to_low_test,LR,1.0,8.5,6
+high_train_to_low_test,RI,1.0,11.0,7
+high_train_to_low_test,SGATR,1.0,13.0,9
+high_train_to_low_test,SGBTR,1.0,15.0,11
+high_train_to_low_test,SLBIC,0.0,24.5,18

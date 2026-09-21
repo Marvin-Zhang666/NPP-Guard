@@ -156,6 +156,16 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/13_ood_severity_blocked_validation.ipynb`、`src/event_parser.py`、`src/ood_validation.py`、`results/13_*` 和 `results/figures/13_*`。13 阶段作为独立里程碑提交并推送到 `origin/main`。
 
+## 第三阶段第四步：Severity-invariant / hierarchical diagnosis
+
+14 阶段复用 13 的 505 条完整 `trajectory/sample_id` matched cohort 和 random / severity-blocked / extrapolation split，汇总 OOD error decomposition、severity-invariant 特征和基于 NPPAD README Table 1 正式名称建立的 family taxonomy。family mapping 覆盖 17 个类别、10 个研究型事故族；family 分组是本项目的可解释研究分类，不是 NPPAD 原生标签。
+
+120 s severity extrapolation 下，12-class baseline Macro-F1 为 `0.4826`、Balanced Accuracy 为 `0.8125`；变化/归一化 severity-invariant 特征仅提升到 Macro-F1 `0.4905`，Balanced Accuracy 仍为 `0.8125`。独立 family-level classifier 的 Macro-F1 为 `0.6331`，但两阶段 family→subtype 的 end-to-end subtype Macro-F1 仅 `0.4829`，没有改善细分类 OOD 能力。
+
+方向性审计显示 RI、LOCAC、SLBIC 在 low→high 与 high→low severity extrapolation 间明显不稳定：RI low→high Recall 为 `0` 且主要混淆到 `SGATR`；LOCAC high→low Recall 为 `0` 且主要混淆到 `SGATR`；SLBIC high→low Recall 为 `0` 且主要混淆到 `RI`。因此 14 阶段结论为：**继续 coverage/task redesign，暂不进入 GRU/LSTM/TCN 等深度学习。**
+
+审计产物：`notebooks/14_severity_invariant_hierarchical_diagnosis.ipynb`、`src/severity_invariant.py`、`src/ood_error_analysis.py`、`src/hierarchical_diagnosis.py`、`src/milestone14.py`、`results/14_*` 和 `results/figures/14_*`。14 阶段作为独立里程碑提交并推送到 `origin/main`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -191,7 +201,11 @@ NPP-Guard/
 │  ├─ multi_accident.py                       # 09 多事故数据集审计
 │  ├─ temporal_diagnosability.py              # 11 时间可诊断性分析
 │  ├─ event_parser.py                          # 13 通用 protection-event taxonomy
-│  └─ ood_validation.py                        # 13 severity OOD 验证
+│  ├─ ood_validation.py                        # 13 severity OOD 验证
+│  ├─ severity_invariant.py                    # 14 severity-invariant 特征实验
+│  ├─ ood_error_analysis.py                    # 14 方向性 OOD error decomposition
+│  ├─ hierarchical_diagnosis.py                # 14 family mapping 与两阶段诊断
+│  └─ milestone14.py                            # 14 Notebook 编排与结果汇总
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -205,7 +219,8 @@ NPP-Guard/
 │  ├─ 10_multi_accident_classification.ipynb
 │  ├─ 11_temporal_diagnosability_analysis.ipynb
 │  ├─ 12_robust_validation.ipynb
-│  └─ 13_ood_severity_blocked_validation.ipynb
+│  ├─ 13_ood_severity_blocked_validation.ipynb
+│  └─ 14_severity_invariant_hierarchical_diagnosis.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -217,7 +232,8 @@ NPP-Guard/
 │  ├─ 11_temporal_*.csv/json                # 11 时间可诊断性结果
 │  ├─ 12_robust_*.csv/json                  # 12 稳健性验证结果
 │  ├─ 13_ood_*.csv/json                      # 13 OOD 验证结果
-│  └─ figures/11_*.png, 12_*.png, 13_*.png  # 11/12/13 分析图
+│  ├─ 14_*.csv/json                          # 14 coverage/task redesign 结果
+│  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png  # 11–14 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -327,6 +343,7 @@ jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 - 11 temporal diagnosability analysis 已完成：all-sample 的 120 s Macro-F1 为 `0.749`，strict pre-protection-only 的固定 12 类 Macro-F1 为 `0.647`、Observed-class Macro-F1 为 `0.971`，但 strict 集只有 8 个有支持类别且部分 test support 很小；
 - `12_robust_validation` 已完成：471 条 strict matched trajectories、10 个固定 seed、共用 matched cohort/split；120 s Fixed-12 Macro-F1 `0.578±0.004`、Observed-class Macro-F1 `0.991±0.007`、Balanced Accuracy `0.989±0.011`，但 RW 仅 3 条且 test support 为 0，LLB/LR/MD/SLBOC 无 `first_protection_time`，暂不进入深度学习；
 - `13_ood_severity_blocked_validation` 已完成：505 条 strict matched trajectories；parser recovery 新增 LR 30 条、RI 6 条 protection event；120 s blocked Macro-F1 `0.593±0.064`、extrapolation `0.483±0.110`，nearest-severity gap 明显扩大，但 extrapolation 与稀疏类别 Recall 仍不足，因此暂不进入 GRU/LSTM/TCN；
+- `14_severity_invariant_hierarchical_diagnosis` 已完成：12-class 120 s extrapolation Macro-F1 `0.4826`、Balanced Accuracy `0.8125`；severity-invariant 特征仅升至 `0.4905`；family-level Macro-F1 `0.6331`，但两阶段 subtype Macro-F1 `0.4829`；RI/LOCAC/SLBIC 存在方向性不稳定，因此暂不进入深度学习，先进行 coverage/task redesign；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；
