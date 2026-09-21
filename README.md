@@ -142,6 +142,20 @@ Normal reference 每组有 2 个点超过阈值，但没有形成 3 点持续报
 
 审计产物：`notebooks/12_robust_validation.ipynb`、`src/robust_validation.py`、`results/12_*` 和 `results/figures/12_*`。
 
+## 第三阶段第三步：OOD / Severity-blocked validation
+
+13 阶段对 12 个有数据的事故类别按各自定义的 severity 做了严格 OOD 审计。NPPAD README 明确说明文件编号对应 severity；LOCA/LOCAC/SLBIC/SLBOC/FLB 使用破口面积比例，SGATR/SGBTR 使用整根管破裂比例，RW/RI、MD、LR、LLB 分别使用其类别定义的杆位移、未硼化注入、负荷拒绝和 letdown 流量单位，因此没有跨类别混用统一数值阈值。
+
+通用事件解析器扫描了 1,211 条首版类别报告，解析出 696 条 protection event。相对 09 的旧表新增 36 条：`LR` 30 条 Safety Relief Valve opening、`RI` 6 条 Safety Relief Valve opening；`LLB`、`MD`、`SLBOC` 的报告仍只有事故注入行，保持 unknown，没有人为填充 protection time。严格 matched cohort 为 505 条：`FLB=99`、`LOCA=76`、`LOCAC=79`、`LR=28`、`RI=34`、`RW=3`、`SGATR=44`、`SGBTR=54`、`SLBIC=88`。
+
+固定 38 个过程变量和 A 组下，120 s 结果为：随机 baseline Macro-F1 `0.657±0.009`、Balanced Accuracy `0.984±0.016`；severity-blocked `0.593±0.064`、`0.921±0.069`；severity extrapolation `0.483±0.110`、`0.813±0.088`。blocked 使用 low/middle/high 三个连续 block，extrapolation 使用 low→high 和 high→low 两个方向；每个 OOD test block 与训练数据之间保留一条相邻 severity guard。60/90 s 的 OOD Macro-F1 约为 blocked `0.189±0.020`、extrapolation `0.183±0.024`，Balanced Accuracy 均约 `0.375`，因此 120 s 优势在 OOD split 上仍存在，但 extrapolation 的绝对 Macro-F1 未达到可靠进入深度学习的门槛。
+
+敏感性方面，排除 `LVCR` 的 B 组与 A 组几乎一致；排除 14 个 SLBIC 初始工况变量的 C 组在 blocked 120 s 下降至 Macro-F1 `0.570`、Balanced Accuracy `0.875`，extrapolation 约为 `0.480`、`0.779`。nearest-severity gap 均值从 random 的 `1.22` 增至 blocked 的 `11.49`，再增至 extrapolation 的 `20.31`，证明 OOD test 确实远离训练 severity。RW 只有 3 条，保留在 matched/random 审计中，但不纳入 blocked/extrapolation 的三路 OOD 结论。
+
+判定为 **B：暂不进入 GRU/LSTM/TCN**。120 s 在 blocked 和 extrapolation 都优于 60/90 s，且主要大类 Recall 仍较高，但 extrapolation Macro-F1 低于 `0.50`，RI、LOCAC、SLBIC 等类别 Recall 不稳定；应先补充 severity 覆盖和外部/跨工况验证。
+
+审计产物：`notebooks/13_ood_severity_blocked_validation.ipynb`、`src/event_parser.py`、`src/ood_validation.py`、`results/13_*` 和 `results/figures/13_*`。13 阶段作为独立里程碑提交并推送到 `origin/main`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
@@ -175,7 +189,9 @@ NPP-Guard/
 │  ├─ protection_time_models.py              # 分组保护时间回归 baseline
 │  ├─ protection_time_report.py              # 08 结果汇总与敏感性审计
 │  ├─ multi_accident.py                       # 09 多事故数据集审计
-│  └─ temporal_diagnosability.py              # 11 时间可诊断性分析
+│  ├─ temporal_diagnosability.py              # 11 时间可诊断性分析
+│  ├─ event_parser.py                          # 13 通用 protection-event taxonomy
+│  └─ ood_validation.py                        # 13 severity OOD 验证
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -188,7 +204,8 @@ NPP-Guard/
 │  ├─ 09_multi_accident_dataset_audit.ipynb
 │  ├─ 10_multi_accident_classification.ipynb
 │  ├─ 11_temporal_diagnosability_analysis.ipynb
-│  └─ 12_robust_validation.ipynb
+│  ├─ 12_robust_validation.ipynb
+│  └─ 13_ood_severity_blocked_validation.ipynb
 ├─ models/
 │  ├─ npp_guard_full_power_early.joblib
 │  └─ npp_guard_full_power_early.json
@@ -199,7 +216,8 @@ NPP-Guard/
 │  ├─ 10_multi_accident_*.csv/json          # 10 多事故分类结果
 │  ├─ 11_temporal_*.csv/json                # 11 时间可诊断性结果
 │  ├─ 12_robust_*.csv/json                  # 12 稳健性验证结果
-│  └─ figures/11_*.png, 12_*.png            # 11/12 分析图
+│  ├─ 13_ood_*.csv/json                      # 13 OOD 验证结果
+│  └─ figures/11_*.png, 12_*.png, 13_*.png  # 11/12/13 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
 ├─ requirements.txt
 └─ README.md
@@ -294,6 +312,7 @@ jupyter notebook notebooks/09_multi_accident_dataset_audit.ipynb
 jupyter notebook notebooks/10_multi_accident_classification.ipynb
 jupyter notebook notebooks/11_temporal_diagnosability_analysis.ipynb
 jupyter notebook notebooks/12_robust_validation.ipynb
+jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 ```
 
 请从仓库根目录启动 Jupyter。04/05 Notebook 会从当前目录及其父目录探测项目根目录，并读取本地 `data/`；`src/` 中的脚本也使用相对于项目根目录的路径推导。
@@ -307,7 +326,7 @@ jupyter notebook notebooks/12_robust_validation.ipynb
 - 10 multi-accident classification 已完成：按完整 trajectory/sample_id 分组，比较 12 类、38 个严格过程变量以及 leakage/SLBIC 初始工况敏感性；
 - 11 temporal diagnosability analysis 已完成：all-sample 的 120 s Macro-F1 为 `0.749`，strict pre-protection-only 的固定 12 类 Macro-F1 为 `0.647`、Observed-class Macro-F1 为 `0.971`，但 strict 集只有 8 个有支持类别且部分 test support 很小；
 - `12_robust_validation` 已完成：471 条 strict matched trajectories、10 个固定 seed、共用 matched cohort/split；120 s Fixed-12 Macro-F1 `0.578±0.004`、Observed-class Macro-F1 `0.991±0.007`、Balanced Accuracy `0.989±0.011`，但 RW 仅 3 条且 test support 为 0，LLB/LR/MD/SLBOC 无 `first_protection_time`，暂不进入深度学习；
-- 下一步进行 `13_ood_severity_blocked_validation`：severity-blocked / extrapolation 验证、nearest-severity gap audit，以及 LLB/LR/MD/SLBOC protection-event parser recovery；只有 OOD 结果仍稳健时才评估 GRU/LSTM/TCN；
+- `13_ood_severity_blocked_validation` 已完成：505 条 strict matched trajectories；parser recovery 新增 LR 30 条、RI 6 条 protection event；120 s blocked Macro-F1 `0.593±0.064`、extrapolation `0.483±0.110`，nearest-severity gap 明显扩大，但 extrapolation 与稀疏类别 Recall 仍不足，因此暂不进入 GRU/LSTM/TCN；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；

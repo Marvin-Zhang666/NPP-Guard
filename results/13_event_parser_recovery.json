@@ -1,0 +1,196 @@
+{
+  "parser_version": "13_generic_taxonomy_v1",
+  "taxonomy": [
+    {
+      "category": "reactor_scram",
+      "protection_relevance": "automatic_reactor_protection",
+      "regex": "\\bReactor\\s+Scram\\b",
+      "description": "Reactor Scram"
+    },
+    {
+      "category": "safety_relief_valve_open",
+      "protection_relevance": "automatic_pressure_protection",
+      "regex": "\\bSafety\\s+Relief\\s+Valve\\b.*\\bPosition\\s+Change:\\s*100\\s*%",
+      "description": "Safety Relief Valve opening"
+    },
+    {
+      "category": "hpi_pump_start",
+      "protection_relevance": "automatic_safety_injection",
+      "regex": "\\bHPI\\s+Pump\\b.*\\bPosition\\s+Change:\\s*100\\s*%",
+      "description": "HPI pump start"
+    },
+    {
+      "category": "hpsi_start",
+      "protection_relevance": "automatic_safety_injection",
+      "regex": "\\bHPSI\\b.*\\bstart\\b",
+      "description": "HPSI start"
+    },
+    {
+      "category": "safety_injection",
+      "protection_relevance": "automatic_safety_injection",
+      "regex": "\\bSafety\\s+Injection\\b",
+      "description": "Safety Injection"
+    },
+    {
+      "category": "spray_start",
+      "protection_relevance": "automatic_pressure_or_containment_protection",
+      "regex": "\\b(?:Containment|Pressurizer)?\\s*Spray\\b.*(?:\\bstart\\b|\\bPosition\\s+Change:\\s*100\\s*%)",
+      "description": "Spray start"
+    },
+    {
+      "category": "feedwater_isolation",
+      "protection_relevance": "automatic_isolation",
+      "regex": "\\bFeed\\s*water\\b.*(?:\\bisolat\\w*\\b|\\bPosition\\s+Change:\\s*0\\s*%)",
+      "description": "Feedwater isolation"
+    },
+    {
+      "category": "steam_isolation",
+      "protection_relevance": "automatic_isolation",
+      "regex": "\\b(?:Main\\s+)?Steam(?:\\s+Line)?\\b.*(?:\\bisolat\\w*\\b|\\bPosition\\s+Change:\\s*0\\s*%)",
+      "description": "Steam isolation"
+    },
+    {
+      "category": "turbine_trip",
+      "protection_relevance": "automatic_turbine_protection",
+      "regex": "\\bTurbine\\s+Trip\\b|\\bTurbine\\b.*\\bPosition\\s+Change:\\s*0\\s*%",
+      "description": "Turbine trip"
+    },
+    {
+      "category": "pump_trip",
+      "protection_relevance": "automatic_component_protection",
+      "regex": "\\b(?:HPI|LPSI|RHR|Charging|Pump)\\b.*(?:\\btrip\\b|\\bPosition\\s+Change:\\s*0\\s*%)",
+      "description": "Pump trip"
+    }
+  ],
+  "trajectory_total": 1211,
+  "injection_parsed": 1211,
+  "protection_parsed": 696,
+  "class_summary": {
+    "FLB": {
+      "trajectory_count": 100,
+      "protection_parsed": 99,
+      "first_protection_categories": [
+        "hpsi_start"
+      ]
+    },
+    "LLB": {
+      "trajectory_count": 101,
+      "protection_parsed": 0,
+      "first_protection_categories": []
+    },
+    "LOCA": {
+      "trajectory_count": 100,
+      "protection_parsed": 100,
+      "first_protection_categories": [
+        "hpsi_start",
+        "reactor_scram"
+      ]
+    },
+    "LOCAC": {
+      "trajectory_count": 100,
+      "protection_parsed": 100,
+      "first_protection_categories": [
+        "hpsi_start",
+        "reactor_scram"
+      ]
+    },
+    "LR": {
+      "trajectory_count": 99,
+      "protection_parsed": 30,
+      "first_protection_categories": [
+        "safety_relief_valve_open"
+      ]
+    },
+    "MD": {
+      "trajectory_count": 100,
+      "protection_parsed": 0,
+      "first_protection_categories": []
+    },
+    "RI": {
+      "trajectory_count": 100,
+      "protection_parsed": 81,
+      "first_protection_categories": [
+        "reactor_scram",
+        "safety_relief_valve_open"
+      ]
+    },
+    "RW": {
+      "trajectory_count": 100,
+      "protection_parsed": 100,
+      "first_protection_categories": [
+        "reactor_scram"
+      ]
+    },
+    "SGATR": {
+      "trajectory_count": 100,
+      "protection_parsed": 44,
+      "first_protection_categories": [
+        "reactor_scram"
+      ]
+    },
+    "SGBTR": {
+      "trajectory_count": 110,
+      "protection_parsed": 54,
+      "first_protection_categories": [
+        "reactor_scram"
+      ]
+    },
+    "SLBIC": {
+      "trajectory_count": 101,
+      "protection_parsed": 88,
+      "first_protection_categories": [
+        "hpsi_start"
+      ]
+    },
+    "SLBOC": {
+      "trajectory_count": 100,
+      "protection_parsed": 0,
+      "first_protection_categories": []
+    }
+  },
+  "category_report_coverage": {
+    "reactor_scram": 660,
+    "safety_relief_valve_open": 301,
+    "hpi_pump_start": 621,
+    "hpsi_start": 514,
+    "safety_injection": 0,
+    "spray_start": 0,
+    "feedwater_isolation": 0,
+    "steam_isolation": 0,
+    "turbine_trip": 0,
+    "pump_trip": 0
+  },
+  "category_examples": {
+    "reactor_scram": [
+      "FLB_10: 687 sec, HPSI start high RB Press 1.30 bar || 687 sec, HPI Pump #1 Position Change: 100% || 687 sec, HPI Pump #2 Position Change: 100% || 688 sec, Reactor Scram || 2002.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2045.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2085.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2123.5 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_100: 164 sec, HPSI start high RB Press 1.30 bar || 164 sec, HPI Pump #1 Position Change: 100% || 164 sec, HPI Pump #2 Position Change: 100% || 165 sec, Reactor Scram || 1474.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1517.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1558 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1598 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_11: 633.5 sec, HPSI start high RB Press 1.30 bar || 633.5 sec, HPI Pump #1 Position Change: 100% || 633.5 sec, HPI Pump #2 Position Change: 100% || 634.5 sec, Reactor Scram || 1949 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1992 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2032 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2070 sec, PZR Safety Relief Valve #0 Position Change: 100%"
+    ],
+    "safety_relief_valve_open": [
+      "FLB_10: 687 sec, HPSI start high RB Press 1.30 bar || 687 sec, HPI Pump #1 Position Change: 100% || 687 sec, HPI Pump #2 Position Change: 100% || 688 sec, Reactor Scram || 2002.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2045.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2085.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2123.5 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_100: 164 sec, HPSI start high RB Press 1.30 bar || 164 sec, HPI Pump #1 Position Change: 100% || 164 sec, HPI Pump #2 Position Change: 100% || 165 sec, Reactor Scram || 1474.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1517.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1558 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1598 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_11: 633.5 sec, HPSI start high RB Press 1.30 bar || 633.5 sec, HPI Pump #1 Position Change: 100% || 633.5 sec, HPI Pump #2 Position Change: 100% || 634.5 sec, Reactor Scram || 1949 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1992 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2032 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2070 sec, PZR Safety Relief Valve #0 Position Change: 100%"
+    ],
+    "hpi_pump_start": [
+      "FLB_10: 687 sec, HPSI start high RB Press 1.30 bar || 687 sec, HPI Pump #1 Position Change: 100% || 687 sec, HPI Pump #2 Position Change: 100% || 688 sec, Reactor Scram || 2002.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2045.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2085.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2123.5 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_100: 164 sec, HPSI start high RB Press 1.30 bar || 164 sec, HPI Pump #1 Position Change: 100% || 164 sec, HPI Pump #2 Position Change: 100% || 165 sec, Reactor Scram || 1474.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1517.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1558 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1598 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_11: 633.5 sec, HPSI start high RB Press 1.30 bar || 633.5 sec, HPI Pump #1 Position Change: 100% || 633.5 sec, HPI Pump #2 Position Change: 100% || 634.5 sec, Reactor Scram || 1949 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1992 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2032 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2070 sec, PZR Safety Relief Valve #0 Position Change: 100%"
+    ],
+    "hpsi_start": [
+      "FLB_10: 687 sec, HPSI start high RB Press 1.30 bar || 687 sec, HPI Pump #1 Position Change: 100% || 687 sec, HPI Pump #2 Position Change: 100% || 688 sec, Reactor Scram || 2002.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2045.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2085.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2123.5 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_100: 164 sec, HPSI start high RB Press 1.30 bar || 164 sec, HPI Pump #1 Position Change: 100% || 164 sec, HPI Pump #2 Position Change: 100% || 165 sec, Reactor Scram || 1474.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1517.5 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1558 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1598 sec, PZR Safety Relief Valve #0 Position Change: 100%",
+      "FLB_11: 633.5 sec, HPSI start high RB Press 1.30 bar || 633.5 sec, HPI Pump #1 Position Change: 100% || 633.5 sec, HPI Pump #2 Position Change: 100% || 634.5 sec, Reactor Scram || 1949 sec, PZR Safety Relief Valve #0 Position Change: 100% || 1992 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2032 sec, PZR Safety Relief Valve #0 Position Change: 100% || 2070 sec, PZR Safety Relief Valve #0 Position Change: 100%"
+    ],
+    "safety_injection": [],
+    "spray_start": [],
+    "feedwater_isolation": [],
+    "steam_isolation": [],
+    "turbine_trip": [],
+    "pump_trip": []
+  },
+  "limitations": [
+    "Malfunction/Fraction lines are treated as accident injection and never as protection.",
+    "Unknown reports remain unknown; no protection time is imputed.",
+    "Safety Relief Valve opening is retained as an automatic pressure-protection event when explicitly logged."
+  ]
+}
