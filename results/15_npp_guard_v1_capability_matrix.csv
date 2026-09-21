@@ -1,0 +1,14 @@
+milestone,capability,status,tier,evidence,limitation
+03,"Dataset schema, trajectory grouping, strict 38-variable audit",supported,Tier A,results/feature_groups.csv; results/09_multi_accident_class_inventory.csv,"Research-data integrity, not plant deployment evidence."
+04,Static early anomaly detection,exploratory,Tier B,results/early_anomaly_detection_*.csv,Reference and operating-condition scope is limited.
+05,Dynamic early warning,exploratory,Tier B,results/dynamic_early_warning_*.csv,Alarm coverage and normal-reference validity remain incomplete.
+06,Normal-reference expansion,not-supported,Tier C,results/normal_reference_audit_summary.json,No complete fixed-power accident-prehistory reference for strict early-warning claims.
+07,LOCA severity estimation,exploratory,Tier B,results/07_severity_summary.json,LOCA-only and severity coverage is simulation-specific.
+08,Protection-time prediction,exploratory,Tier B,results/08_protection_time_summary.json,Landmark and support limitations prevent general deployment claims.
+09,Multi-accident data audit,supported,Tier A,results/09_multi_accident_audit_summary.json,Audit capability does not imply classification generalization.
+10,Grouped 12-class traditional baseline,exploratory,Tier B,results/10_multi_accident_summary.json,Random-split performance is not sufficient under severity OOD.
+11,Temporal diagnosability,exploratory,Tier B,results/11_temporal_diagnosability_summary.json,Strict pre-protection support is uneven.
+12,Repeated robust validation,exploratory,Tier B,results/12_robust_validation_summary.json,Sparse classes and protection-event coverage remain limiting.
+13,Severity-blocked and extrapolation 12-class diagnosis,exploratory,Tier B,results/13_ood_summary.json,120 s extrapolation Macro-F1 is below 0.50 and directional recalls are unstable.
+14,Severity-invariant and hierarchical diagnosis,exploratory,Tier B,results/14_summary.json; results/14_hierarchical_metrics.csv,Family-level gain does not transfer to end-to-end subtype diagnosis.
+15,Coverage-aware family selective diagnosis,exploratory,Tier B,results/15_summary.json,Selective capability is still simulation/cohort-specific and uses an explicit unknown reject state.

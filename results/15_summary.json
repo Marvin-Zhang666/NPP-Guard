@@ -1,0 +1,182 @@
+{
+  "experiment": "Coverage-aware task redesign and selective family diagnosis",
+  "cohort_count": 505,
+  "window_s": 120,
+  "split_protocol": "Reuse results/13_split_inventory.csv; trajectory-level random/severity-blocked/extrapolation assignments; no test threshold tuning.",
+  "coverage_tiers": {
+    "class_counts": {
+      "not-supported": 8,
+      "supported": 8,
+      "exploratory": 1
+    },
+    "family_counts": {
+      "not-supported": 4,
+      "supported": 4,
+      "exploratory": 2
+    }
+  },
+  "comparison_test_summary": [
+    {
+      "split_type": "random",
+      "mode": "forced_12_class",
+      "n_splits": 10,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.9831683168316833,
+      "selective_macro_f1_mean": 0.6572514731014946,
+      "balanced_accuracy_mean": 0.9838963293650795,
+      "risk_mean": 0.016831683168316867,
+      "selected_threshold_mean": 0.0
+    },
+    {
+      "split_type": "severity_blocked",
+      "mode": "forced_12_class",
+      "n_splits": 3,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.9255663430420712,
+      "selective_macro_f1_mean": 0.5931285851575706,
+      "balanced_accuracy_mean": 0.9212962962962963,
+      "risk_mean": 0.07443365695792876,
+      "selected_threshold_mean": 0.0
+    },
+    {
+      "split_type": "severity_extrapolation",
+      "mode": "forced_12_class",
+      "n_splits": 2,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.8009708737864079,
+      "selective_macro_f1_mean": 0.48258843494350745,
+      "balanced_accuracy_mean": 0.8125,
+      "risk_mean": 0.19902912621359214,
+      "selected_threshold_mean": 0.0
+    },
+    {
+      "split_type": "random",
+      "mode": "forced_family",
+      "n_splits": 10,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.9891089108910892,
+      "selective_macro_f1_mean": 0.8469281497141441,
+      "balanced_accuracy_mean": 0.9863244580986518,
+      "risk_mean": 0.0108910891089109,
+      "selected_threshold_mean": 0.33499999999999996
+    },
+    {
+      "split_type": "random",
+      "mode": "family_selective",
+      "n_splits": 10,
+      "coverage_mean": 0.9772277227722771,
+      "selective_accuracy_mean": 0.992049504950495,
+      "selective_macro_f1_mean": 0.8361614098492549,
+      "balanced_accuracy_mean": 0.9911913295784263,
+      "risk_mean": 0.007950495049504958,
+      "selected_threshold_mean": 0.33499999999999996
+    },
+    {
+      "split_type": "severity_blocked",
+      "mode": "forced_family",
+      "n_splits": 3,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.9093851132686085,
+      "selective_macro_f1_mean": 0.7603295256952635,
+      "balanced_accuracy_mean": 0.9111827601410933,
+      "risk_mean": 0.09061488673139158,
+      "selected_threshold_mean": 0.16666666666666666
+    },
+    {
+      "split_type": "severity_blocked",
+      "mode": "family_selective",
+      "n_splits": 3,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.9093851132686085,
+      "selective_macro_f1_mean": 0.7603295256952635,
+      "balanced_accuracy_mean": 0.9111827601410933,
+      "risk_mean": 0.09061488673139158,
+      "selected_threshold_mean": 0.16666666666666666
+    },
+    {
+      "split_type": "severity_extrapolation",
+      "mode": "forced_family",
+      "n_splits": 2,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.8058252427184467,
+      "selective_macro_f1_mean": 0.6659730091313389,
+      "balanced_accuracy_mean": 0.8314732142857142,
+      "risk_mean": 0.19417475728155337,
+      "selected_threshold_mean": 0.0
+    },
+    {
+      "split_type": "severity_extrapolation",
+      "mode": "family_selective",
+      "n_splits": 2,
+      "coverage_mean": 1.0,
+      "selective_accuracy_mean": 0.8058252427184467,
+      "selective_macro_f1_mean": 0.6659730091313389,
+      "balanced_accuracy_mean": 0.8314732142857142,
+      "risk_mean": 0.19417475728155337,
+      "selected_threshold_mean": 0.0
+    }
+  ],
+  "selected_model_counts": {
+    "hist_gradient_boosting": 11,
+    "random_forest": 4
+  },
+  "selected_threshold_summary": {
+    "mean": 0.25666666666666665,
+    "min": 0.0,
+    "max": 0.85
+  },
+  "rejection_summary": {
+    "n_test_rows": 1525,
+    "rejected_rows": 23,
+    "rejection_rate": 0.015081967213114755,
+    "mean_gap_rejected": 1.2608695652173914,
+    "mean_gap_accepted": 5.948735019973369,
+    "focus_rejection_rate": 0.03414634146341464,
+    "other_rejection_rate": 0.002197802197802198
+  },
+  "calibration_summary": [
+    {
+      "eval_split": "test",
+      "model": "hist_gradient_boosting",
+      "ece": 0.12588037511894537,
+      "brier_score": 0.1020707844302589,
+      "log_loss": 0.29620755571322394
+    },
+    {
+      "eval_split": "test",
+      "model": "random_forest",
+      "ece": 0.07525219314404567,
+      "brier_score": 0.03267859073646545,
+      "log_loss": 0.11873786484510107
+    },
+    {
+      "eval_split": "validation",
+      "model": "hist_gradient_boosting",
+      "ece": 0.11872406592916031,
+      "brier_score": 0.03774419030854969,
+      "log_loss": 0.1528234750882417
+    },
+    {
+      "eval_split": "validation",
+      "model": "random_forest",
+      "ece": 0.07033336150084353,
+      "brier_score": 0.018387764829042277,
+      "log_loss": 0.09155874259691671
+    }
+  ],
+  "capability_matrix": "results/15_npp_guard_v1_capability_matrix.csv/json",
+  "figure_paths": [
+    "results/figures/15_risk_coverage.png",
+    "results/figures/15_macro_f1_vs_coverage.png",
+    "results/figures/15_reliability_diagram.png",
+    "results/figures/15_forced_vs_selective.png",
+    "results/figures/15_rejection_focus_classes.png"
+  ],
+  "assertions": {
+    "same_13_assignments": true,
+    "train_only_probability_calibration": true,
+    "validation_only_threshold_selection": true,
+    "test_not_used_for_threshold": true,
+    "unknown_reject_state": true
+  }
+}
