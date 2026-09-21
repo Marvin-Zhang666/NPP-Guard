@@ -1,0 +1,19 @@
+sample_id,status,comparison,top5_variable_jaccard,spearman_rank,target_score_change,status_changed,deterministic_exact,perturbed_status,note
+FLB_10,accepted,repeat_same_input,1.0,1.0,0.0,False,True,,
+FLB_10,accepted,0.1_percent_training_scale_perturbation,1.0,1.0,-0.00020699252446021443,True,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+FLB_12,accepted,repeat_same_input,1.0,1.0,0.0,False,True,,
+FLB_12,accepted,0.1_percent_training_scale_perturbation,1.0,1.0,-0.00020699252446021443,True,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+FLB_14,accepted,repeat_same_input,1.0,1.0,0.0,False,True,,
+FLB_14,accepted,0.1_percent_training_scale_perturbation,1.0,1.0,-0.00020699252446021443,True,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+LOCAC_12,requires_review,repeat_same_input,1.0,1.0,0.0,False,True,,
+LOCAC_12,requires_review,0.1_percent_training_scale_perturbation,0.75,0.7351470441147052,0.006236222094971544,False,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+LOCAC_3,requires_review,repeat_same_input,1.0,0.9999999999999999,0.0,False,True,,
+LOCAC_3,requires_review,0.1_percent_training_scale_perturbation,1.0,0.9999999999999999,-0.0005318138617591561,False,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+LOCAC_67,requires_review,repeat_same_input,1.0,1.0,0.0,False,True,,
+LOCAC_67,requires_review,0.1_percent_training_scale_perturbation,1.0,0.7351470441147052,-7.60001427808632e-05,False,False,requires_review,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+LR_93,unknown,repeat_same_input,1.0,0.9999999999999999,0.0,False,True,,
+LR_93,unknown,0.1_percent_training_scale_perturbation,1.0,0.9999999999999999,0.0,False,False,unknown,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+RI_-20,unknown,repeat_same_input,1.0,1.0,0.0,False,True,,
+RI_-20,unknown,0.1_percent_training_scale_perturbation,1.0,1.0,0.0,False,False,unknown,Status changes are reported as model-boundary sensitivity; no stability correction is applied.
+RI_-29,unknown,repeat_same_input,1.0,1.0,0.0,False,True,,
+RI_-29,unknown,0.1_percent_training_scale_perturbation,1.0,1.0,0.0,False,False,unknown,Status changes are reported as model-boundary sensitivity; no stability correction is applied.

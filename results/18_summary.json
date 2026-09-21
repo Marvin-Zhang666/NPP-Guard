@@ -1,0 +1,186 @@
+{
+  "milestone": "18 Explainability",
+  "status": "passed",
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "methods": {
+    "family_global": "permutation importance on frozen HistGradientBoosting base classifier, neg_log_loss, 8 deterministic repeats",
+    "family_local": "leave-one-engineered-feature-out to frozen distance-model training center; explains base score, not sigmoid calibration causally",
+    "ood": "diagonal standardized class-conditional Ledoit-Wolf Mahalanobis approximation with signed standardized displacement",
+    "severity": "frozen RandomForest feature perturbation to reconstructed frozen training medians plus model feature importance; historical sensitivity Test MAE≈0.972"
+  },
+  "cohort": {
+    "name": "locked_release_test",
+    "sample_count": 101,
+    "window_s": 120
+  },
+  "status_counts": {
+    "accepted": 52,
+    "requires_review": 39,
+    "unknown": 10
+  },
+  "global_top_variables": [
+    {
+      "variable": "P",
+      "importance": 0.4999723483220581,
+      "mean_delta_neg_log_loss": 0.4999723483220581,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "WSTA",
+      "importance": 0.10386870442255884,
+      "mean_delta_neg_log_loss": 0.10386870442255884,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "TAVG",
+      "importance": 0.01515184635592731,
+      "mean_delta_neg_log_loss": 0.01515184635592731,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "WFWA",
+      "importance": 0.01434335339062252,
+      "mean_delta_neg_log_loss": 0.01434335339062252,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "LSGA",
+      "importance": 0.008288195507728108,
+      "mean_delta_neg_log_loss": 0.008288195507728108,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "QMWT",
+      "importance": 0.0053543830127422126,
+      "mean_delta_neg_log_loss": 0.0053543830127422126,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "TCB",
+      "importance": 0.0044952542414256795,
+      "mean_delta_neg_log_loss": 0.0044952542414256795,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "LSGB",
+      "importance": 0.003662767574587337,
+      "mean_delta_neg_log_loss": 0.003658536974124901,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "NSGB",
+      "importance": 0.0036193687167529894,
+      "mean_delta_neg_log_loss": 0.0036190988329926187,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    },
+    {
+      "variable": "PSGB",
+      "importance": 0.002028732508779497,
+      "mean_delta_neg_log_loss": 0.002028732508779497,
+      "engineered_feature_count": 5,
+      "aggregation": "sum across last/delta_t0/mean/std/slope",
+      "method": "permutation_importance",
+      "cohort": "locked_release_test"
+    }
+  ],
+  "examples": {
+    "accepted_tier_a": {
+      "sample_id": "FLB_10",
+      "status": "accepted",
+      "family": "feedwater_line_break",
+      "severity_status": "not_run_due_to_family_gating"
+    },
+    "accepted_non_loca_tier_a": {
+      "sample_id": "FLB_10",
+      "status": "accepted",
+      "family": "feedwater_line_break",
+      "severity_status": "not_run_due_to_family_gating"
+    },
+    "requires_review": {
+      "sample_id": "LOCAC_12",
+      "status": "requires_review",
+      "family": "primary_coolant_boundary_break",
+      "severity_status": "not_run_due_to_family_gating"
+    },
+    "accepted_loca_severity": {
+      "sample_id": "LOCAC_19",
+      "status": "accepted",
+      "family": "primary_coolant_boundary_break",
+      "severity_status": "available_exploratory"
+    },
+    "unknown": {
+      "sample_id": "LR_93",
+      "status": "unknown",
+      "family": "turbine_and_load_transient",
+      "severity_status": "not_run_due_to_family_gating"
+    }
+  },
+  "stability": {
+    "row_count": 18,
+    "same_input_exact": true,
+    "perturbation_mean_top5_jaccard": 0.9722222222222222,
+    "status_changes": 3
+  },
+  "faithfulness": {
+    "row_count": 119,
+    "family_top_minus_random_mean": 0.7532168916436077,
+    "severity_top_minus_random_mean": 0.5731616990005899,
+    "family_top_effect_exceeds_random_rate": 1.0
+  },
+  "severity_reference": {
+    "frozen_validation_mae": 0.9655100308641985,
+    "historical_sensitivity_test_mae": 0.9724715909090943,
+    "exploratory": true
+  },
+  "artifact_sha256_passed": true,
+  "core_diagnosis_unchanged": true,
+  "api_batch_parity": {
+    "overall_pass": true,
+    "agreement_rate": 1.0,
+    "max_float_abs_delta": 0.0
+  },
+  "regression_tests": {
+    "passed": 18,
+    "total": 18,
+    "all_passed": true
+  },
+  "dashboard_gate": {
+    "eligible": true,
+    "reason": "Explainability artifacts generated; frozen artifact hashes, 17.2 parity, and regression checks all passed."
+  },
+  "limitations": [
+    "Feature contribution is model attribution, not physical causality.",
+    "Family local scores explain the frozen base classifier around the calibrated output; the sigmoid calibration layer is not directly attributed.",
+    "OOD drivers are a diagonal approximation to class-conditional Ledoit-Wolf Mahalanobis distance and ignore cross terms.",
+    "LOCA severity is exploratory and simulation-specific; historical validation MAE is reported with the frozen artifact.",
+    "Research prototype; not for safety-critical deployment."
+  ],
+  "summary_sha256": "bc85a4f19af7d56d7f6989ec63be24cdd51b2c539b82b640e3312d5176359d79"
+}

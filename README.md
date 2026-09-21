@@ -198,6 +198,20 @@ locked release benchmark（101 条轨迹）记录为：forced family Accuracy/Ma
 
 17.2 产物包括：`notebooks/17_npp_guard_v1_integration.ipynb`、`src/inference/`、`examples/run_v1_inference.py`、`artifacts/v1/release_split_manifest.json`、`artifacts/v1/manifest.json`、`results/17_v1_overlap_audit.csv/json`、`results/17_v1_pipeline_parity.csv/json`、`results/17_v1_release_benchmark.csv/json`、`results/17_v1_example_outputs.json` 和 `results/17_v1_regression_tests.csv`。当前五类行为示例均观察到：accepted Tier-A、accepted LOCA、requires_review、unknown、invalid_input；回归测试 `18/18` 通过。`results/17_v1_artifact_parity.csv/json` 保留为 17.1 历史诊断，不再是 release gate。
 
+## 第三阶段第八步：Explainability（18）
+
+18 阶段在不修改冻结 v1.2 推理逻辑的前提下，为已有诊断结果增加模型归因与诊断辅助解释。解释层只读取 `artifacts/v1/` 和 locked release cohort，不重新训练 classifier、calibrator、conformal、distance 或 severity 模型。
+
+解释方法固定为：family 全局 `permutation importance`；family 局部的冻结训练中心替换 attribution；OOD 的 Ledoit–Wolf 距离对角近似；LOCA severity 的冻结 Random Forest feature perturbation。locked release test 上的全局变量 Top-5 为 `P / WSTA / TAVG / WFWA / LSGA`。
+
+可复现示例包括：`FLB_10` 为 accepted；`LOCAC_12` 为 requires_review，主要 OOD driver 为 `P / TSAT / LVPZ / VOL`；`LR_93` 为 unknown；`LOCAC_19` 为 accepted LOCA，exploratory severity estimate 约为 `12.95%`。severity frozen validation MAE 为 `0.9655`，历史 sensitivity test MAE 为 `0.97247`，后者明确标记为 exploratory。
+
+解释验证记录为：重复解释 deterministic；扰动 top-5 variable Jaccard 为 `0.9722`；family faithfulness 的 top-k 相对随机移除差为 `+0.7532`，severity 为 `+0.5732`。18 同时确认 17.2 frozen inference 未变化：artifact SHA-256 `10/10`，API/batch parity `101/101 = 100%` 且最大浮点差 `0`，regression `18/18`。
+
+18 的解释是模型归因与诊断辅助，不是物理因果证明；LOCA severity 仍是仿真数据上的 exploratory 估计。NPP-Guard 仍为 research prototype，不适用于真实核电站运行控制或 safety-critical deployment。
+
+18 产物包括：`notebooks/18_explainability.ipynb`、`src/explainability/`、`results/18_summary.json`、`results/18_local_explanations.json`、`results/18_global_*.csv`、`results/18_ood_explanations.csv`、`results/18_severity_explanations.csv`、`results/18_explanation_*.csv` 和 `results/figures/18_*`。
+
 ## 当前结果摘要
 
 以下数字来自仓库中已保存的 `results/*.json`，是当前数据和当前规则下的实验记录，不是泛化性能承诺。
