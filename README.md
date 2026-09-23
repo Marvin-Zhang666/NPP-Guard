@@ -22,6 +22,16 @@ NPP-Guard v1 将单条 NPPAD CSV 轨迹经过数据质量检查、120 s 过程�
 .\.venv\Scripts\python.exe -m streamlit run dashboard/app.py
 ```
 
+`requirements.txt` 是网页运行时的最小固定依赖；完整研究 / Notebook 环境（包括可选的 Access/MDB 与 Jupyter 工具）使用 `requirements-research.txt`。
+
+### Online Demo / Deploy your own
+
+Online Demo：当前尚未填入公网 URL；只有完成真实部署并打开验证后才会写入。
+
+部署自己的实例：打开 [Streamlit Community Cloud](https://share.streamlit.io/)，选择 **Create app**，填写仓库 `Marvin-Zhang666/NPP-Guard`、分支 `main`、入口 `dashboard/app.py`，在 Advanced settings 选择 Python 3.12 后 Deploy。完整说明见 [`docs/web_deployment.md`](docs/web_deployment.md)。
+
+网页模式只支持上传 CSV，不捆绑或读取原始 NPPAD 数据；它仍然是 research prototype，不用于 safety-critical deployment。
+
 命令行推理：
 
 ```powershell
@@ -74,6 +84,8 @@ CSV/DataFrame → Data Quality → 120 s Features → Family Classifier
 - [v1 Release Checklist](docs/NPP-Guard_v1_Release_Checklist.md)
 - [机器可读关键结果](results/20_key_results.csv)
 - [最终发布验证摘要](results/20_release_validation_summary.json)
+- [网页部署验证摘要](results/21_web_deployment_validation.json)
+- [网页部署说明](docs/web_deployment.md)
 - [研究路线图源文件](docs/figures/20_research_route.mmd)
 
 ## 研究动机
@@ -279,7 +291,7 @@ locked release benchmark（101 条轨迹）记录为：forced family Accuracy/Ma
 
 ## 第三阶段第九步：Dashboard（19）
 
-19 阶段将 17.2 冻结推理 API 与 18 解释层接入 Streamlit 研究展示原型。Dashboard 只加载 `artifacts/v1/`，不在页面启动时重新训练，也不允许修改 conformal、distance 或其他 policy 参数。它支持本地 demo CSV 和单轨迹 CSV 上传，并在诊断前展示 `TIME`、38 个严格过程变量、至少 120 s 覆盖、采样间隔、NaN/Inf、重复时间点和额外列检查。
+19 阶段将 17.2 冻结推理 API 与 18 解释层接入 Streamlit 研究展示原型。Dashboard 只加载 `artifacts/v1/`，不在页面启动时重新训练，也不允许修改 conformal、distance 或其他 policy 参数。网页入口采用 upload-only 模式；本地 raw NPPAD 只用于离线 smoke tests，不随网页发布，并在诊断前展示 `TIME`、38 个严格过程变量、至少 120 s 覆盖、采样间隔、NaN/Inf、重复时间点和额外列检查。
 
 页面包含：`Data Quality`、`Diagnostic Status`、family/confidence/conformal/OOD、自动选择解释 Top 变量的 120 s 趋势、18 的 family/OOD/uncertainty/severity 解释、LOCA gating、protection-time `not_available_in_v1` 和 JSON 导出。状态文案明确区分 accepted（研究模型接受）、requires_review（需要人工复核）、unknown（模型证据不足）与 invalid_input（预测前拒绝）。LOCA severity 仅在 accepted + LOCA family + Tier A 时显示；其他状态显示 `Not run due to family gating`。
 
@@ -338,7 +350,8 @@ NPP-Guard/
 │  ├─ ood_selective.py                           # 16 OOD-aware selective family diagnosis
 │  ├─ inference/                                 # 17 fixed-artifact v1 inference API and CLI
 │  └─ explainability/                            # 18 frozen-model attribution and explanation
-├─ dashboard/                                    # 19 Streamlit research dashboard and smoke tests
+├─ dashboard/                                    # 19/21 Streamlit research dashboard and smoke tests
+│  └─ fixtures/                                  # small derived web-only explainability reference
 ├─ notebooks/
 │  ├─ 01_LOCA_EDA.ipynb
 │  ├─ 02_LOCA_severity_analysis.ipynb
@@ -378,13 +391,14 @@ NPP-Guard/
 │  ├─ 19_dashboard_*.json/csv, 19_example_exports.json # 19 dashboard 验证结果
 │  └─ figures/11_*.png, 12_*.png, 13_*.png, 14_*.png, 15_*.png, 16_*.png, 18_*.png # 分析图
 ├─ data/                                    # 本地数据目录，不提交到本仓库
-├─ requirements.txt
+├─ requirements.txt                         # 最小网页运行依赖
+├─ requirements-research.txt                # 完整研究 / Notebook 依赖
 └─ README.md
 ```
 
 ## 环境与依赖
 
-推荐使用 Python 3.12 和项目虚拟环境。Windows 下运行变功率 `.mdb` 数据还需要安装能提供以下驱动的 Microsoft Access ODBC 驱动：
+推荐使用 Python 3.12 和项目虚拟环境；版本约束见 `.python-version`。Windows 下运行变功率 `.mdb` 数据还需要安装能提供以下驱动的 Microsoft Access ODBC 驱动：
 
 ```text
 Microsoft Access Driver (*.mdb, *.accdb)
@@ -395,13 +409,13 @@ Microsoft Access Driver (*.mdb, *.accdb)
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-research.txt
 ```
 
 如果 PowerShell 阻止激活脚本，也可以直接调用虚拟环境解释器：
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-research.txt
 ```
 
 ## 数据准备
@@ -491,7 +505,8 @@ jupyter notebook notebooks/13_ood_severity_blocked_validation.ipynb
 - `16_ood_aware_selective_diagnosis` 已完成：120 s extrapolation forced family Macro-F1 `0.666`、risk `0.194`；Conformal `alpha=0.10` coverage `75.7%`、Selective Macro-F1 `0.670`、risk `0.089`，但 empirical set coverage 仅 `68.9%`，不能宣称 `90%` 统计覆盖保证；distance OOD proxy AUROC `0.822`。推荐研究型 Unknown/Requires review 策略，仍不适用于 safety-critical deployment；
 - `17_npp_guard_v1_integration` 的 17.2 Protocol Alignment 已完成：固定 release split、zero-overlap audit、artifact SHA-256、exact batch/API parity、LOCA gating、locked release benchmark 和 `18/18` regression 全部通过；16 的 severity-extrapolation 结果仅作为独立 research stress benchmark，不能与 release benchmark 做严格数值 parity。保护时间暂不接入 v1，系统仍明确标记 research prototype、not for safety-critical deployment、severity OOD/subtype OOD 与 conformal 实际 coverage 限制；
 - `18_explainability` 已完成并独立提交：Permutation importance、冻结训练中心替换 local attribution、Ledoit–Wolf 距离对角近似和 Random Forest severity perturbation 均通过验证；Top 变量为 `P/WSTA/TAVG/WFWA/LSGA`，解释稳定性 top-5 Jaccard `0.9722`，family faithfulness top-k 相对随机差 `+0.7532`，且 17.2 parity/regression 仍为 `101/101`、`18/18`；解释是模型归因，不是物理因果；
-- `19_dashboard` 已完成本地验证：Streamlit 页面可启动，真实四状态与 accepted LOCA gating smoke test 全部通过，导出不含原始全量 CSV；当前工作区保留 19 的未提交变更，等待单独审阅后再提交；
+- `19_dashboard` 已完成本地验证：Streamlit 页面可启动，真实四状态与 accepted LOCA gating smoke test 全部通过，导出不含原始全量 CSV；
+- `21_web_deployment` 已完成部署就绪验证：网页 upload-only、无原始 NPPAD 依赖，固定 Python 3.12 与 Linux-compatible runtime dependencies，shadow app 无 `data/` 目录仍通过 AppTest 与 accepted LOCA explainability；公网 URL 只在真实部署并实测后补充；
 - 如果后续获得独立且匹配的固定功率 Normal reference，再恢复更严格的 normal-reference early warning 研究；
 - 只有在 Normal reference 和传统基线稳定后，再评估更严格的按场景/工况隔离、更多早期预警指标和时序深度学习模型；
 - 继续保留当前变功率分类和未触发异常门场景的独立验证，不把实验性结果接入统一推理；

@@ -1,0 +1,89 @@
+{
+  "milestone": "21 Web deployment readiness",
+  "status": "passed",
+  "validated_at": "2026-09-23",
+  "source_commit_before_changes": "d34c01970d382a062811632c4bd84b6a38f3f9ef",
+  "source_tag_before_changes": "v1.0.0",
+  "web_entrypoint": "dashboard/app.py",
+  "model_version": "npp_guard_v1_17_2_20260921",
+  "runtime": {
+    "python": "3.12.10",
+    "python_selector_file": ".python-version",
+    "streamlit": "1.64.0",
+    "web_requirements": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.8",
+      "scikit-learn": "1.7.2",
+      "joblib": "1.4.2"
+    },
+    "research_only_requirements_moved_out": ["pyodbc", "jupyter"]
+  },
+  "dependency_validation": {
+    "linux_manylinux2014_direct_wheel_probe": "passed",
+    "isolated_python312_install": "passed",
+    "isolated_artifact_load_and_smoke": "passed",
+    "isolated_versions": {
+      "streamlit": "1.64.0",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.8",
+      "scikit-learn": "1.7.2",
+      "joblib": "1.4.2"
+    },
+    "sklearn_pickle_version_note": "Artifacts were serialized with scikit-learn 1.9.1; the Linux-compatible 1.7.2 environment loads all artifacts and runs the smoke set, while emitting the expected InconsistentVersionWarning. Artifacts were not rewritten or retrained."
+  },
+  "artifact_and_core_validation": {
+    "artifact_manifest_sha256": "10/10",
+    "isolated_loaded_artifact_groups": ["base_model", "calibrator", "distance", "feature_schema", "loca_severity", "manifest", "policy", "conformal", "capability"],
+    "api_batch_parity": "101/101",
+    "api_batch_max_float_abs_delta": 0.0,
+    "regression": "18/18",
+    "explainability_core_diagnosis_unchanged": true,
+    "explainability_artifact_sha256_passed": true,
+    "loca_gating_unchanged": true,
+    "ood_conformal_policy_unchanged": true
+  },
+  "web_validation": {
+    "status_smoke": {
+      "accepted": "accepted",
+      "accepted_loca": "accepted",
+      "requires_review": "requires_review",
+      "unknown": "unknown",
+      "invalid_input": "invalid_input"
+    },
+    "dashboard_smoke": "5/5",
+    "helper_tests": "3/3",
+    "apptest_exceptions": 0,
+    "local_http_status": 200,
+    "template_rows": 13,
+    "template_columns": 39,
+    "template_is_synthetic": true,
+    "loca_reference_feature_count": 170,
+    "loca_reference_max_abs_delta_vs_local_reconstruction": 0.0,
+    "shadow_run_without_data_directory": {
+      "data_directory_present": false,
+      "apptest_exceptions": 0,
+      "accepted_loca_status": "accepted",
+      "severity_drivers_available": true
+    }
+  },
+  "path_and_repository_audit": {
+    "windows_absolute_paths_in_web_target_files": 0,
+    "web_entrypoint_reads_raw_nppad": false,
+    "web_entrypoint_trains_at_startup": false,
+    "web_entrypoint_requires_access_driver": false,
+    "tracked_raw_data_files": 0,
+    "tracked_files_over_20mb": 0,
+    "tracked_venv_or_cache_files": 0,
+    "secrets_in_worktree": 0
+  },
+  "deployment": {
+    "platform": "Streamlit Community Cloud",
+    "status": "pending_after_commit",
+    "repository": "Marvin-Zhang666/NPP-Guard",
+    "branch": "main",
+    "entrypoint": "dashboard/app.py",
+    "public_url": null
+  }
+}

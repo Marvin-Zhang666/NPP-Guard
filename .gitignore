@@ -219,3 +219,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+.streamlit/credentials.toml
+.streamlit/*.local.toml
+.streamlit/cache/
