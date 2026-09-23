@@ -80,12 +80,15 @@
   },
   "deployment": {
     "platform": "Streamlit Community Cloud",
-    "status": "not_deployed_auth_required",
-    "authorization_blocker": "email_verification_required_after_github_oauth",
-    "code_commit": "39bd8fd52710fd1bb6c09da8350ce40d01de5c84",
+    "status": "deployed",
+    "deployed_at": "2026-09-23",
+    "code_commit": "ec0fa0c22621c2b3b2b5fc48959b668c648251a7",
     "repository": "Marvin-Zhang666/NPP-Guard",
     "branch": "main",
     "entrypoint": "dashboard/app.py",
-    "public_url": null
+    "public_url": "https://npp-guard-sfbn7uujbsbisqokhs3j6a.streamlit.app/",
+    "browser_page_verified": true,
+    "browser_page_has_error": false,
+    "browser_page_visible_sections": ["NPP-Guard", "CSV input", "Research prototype warning", "CSV example format"]
   }
 }

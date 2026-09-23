@@ -26,7 +26,7 @@ NPP-Guard v1 将单条 NPPAD CSV 轨迹经过数据质量检查、120 s 过程�
 
 ### Online Demo / Deploy your own
 
-Online Demo：当前尚未填入公网 URL；只有完成真实部署并打开验证后才会写入。
+Online Demo：[NPP-Guard on Streamlit Community Cloud](https://npp-guard-sfbn7uujbsbisqokhs3j6a.streamlit.app/)
 
 部署自己的实例：打开 [Streamlit Community Cloud](https://share.streamlit.io/)，选择 **Create app**，填写仓库 `Marvin-Zhang666/NPP-Guard`、分支 `main`、入口 `dashboard/app.py`，在 Advanced settings 选择 Python 3.12 后 Deploy。完整说明见 [`docs/web_deployment.md`](docs/web_deployment.md)。
 
